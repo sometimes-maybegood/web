@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Выбор точек отправления и прибытия</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ВАШ_API_КЛЮЧ&lang=ru_RU"></script>
+    <style>
+        #map { width: 100%; height: 500px; }
+        .controls { padding: 20px; background: #f0f0f0; display: flex; flex-direction: column; gap: 15px; max-width: 600px; margin: 0 auto; }
+        .point-info { padding: 15px; border: 1px solid #ccc; border-radius: 8px; background: white; display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: all 0.2s; }
+        .point-info:hover { border-color: #999; }
+        .point-info .details { flex-grow: 1; margin-right: 10px; }
+        .active-selection { background: #e0e0ff; border-color: #666 !important; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+        .point-info .address { color: #666; font-size: 0.9em; margin-top: 5px; }
+        button { padding: 8px 15px; background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: all 0.2s; }
+        button:hover { background: #e0e0e0; }
+        .remove-btn { background: #ffebee; border-color: #ef9a9a; color: #c62828; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+        .remove-btn:hover { background: #ffcdd2; }
+        .clear-btn { margin-top: 10px; background: #e3f2fd; border-color: #90caf9; color: #1565c0; }
+        .clear-btn:hover { background: #bbdefb; }
+        h2 { text-align: center; margin: 20px 0 10px; }
+        .instructions { text-align: center; color: #666; margin-bottom: 20px; }
+        .route-info { margin-top: 15px; padding: 10px; background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 4px; display: none; }
+    </style>
+</head>
+
+<body>
+    <h2>Выбор маршрута</h2>
+    <p class="instructions">Кликните на карте, чтобы указать точки отправления и прибытия</p>
+    <div id="map"></div>
+    <div class="controls">
+        <div id="pointsList"></div>
+        <div id="routeInfo" class="route-info"></div>
+    </div>
+
+    <script>
+        let map;
+        let currentSelection = 'start'; // Активное поле для ввода точки: 'start' или 'end'
+        let route; // Для хранения объекта маршрута
+        const pointData = {
+            start: { label: 'Отправление', name: 'Точка А', marker: null, id: 'startPoint', coords: [], address: 'Не указано' },
+            end: { label: 'Прибытие', name: 'Точка Б', marker: null, id: 'endPoint', coords: [], address: 'Не указано' }
+        };
+
+        ymaps.ready(init);
+
+        function init() {
+            // Инициализация карты
+            map = new ymaps.Map('map', {
+                center: [55.75, 37.61], // Центр Москвы
+                zoom: 10,
+                controls: ['zoomControl']
+            });
+
+            // Обработчик клика по карте
+            map.events.add('click', function(e) {
+                handleMapClick(e.get('coords'));
+            });
+
+            updateSelectionUI();
+            renderPointsList();
+        }
+
+        function handleMapClick(coords) {
+            ymaps.geocode(coords).then(function(res) {
+                const name = getLocationName(res);
+                const address = getFullAddress(res); setPoint(coords, name, address, currentSelection);
+                // Автопереключение на следующую точку, если текущая установлена
+                if (currentSelection === 'start' && pointData.start.coords.length) {
+                    currentSelection = 'end';
+                } else if (currentSelection === 'end' && pointData.end.coords.length) {
+                    currentSelection = 'start';
+                }
+                renderPointsList();
+                updateSelectionUI();
+                // Если обе точки установлены, строим маршрут
+                if (pointData.start.coords.length && pointData.end.coords.length) {
+                    buildRoute();
+                } else {
+                    // Если маршрут не полный, скрываем информацию о маршруте
+                    document.getElementById('routeInfo').style.display = 'none';
+                    if (route) {
+                        map.geoObjects.remove(route);
+                        route = null;
+                    }
+                }
+            });
+        }
+
+        function getLocationName(res) {
+            const geoObject = res.geoObjects.get(0);
+            if (!geoObject) return 'Неизвестное место';
+            return geoObject.getLocalities()[0] || geoObject.getAdministrativeAreas()[0] || geoObject.getThoroughfare() || geoObject.getAddressLine();
+        }
+
+        function getFullAddress(res) {
+            const geoObject = res.geoObjects.get(0);
+            return geoObject ? geoObject.getAddressLine() : 'Адрес не определен';
+        }
+
+        function setPoint(coords, name, address, type) {
+            // Удаляем старый маркер (если есть)
+            if (pointData[type].marker) {
+                map.geoObjects.remove(pointData[type].marker);
+            }
+            // Создаем новый маркер
+            const marker = new ymaps.Placemark(coords, {
+                balloonContent: address,
+                iconCaption: pointData[type].label
+            }, {
+                preset: type === 'start' ? 'islands#blueCircleDotIconWithCaption' : 'islands#redCircleDotIconWithCaption',
+                draggable: true
+            });
+
+            // Обработчик перетаскивания маркера
+            marker.events.add('dragend', function(e) {
+                const newCoords = marker.geometry.getCoordinates();
+                ymaps.geocode(newCoords).then(function(res) {
+                    const newAddress = getFullAddress(res);
+                    pointData[type].coords = newCoords;
+                    pointData[type].address = newAddress;
+                    renderPointsList();
+                    if (pointData.start.coords.length && pointData.end.coords.length) {
+                        buildRoute();
+                    }
+                });
+            });
+
+            // Сохраняем данные точки
+            pointData[type].marker = marker;
+            pointData[type].coords = coords;
+            pointData[type].address = address;
+            map.geoObjects.add(marker);
+            map.panTo(coords, {flying: true});
+        }
+
+        function buildRoute() {
+            // Удаляем старый маршрут, если он есть
+            if (route) {
+                map.geoObjects.remove(route);
+            }
+            // Создаем маршрут между точками
+            ymaps.route([
+                pointData.start.coords,
+                pointData.end.coords
+            ], {
+                mapStateAutoApply: true
+            }).then(function(router) {
+                route = router;
+                map.geoObjects.add(route);
+                // Получаем информацию о маршруте
+                const routeInfo = router.getRoutes().get(0);
+                const distance = routeInfo.properties.get("distance").text;
+                const duration = routeInfo.properties.get("duration").text;
+                // Отображаем информацию о маршруте
+                document.getElementById('routeInfo').innerHTML = `
+                    <strong>Информация о маршруте:</strong><br>
+                    Расстояние: ${distance}<br>
+                    Время в пути: ${duration}
+                `;
+                document.getElementById('routeInfo').style.display = 'block';
+                // Центрируем карту на маршруте
+                map.setBounds(router.getBounds(), { checkZoomRange: true });
+            }, function(error) {
+                console.error('Ошибка построения маршрута:', error);
+                document.getElementById('routeInfo').innerHTML = `
+                    <strong>Ошибка построения маршрута:</strong><br>
+                    ${error.message}
+                `;
+                document.getElementById('routeInfo').style.display = 'block';
+            });
+        }
+
+        function removePoint(type) {
+            // Удаляем маркер с карты
+            if (pointData[type].marker) {
+                map.geoObjects .remove(pointData[type].marker);
+            }
+            // Сбрасываем данные точки
+            pointData[type].marker = null;
+            pointData[type].coords = [];
+            pointData[type].address = 'Не указано';
+            // Если удаляем текущую выбранную точку, переключаемся на другую
+            if (currentSelection === type) {
+                currentSelection = type === 'start' ? 'end' : 'start';
+            }
+            renderPointsList();
+            updateSelectionUI();
+            // Удаляем маршрут, если он есть
+            if (route) {
+                map.geoObjects.remove(route);
+                route = null;
+                document.getElementById('routeInfo').style.display = 'none';
+            }
+        }
+
+        function clearAll() {
+            // Очищаем все точки
+            Object.keys(pointData).forEach(removePoint);
+            currentSelection = 'start';
+            updateSelectionUI();
+        }
+
+        function selectPoint(type) {
+            currentSelection = type;
+            updateSelectionUI();
+            // Центрируем карту на выбранной точке, если она установлена
+            if (pointData[type].coords.length) {
+                map.panTo(pointData[type].coords, {flying: true});
+            }
+        }
+
+        function updateSelectionUI() {
+            const points = document.querySelectorAll('.point-info');
+            points.forEach(point => point.classList.remove('active-selection'));
+            const activePoint = document.getElementById(currentSelection + 'Info');
+            if (activePoint) {
+                activePoint.classList.add('active-selection');
+            }
+        }
+
+        function renderPointsList() {
+            const pointsList = document.getElementById('pointsList');
+            pointsList.innerHTML = '';
+            Object.keys(pointData).forEach(key => {
+                const point = pointData[key];
+                const pointDiv = document.createElement('div');
+                pointDiv.className = 'point-info';
+                pointDiv.id = key + 'Info';
+                pointDiv.onclick = () => selectPoint(key);
+                if (currentSelection === key) {
+                    pointDiv.classList.add('active-selection');
+                }
+                const detailsDiv = document.createElement('div');
+                detailsDiv.className = 'details';
+                if (point.coords.length) {
+                    detailsDiv.innerHTML = `
+                        <strong>${point.label}</strong>
+                        <div class="address">${point.address}</div>
+                        <div>Координаты: ${point.coords[0].toFixed(6)}, ${point.coords[1].toFixed(6)}</div>
+                    `;
+                } else {
+                    detailsDiv.innerHTML = `
+                        <strong>${point.label}</strong>
+                        <div class="address">Не указано</div>
+                        <div>Кликните на карте, чтобы выбрать</div>
+                    `;
+                }
+                const removeButton = document.createElement('button');
+                removeButton.className = 'remove-btn';
+                removeButton.textContent = '×';
+                removeButton.onclick = (e) => {
+                    e.stopPropagation(); // Предотвращаем срабатывание onclick родителя
+                    removePoint(key);
+                };
+                pointDiv.appendChild(detailsDiv);
+                pointDiv.appendChild(removeButton);
+                pointsList.appendChild(pointDiv);
+            });
+            // Добавляем кнопку для очистки всех точек
+            if (pointData.start.coords.length || pointData.end.coords.length) {
+                const clearButton = document.createElement('button');
+                clearButton.className = 'clear-btn';
+                clearButton.textContent = 'Очистить все точки';
+                clearButton.onclick = clearAll;
+                pointsList.appendChild(clearButton);
+            }
+        }
+    </script>
+</body>
+</html>
