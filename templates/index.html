@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта отелей</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+    <h1>Выберите точку на карте</h1>
+    <div id="map" style="width: 100%; height: 500px;"></div>
+    <form id="hotelForm" method="POST" action="/hotels">
+        <input type="hidden" name="latitude" id="latitude">
+        <input type="hidden" name="longitude" id="longitude">
+        <button type="submit">Найти отели</button>
+    </form>
+
+    <script>
+        var myMap;
+        var currentPlacemark;
+
+        function init() {
+            myMap = new ymaps.Map("map", {
+                center: [55.751574, 37.573856], // Москва
+                zoom: 10
+            });
+
+            myMap.events.add('click', function (e) {
+                var coords = e.get('coords');
+                document.getElementById('latitude').value = coords[0];
+                document.getElementById('longitude').value = coords[1];
+
+                if (currentPlacemark) {
+                    myMap.geoObjects.remove(currentPlacemark);
+                }
+
+                currentPlacemark = new ymaps.Placemark(coords, {
+                    balloonContent: 'Вы выбрали эту точку!'
+                });
+
+                myMap.geoObjects.add(currentPlacemark);
+            });
+
+            myMap.events.add('contextmenu', function (e) {
+                if (currentPlacemark) {
+                    myMap.geoObjects.remove(currentPlacemark);
+                    currentPlacemark = null;
+                }
+            });
+        }
+
+        ymaps.ready(init);
+    </script>
+</body>
+</html>

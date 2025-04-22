@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ближайшие отели</title>
+</head>
+<body>
+    <h1>Ближайшие отели</h1>
+    <ul>
+        {% if hotels %}
+            {% for hotel in hotels %}
+                <li>
+                    <strong>{{ hotel.name }}</strong> - {{ hotel.price }} за ночь
+                    <a href="{{ hotel.booking_url }}" target="_blank">Забронировать</a>
+                </li>
+            {% endfor %}
+        {% else %}
+            <li>Нет доступных отелей.</li>
+        {% endif %}
+    </ul>
+    <a href="/">Назад</a>
+</body>
+</html>
