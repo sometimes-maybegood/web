@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ближайшие отели</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">Поиск отелей</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    {% if session.get('user_id') %}
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('logout') }}">Выйти</a></li>
+                    {% else %}
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}">Вход</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}">Регистрация</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Ближайшие отели</h1>
+        <ul class="list-group">
+            {% if hotels %}
+                {% for hotel in hotels %}
+                    <li class="list-group-item">
+                        <strong>{{ hotel.name }}</strong><br>
+                        {{ hotel.price }} за ночь<br>
+                        <a href="{{ hotel.booking_url }}" class="btn btn-primary btn-sm mt-2" target="_blank">Забронировать</a>
+                    </li>
+                {% endfor %}
+            {% else %}
+                <li class="list-group-item">Нет доступных отелей.</li>
+            {% endif %}
+        </ul>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary mt-4">Назад</a>
+    </div>
+</body>
+</html>
