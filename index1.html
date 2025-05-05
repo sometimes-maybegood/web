@@ -727,46 +727,46 @@
         }
 
         function findNearbyHotels(destinationCoords) {
-            const [destLat, destLon] = destinationCoords;
-            const allHotels = [];
+    const [destLat, destLon] = destinationCoords;
+    const allHotels = [];
 
-            // Находим город, ближайший к точке назначения
-            let closestCity = null;
-            let minCityDistance = Infinity;
+    // Находим город, ближайший к точке назначения
+    let closestCity = null;
+    let minCityDistance = Infinity;
 
-            hotelsData.forEach(city => {
-                const cityLat = city.city === "Moscow" ? 55.7558 :
-                               city.city === "Saint Petersburg" ? 59.9343 :
-                               city.lat || 0;
-                const cityLon = city.city === "Moscow" ? 37.6173 :
-                               city.city === "Saint Petersburg" ? 30.3351 :
-                               city.lon || 0;
+    hotelsData.forEach(city => {
+        const cityLat = city.city === "Moscow" ? 55.7558 :
+                       city.city === "Saint Petersburg" ? 59.9343 :
+                       city.lat || 0;
+        const cityLon = city.city === "Moscow" ? 37.6173 :
+                       city.city === "Saint Petersburg" ? 30.3351 :
+                       city.lon || 0;
 
-                const distance = getDistance(destLat, destLon, cityLat, cityLon);
-                if (distance < minCityDistance) {
-                    minCityDistance = distance;
-                    closestCity = city;
-                }
-            });
-
-            if (!closestCity) return [];
-
-            // Получаем все отели из ближайшего города
-            closestCity.hotels.forEach(hotel => {
-                const hotelLat = hotel.coordinates.latitude;
-                const hotelLon = hotel.coordinates.longitude;
-                const distance = getDistance(destLat, destLon, hotelLat, hotelLon);
-
-                allHotels.push({
-                    ...hotel,
-                    distance: distance,
-                    city: closestCity.city
-                });
-            });
-
-            // Сортируем по расстоянию и берем 10 ближайших
-            return allHotels.sort((a, b) => a.distance - b.distance).slice(0, 10);
+        const distance = getDistance(destLat, destLon, cityLat, cityLon);
+        if (distance < minCityDistance) {
+            minCityDistance = distance;
+            closestCity = city;
         }
+    });
+
+    if (!closestCity) return [];
+
+    // Получаем все отели из ближайшего города
+    closestCity.hotels.forEach(hotel => {
+        const hotelLat = hotel.coordinates.latitude;
+        const hotelLon = hotel.coordinates.longitude;
+        const distance = getDistance(destLat, destLon, hotelLat, hotelLon);
+
+        allHotels.push({
+            ...hotel,
+            distance: distance,
+            city: closestCity.city
+        });
+    });
+
+    // Сортируем по расстоянию и берем 5 ближайших
+    return allHotels.sort((a, b) => a.distance - b.distance).slice(0, 5);
+}
 
         function getDistance(lat1, lon1, lat2, lon2) {
             // Формула гаверсинусов для расчета расстояния между точками
@@ -819,31 +819,7 @@
             container.innerHTML = html;
         }
 
-        function addHotelMarkers(hotels) {
-            // Очищаем предыдущие метки
-            clearHotels();
 
-            hotels.forEach(hotel => {
-                const coords = [hotel.coordinates.latitude, hotel.coordinates.longitude];
-                const placemark = new ymaps.Placemark(coords, {
-                    hintContent: hotel.name,
-                    balloonContent: `
-                        <b>${hotel.name}</b><br>
-                        Цена: $${hotel.price_per_day_usd.toFixed(2)}<br>
-                        Расстояние: ${hotel.distance.toFixed(2)} км<br>
-                        <button onclick="bookHotel('${hotel.name}', ${hotel.price_per_day_usd})"
-                                style="margin-top: 5px; padding: 5px 10px; background: #4a76a8; color: white; border: none; border-radius: 3px; cursor: pointer;">
-                            Забронировать
-                        </button>
-                    `
-                }, {
-                    preset: 'islands#greenDotIcon'
-                });
-
-                map.geoObjects.add(placemark);
-                hotelPlacemarks.push(placemark);
-            });
-        }
 
         function calculateRoute() {
             // Удаляем предыдущий маршрут
