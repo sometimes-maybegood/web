@@ -1,0 +1,66 @@
+[
+    {
+        "city": "Moscow",
+        "hotels": []
+    },
+    {
+        "city": "Saint Petersburg",
+        "hotels": []
+    },
+    {
+        "city": "Novosibirsk",
+        "hotels": []
+    },
+    {
+        "city": "Yekaterinburg",
+        "hotels": []
+    },
+    {
+        "city": "Kazan",
+        "hotels": []
+    },
+    {
+        "city": "Nizhny Novgorod",
+        "hotels": []
+    },
+    {
+        "city": "Chelyabinsk",
+        "hotels": []
+    },
+    {
+        "city": "Samara",
+        "hotels": []
+    },
+    {
+        "city": "Ufa",
+        "hotels": []
+    },
+    {
+        "city": "Rostov-on-Don",
+        "hotels": []
+    },
+    {
+        "city": "Omsk",
+        "hotels": []
+    },
+    {
+        "city": "Krasnoyarsk",
+        "hotels": []
+    },
+    {
+        "city": "Voronezh",
+        "hotels": []
+    },
+    {
+        "city": "Perm",
+        "hotels": []
+    },
+    {
+        "city": "Volgograd",
+        "hotels": []
+    },
+    {
+        "city": "Krasnodar",
+        "hotels": []
+    }
+]

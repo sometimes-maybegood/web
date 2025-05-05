@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RouteFinder - мультимодальный маршрутизатор</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=8e8a5348-4577-4639-af6c-e3cb2ff62eb0&lang=ru_RU" type="text/javascript"></script>
+    <style>
+        :root {
+            --primary-color: #4a76a8;
+            --secondary-color: #5d9cec;
+            --accent-color: #ff6b6b;
+            --light-gray: #f5f7fa;
+            --dark-gray: #333;
+            --medium-gray: #777;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--light-gray);
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .search-panel {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .search-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr 120px;
+            gap: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+
+        .search-btn {
+            align-self: flex-end;
+            height: 42px;
+            background-color: var(--accent-color);
+            color: white;
+            font-weight: bold;
+        }
+
+        .map-container {
+            height: 500px;
+            background-color: #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #yandex-map {
+            width: 100%;
+            height: 100%;
+        }
+
+        .map-controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .map-control {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .map-control:hover {
+            background-color: #f5f5f5;
+        }
+
+        .results-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 2rem;
+        }
+
+        .routes-list, .hotels-list {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        .route-item, .hotel-item {
+            padding: 1rem;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .route-item:hover, .hotel-item:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .route-header, .hotel-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .route-title, .hotel-title {
+            font-weight: 500;
+            color: var(--dark-gray);
+        }
+
+        .route-price, .hotel-price {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .route-details, .hotel-details {
+            display: flex;
+            justify-content: space-between;
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .route-transport {
+            display: flex;
+            gap: 10px;
+            margin-top: 0.5rem;
+        }
+
+        .transport-icon {
+            width: 24px;
+            height: 24px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+        }
+
+        .hotel-rating {
+            color: #ffc107;
+        }
+
+        .hotel-distance {
+            color: var(--primary-color);
+        }
+
+        .book-btn {
+            width: 100%;
+            padding: 8px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 0.5rem;
+        }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .tab {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab.active {
+            border-bottom-color: var(--primary-color);
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .auth-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .auth-modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--medium-gray);
+        }
+
+        .auth-form .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .auth-form .btn {
+            width: 100%;
+            padding: 12px;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .form-footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .route-info {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(0,0,0,.3);
+            border-radius: 50%;
+            border-top-color: var(--primary-color);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .search-form {
+                grid-template-columns: 1fr;
+            }
+
+            .results-container {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .auth-buttons {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Логотип RouteFinder" />
+            <h1>RouteFinder</h1>
+        </div>
+        <div class="auth-buttons">
+            <button class="btn btn-outline" id="loginBtn">Войти</button>
+            <button class="btn btn-primary" id="registerBtn">Регистрация</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="search-panel">
+            <h2 class="section-title">Поиск маршрутов</h2>
+            <form class="search-form" id="routeForm">
+                <div class="form-group">
+                    <label for="from">Откуда</label>
+                    <input type="text" id="from" class="form-control" placeholder="Город, адрес или точка на карте">
+                </div>
+                <div class="form-group">
+                    <label for="to">Куда</label>
+                    <input type="text" id="to" class="form-control" placeholder="Город, адрес или точка на карте">
+                </div>
+                <button type="submit" class="btn btn-primary search-btn" id="searchBtn">
+                    <span id="searchBtnText">Найти</span>
+                    <span id="searchBtnLoader" class="loading" style="display: none;"></span>
+                </button>
+                <div class="form-group">
+                    <label for="date">Дата поездки</label>
+                    <input type="date" id="date" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="transport-type">Тип транспорта</label>
+                    <select id="transport-type" class="form-control">
+                        <option value="auto">Автомобиль</option>
+                        <option value="masstransit">Общественный транспорт</option>
+                        <option value="multimodal">Мультимодальный</option>
+                        <option value="pedestrian">Пешком</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+
+        <div class="map-container">
+            <div id="yandex-map"></div>
+            <div class="map-controls">
+                <button class="map-control" id="zoom-in">+</button>
+                <button class="map-control" id="zoom-out">-</button>
+                <button class="map-control" id="current-location">Мое местоположение</button>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active" data-tab="routes">Маршруты</div>
+            <div class="tab" data-tab="hotels">Отели</div>
+            <div class="tab" data-tab="calculator">Калькулятор</div>
+        </div>
+
+        <div class="tab-content active" id="routes-tab">
+            <div class="results-container">
+                <div class="routes-list">
+                    <h3 class="section-title">Варианты маршрутов</h3>
+                    <div id="routes-results">
+                        <p style="text-align: center; color: var(--medium-gray);">Укажите точки отправления и назначения для поиска маршрутов</p>
+                    </div>
+                </div>
+
+                <div class="hotels-list">
+                    <h3 class="section-title">Отели в пункте назначения</h3>
+                    <div id="hotels-results">
+                        <p style="text-align: center; color: var(--medium-gray);">Укажите пункт назначения для поиска отелей</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="hotels-tab">
+            <div class="hotels-list">
+                <h3 class="section-title">Отели в пункте назначения</h3>
+                <div class="filters" style="margin-bottom: 1rem;">
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <div class="form-group" style="flex: 1; min-width: 200px;">
+                            <label for="price-range">Цена за ночь</label>
+                            <select id="price-range" class="form-control">
+                                <option value="all">Любая</option>
+                                <option value="30-40">30 - 40 $</option>
+                                <option value="45-60">45 - 60 $</option>
+                                <option value="65-80">65 - 80 $</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="flex: 1; min-width: 200px;">
+                            <label for="distance">Расстояние (км)</label>
+                            <select id="distance" class="form-control">
+                                <option value="all">Любое</option>
+                                <option value="1">До 1 км</option>
+                                <option value="3">До 3 км</option>
+                                <option value="5">До 5 км</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" id="apply-filters" style="align-self: flex-end; height: 42px;">Применить</button>
+                    </div>
+                </div>
+
+                <div id="hotels-tab-results">
+                    <p style="text-align: center; color: var(--medium-gray);">Укажите пункт назначения для поиска отелей</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="calculator-tab">
+            <div class="routes-list">
+                <h3 class="section-title">Топливный калькулятор</h3>
+                <div style="background-color: white; padding: 1.5rem; border-radius: 8px;">
+                    <div class="form-group">
+                        <label for="car-type">Тип автомобиля</label>
+                        <select id="car-type" class="form-control">
+                            <option value="sedan">Легковой (расход 8л/100км)</option>
+                            <option value="suv">Внедорожник (расход 12л/100км)</option>
+                            <option value="truck">Грузовой (расход 18л/100км)</option>
+                            <option value="custom">Указать свой расход</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="custom-consumption-group" style="display: none;">
+                        <label for="custom-consumption">Расход топлива (л/100км)</label>
+                        <input type="number" id="custom-consumption" class="form-control" min="1" max="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="fuel-price">Цена топлива (₽/литр)</label>
+                        <input type="number" id="fuel-price" class="form-control" value="55" min="1" max="200">
+                    </div>
+                    <div class="form-group">
+                        <label for="distance">Расстояние (км)</label>
+                        <input type="number" id="distance" class="form-control" value="100" min="1">
+                    </div>
+                    <button class="btn btn-primary" id="calculate-btn">Рассчитать</button>
+                    <div id="calculation-result" style="margin-top: 1rem; padding: 1rem; background-color: #f8f9fa; border-radius: 4px; display: none;">
+                        <h4>Результаты расчёта:</h4>
+                        <p>Потребуется топлива: <span id="fuel-needed">0</span> л</p>
+                        <p>Стоимость поездки: <span id="trip-cost">0</span> ₽</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="auth-modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Вход в аккаунт</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Пароль</label>
+                    <input type="password" id="login-password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Войти</button>
+                <div class="form-footer">
+                    Нет аккаунта? <a href="#" id="showRegister">Зарегистрироваться</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="auth-modal" id="registerModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Регистрация</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="reg-name">Имя</label>
+                    <input type="text" id="reg-name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Пароль</label>
+                    <input type="password" id="reg-password" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-confirm">Подтвердите пароль</label>
+                    <input type="password" id="reg-confirm" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                <div class="form-footer">
+                    Уже есть аккаунт? <a href="#" id="showLogin">Войти</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Инициализация Яндекс.Карты
+        ymaps.ready(initMap);
+
+        let map, placemarkFrom, placemarkTo, route, routes = [];
+        let fromCoords, toCoords;
+        let hotelsData = [];
+        let hotelPlacemarks = [];
+
+        // Загрузка данных об отелях
+        fetch('hotels_russia.json')
+            .then(response => response.json())
+            .then(data => {
+                hotelsData = data;
+            })
+            .catch(error => console.error('Ошибка загрузки данных об отелях:', error));
+
+        function initMap() {
+            map = new ymaps.Map("yandex-map", {
+                center: [55.76, 37.64], // Москва
+                zoom: 7,
+                controls: []
+            });
+
+            // Добавляем элементы управления
+            map.controls.add('zoomControl', {
+                position: {right: 10, top: 50}
+            });
+            map.controls.add('geolocationControl', {
+                position: {right: 10, top: 100}
+            });
+            map.controls.add('typeSelector');
+            map.controls.add('fullscreenControl');
+
+            // Обработчик клика по карте
+            map.events.add('click', function(e) {
+                const coords = e.get('coords');
+
+                if (!document.getElementById('from').value) {
+                    setPoint('from', coords);
+                } else if (!document.getElementById('to').value) {
+                    setPoint('to', coords);
+                }
+            });
+
+            // Инициализация элементов управления
+            document.getElementById('zoom-in').addEventListener('click', function() {
+                map.setZoom(map.getZoom() + 1);
+            });
+
+            document.getElementById('zoom-out').addEventListener('click', function() {
+                map.setZoom(map.getZoom() - 1);
+            });
+
+            document.getElementById('current-location').addEventListener('click', function() {
+                ymaps.geolocation.get({
+                    provider: 'browser',
+                    mapStateAutoApply: true
+                }).then(function(result) {
+                    map.setCenter(result.geoObjects.position, 15);
+                });
+            });
+        }
+
+        function setPoint(field, coords) {
+            // Удаляем предыдущую метку
+            if (field === 'from' && placemarkFrom) {
+                map.geoObjects.remove(placemarkFrom);
+            } else if (field === 'to' && placemarkTo) {
+                map.geoObjects.remove(placemarkTo);
+                clearHotels();
+            }
+
+            // Создаем новую метку
+            const placemark = new ymaps.Placemark(coords, {
+                hintContent: field === 'from' ? 'Точка отправления' : 'Точка назначения',
+                balloonContent: 'Координаты: ' + coords
+            }, {
+                preset: field === 'from' ? 'islands#redDotIcon' : 'islands#blueDotIcon'
+            });
+
+            // Добавляем метку на карту
+            map.geoObjects.add(placemark);
+
+            // Сохраняем ссылку на метку
+            if (field === 'from') {
+                placemarkFrom = placemark;
+                fromCoords = coords;
+            } else {
+                placemarkTo = placemark;
+                toCoords = coords;
+                showNearbyHotels(coords);
+            }
+
+            // Устанавливаем значение в поле ввода
+            document.getElementById(field).value = coords.join(', ');
+
+            // Если есть обе точки, строим маршрут
+            if (placemarkFrom && placemarkTo) {
+                calculateRoute();
+            }
+        }
+
+        function clearHotels() {
+            // Удаляем все метки отелей с карты
+            hotelPlacemarks.forEach(placemark => {
+                map.geoObjects.remove(placemark);
+            });
+            hotelPlacemarks = [];
+        }
+
+        function showNearbyHotels(destinationCoords) {
+            if (!hotelsData.length) return;
+
+            // Находим ближайшие отели
+            const nearbyHotels = findNearbyHotels(destinationCoords);
+
+            // Отображаем отели в списке
+            displayHotels(nearbyHotels, 'hotels-results');
+            displayHotels(nearbyHotels, 'hotels-tab-results');
+
+            // Добавляем метки отелей на карту
+            addHotelMarkers(nearbyHotels);
+        }
+
+        function findNearbyHotels(destinationCoords) {
+            const [destLat, destLon] = destinationCoords;
+            const allHotels = [];
+
+            // Находим город, ближайший к точке назначения
+            let closestCity = null;
+            let minCityDistance = Infinity;
+
+            hotelsData.forEach(city => {
+                const cityLat = city.city === "Moscow" ? 55.7558 :
+                               city.city === "Saint Petersburg" ? 59.9343 :
+                               city.lat || 0;
+                const cityLon = city.city === "Moscow" ? 37.6173 :
+                               city.city === "Saint Petersburg" ? 30.3351 :
+                               city.lon || 0;
+
+                const distance = getDistance(destLat, destLon, cityLat, cityLon);
+                if (distance < minCityDistance) {
+                    minCityDistance = distance;
+                    closestCity = city;
+                }
+            });
+
+            if (!closestCity) return [];
+
+            // Получаем все отели из ближайшего города
+            closestCity.hotels.forEach(hotel => {
+                const hotelLat = hotel.coordinates.latitude;
+                const hotelLon = hotel.coordinates.longitude;
+                const distance = getDistance(destLat, destLon, hotelLat, hotelLon);
+
+                allHotels.push({
+                    ...hotel,
+                    distance: distance,
+                    city: closestCity.city
+                });
+            });
+
+            // Сортируем по расстоянию и берем 10 ближайших
+            return allHotels.sort((a, b) => a.distance - b.distance).slice(0, 10);
+        }
+
+        function getDistance(lat1, lon1, lat2, lon2) {
+            // Формула гаверсинусов для расчета расстояния между точками
+            const R = 6371; // Радиус Земли в км
+            const dLat = (lat2 - lat1) * Math.PI / 180;
+            const dLon = (lon2 - lon1) * Math.PI / 180;
+            const a =
+                Math.sin(dLat/2) * Math.sin(dLat/2) +
+                Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                Math.sin(dLon/2) * Math.sin(dLon/2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            return R * c; // Расстояние в км
+        }
+
+        function displayHotels(hotels, containerId) {
+            const container = document.getElementById(containerId);
+
+            if (!hotels.length) {
+                container.innerHTML = '<p style="text-align: center; color: var(--medium-gray);">Отели не найдены</p>';
+                return;
+            }
+
+            let html = '';
+            hotels.forEach(hotel => {
+                const price = hotel.price_per_day_usd;
+                let priceCategory = '';
+
+                if (price <= 40) priceCategory = 'Бюджет';
+                else if (price <= 60) priceCategory = 'Средний';
+                else priceCategory = 'Люкс';
+
+                html += `
+                    <div class="hotel-item">
+                        <div class="hotel-header">
+                            <span class="hotel-title">${hotel.name}</span>
+                            <span class="hotel-price">$${price.toFixed(2)}</span>
+                        </div>
+                        <div class="hotel-details">
+                            <span class="hotel-distance">${hotel.distance.toFixed(2)} км от центра</span>
+                            <span>${priceCategory}</span>
+                        </div>
+                        <div class="hotel-details">
+                            <span>${hotel.city}</span>
+                        </div>
+                        <button class="book-btn" onclick="bookHotel('${hotel.name}', ${price})">Забронировать</button>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+        }
+
+        function addHotelMarkers(hotels) {
+            // Очищаем предыдущие метки
+            clearHotels();
+
+            hotels.forEach(hotel => {
+                const coords = [hotel.coordinates.latitude, hotel.coordinates.longitude];
+                const placemark = new ymaps.Placemark(coords, {
+                    hintContent: hotel.name,
+                    balloonContent: `
+                        <b>${hotel.name}</b><br>
+                        Цена: $${hotel.price_per_day_usd.toFixed(2)}<br>
+                        Расстояние: ${hotel.distance.toFixed(2)} км<br>
+                        <button onclick="bookHotel('${hotel.name}', ${hotel.price_per_day_usd})"
+                                style="margin-top: 5px; padding: 5px 10px; background: #4a76a8; color: white; border: none; border-radius: 3px; cursor: pointer;">
+                            Забронировать
+                        </button>
+                    `
+                }, {
+                    preset: 'islands#greenDotIcon'
+                });
+
+                map.geoObjects.add(placemark);
+                hotelPlacemarks.push(placemark);
+            });
+        }
+
+        function calculateRoute() {
+            // Удаляем предыдущий маршрут
+            if (route) {
+                map.geoObjects.remove(route);
+            }
+
+            const transportType = document.getElementById('transport-type').value;
+            let routingMode;
+
+            switch(transportType) {
+                case 'auto':
+                    routingMode = 'auto';
+                    break;
+                case 'masstransit':
+                    routingMode = 'masstransit';
+                    break;
+                case 'multimodal':
+                    routingMode = 'multimodal';
+                    break;
+                case 'pedestrian':
+                    routingMode = 'pedestrian';
+                    break;
+                default:
+                    routingMode = 'auto';
+            }
+
+            // Показываем индикатор загрузки
+            document.getElementById('searchBtnText').style.display = 'none';
+            document.getElementById('searchBtnLoader').style.display = 'inline-block';
+            document.getElementById('routes-results').innerHTML = '<p style="text-align: center; color: var(--medium-gray);"><span class="loading"></span> Поиск маршрутов...</p>';
+
+            // Используем мультимодальный маршрут
+            ymaps.route([
+                { type: 'wayPoint', point: fromCoords },
+                { type: 'wayPoint', point: toCoords }
+            ], {
+                mapStateAutoApply: true,
+                routingMode: routingMode,
+                avoidTrafficJams: true,
+                multiRoute: true
+            }).then(function(multiRoute) {
+                route = multiRoute;
+                map.geoObjects.add(multiRoute);
+
+                // Скрываем индикатор загрузки
+                document.getElementById('searchBtnText').style.display = 'inline';
+                document.getElementById('searchBtnLoader').style.display = 'none';
+
+                // Обрабатываем результаты маршрута
+                processRouteResults(multiRoute);
+
+                // Подписываемся на событие обновления маршрута
+                multiRoute.model.events.add('requestsuccess', function() {
+                    processRouteResults(multiRoute);
+                });
+            }, function(error) {
+                console.error('Ошибка построения маршрута: ', error);
+                document.getElementById('searchBtnText').style.display = 'inline';
+                document.getElementById('searchBtnLoader').style.display = 'none';
+                document.getElementById('routes-results').innerHTML = '<p style="text-align: center; color: var(--accent-color);">Ошибка при построении маршрута. Пожалуйста, попробуйте другие точки.</p>';
+            });
+        }
+
+        function processRouteResults(multiRoute) {
+            const activeRoute = multiRoute.getActiveRoute();
+            if (!activeRoute) return;
+
+            const properties = activeRoute.properties.getAll();
+            const routesContainer = document.getElementById('routes-results');
+
+            // Очищаем предыдущие результаты
+            routesContainer.innerHTML = '';
+
+            // Получаем все возможные маршруты
+            const routes = multiRoute.getRoutes();
+
+            if (routes.length === 0) {
+                routesContainer.innerHTML = '<p style="text-align: center; color: var(--medium-gray);">Маршруты не найдены</p>';
+                return;
+            }
+
+            // Сортируем маршруты по времени в пути
+            routes.sort((a, b) => {
+                const aTime = a.properties.get('duration').value;
+                const bTime = b.properties.get('duration').value;
+                return aTime - bTime;
+            });
+
+            // Отображаем каждый маршрут
+            routes.forEach((route, index) => {
+                const props = route.properties.getAll();
+                const distance = props.distance.text;
+                const duration = props.duration.text;
+                const segments = route.properties.get('segments');
+
+                // Определяем типы транспорта
+                const transportTypes = new Set();
+                segments.forEach(segment => {
+                    const type = segment.properties.get('type');
+                    transportTypes.add(type);
+                });
+
+                // Создаем элемент маршрута
+                const routeElement = document.createElement('div');
+                routeElement.className = 'route-item';
+                routeElement.innerHTML = `
+                    <div class="route-header">
+                        <span class="route-title">Маршрут ${index + 1}</span>
+                        <span class="route-duration">${duration}</span>
+                    </div>
+                    <div class="route-details">
+                        <span>${distance}</span>
+                        <span>${segments.length > 1 ? segments.length - 1 + ' пересадок' : 'Без пересадок'}</span>
+                    </div>
+                    <div class="route-transport" id="transport-icons-${index}"></div>
+                    <div class="route-info">
+                        ${getRouteDescription(segments)}
+                    </div>
+                    <button class="btn btn-outline" style="width: 100%; margin-top: 0.5rem;" onclick="showRouteDetails(${index})">Подробнее</button>
+                `;
+
+                routesContainer.appendChild(routeElement);
+
+                // Добавляем иконки транспорта
+                const transportIconsContainer = document.getElementById(`transport-icons-${index}`);
+                transportTypes.forEach(type => {
+                    const icon = document.createElement('div');
+                    icon.className = 'transport-icon';
+                    icon.title = getTransportName(type);
+
+                    const iconElement = document.createElement('i');
+                    iconElement.className = getTransportIcon(type);
+                    icon.appendChild(iconElement);
+
+                    transportIconsContainer.appendChild(icon);
+                });
+            });
+
+            // Сохраняем маршруты для детального просмотра
+            window.routes = routes;
+        }
+
+        function getTransportName(type) {
+            switch(type) {
+                case 'walking': return 'Пешком';
+                case 'driving': return 'Автомобиль';
+                case 'taxi': return 'Такси';
+                case 'bus': return 'Автобус';
+                case 'trolleybus': return 'Троллейбус';
+                case 'tramway': return 'Трамвай';
+                case 'suburban': return 'Электричка';
+                case 'underground': return 'Метро';
+                case 'train': return 'Поезд';
+                case 'water': return 'Водный транспорт';
+                case 'funicular': return 'Фуникулер';
+                case 'cable': return 'Канатная дорога';
+                case 'plane': return 'Самолет';
+                default: return type;
+            }
+        }
+
+        function getTransportIcon(type) {
+            switch(type) {
+                case 'walking': return 'fas fa-walking';
+                case 'driving': return 'fas fa-car';
+                case 'taxi': return 'fas fa-taxi';
+                case 'bus': return 'fas fa-bus';
+                case 'trolleybus': return 'fas fa-bus';
+                case 'tramway': return 'fas fa-tram';
+                case 'suburban': return 'fas fa-train';
+                case 'underground': return 'fas fa-subway';
+                case 'train': return 'fas fa-train';
+                case 'water': return 'fas fa-ship';
+                case 'funicular': return 'fas fa-mountain';
+                case 'cable': return 'fas fa-cable-car';
+                case 'plane': return 'fas fa-plane';
+                default: return 'fas fa-question';
+            }
+        }
+
+        function getRouteDescription(segments) {
+            let description = '';
+
+            segments.forEach((segment, index) => {
+                const props = segment.properties.getAll();
+                const type = props.type;
+                const distance = props.distance.text;
+                const duration = props.duration.text;
+
+                if (index > 0) {
+                    description += ' → ';
+                }
+
+                description += `${getTransportName(type)} (${duration}, ${distance})`;
+            });
+
+            return description;
+        }
+
+        function showRouteDetails(index) {
+            const route = window.routes[index];
+            if (!route) return;
+
+            const props = route.properties.getAll();
+            const segments = route.properties.get('segments');
+
+            let detailsHtml = `
+                <div style="background-color: white; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
+                    <h3 style="margin-bottom: 1rem; color: var(--primary-color);">Детали маршрута</h3>
+                    <p><strong>Общее время:</strong> ${props.duration.text}</p>
+                    <p><strong>Расстояние:</strong> ${props.distance.text}</p>
+                    <h4 style="margin: 1rem 0 0.5rem 0; color: var(--dark-gray);">Этапы маршрута:</h4>
+                    <ul style="padding-left: 1.5rem;">
+            `;
+
+            segments.forEach((segment, segIndex) => {
+                const segProps = segment.properties.getAll();
+                detailsHtml += `
+                    <li style="margin-bottom: 0.5rem;">
+                        <strong>Этап ${segIndex + 1}:</strong> ${getTransportName(segProps.type)}<br>
+                        <span style="font-size: 0.9rem; color: var(--medium-gray);">
+                            ${segProps.duration.text}, ${segProps.distance.text}
+                        </span>
+                    </li>
+                `;
+            });
+
+            detailsHtml += `</ul></div>`;
+
+            // Показываем детали в модальном окне или в отдельном блоке
+            alert(detailsHtml.replace(/<[^>]*>/g, '')); // Упрощенный вывод для примера
+        }
+
+        // Обработчик формы поиска маршрута
+        document.getElementById('routeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const from = document.getElementById('from').value;
+            const to = document.getElementById('to').value;
+
+            if (!from || !to) {
+                alert('Пожалуйста, укажите точки отправления и назначения');
+                return;
+            }
+
+            // Если координаты уже есть, строим маршрут
+            if (fromCoords && toCoords) {
+                calculateRoute();
+                return;
+            }
+
+            // Иначе геокодируем адреса
+            const geocoder = ymaps.geocode(from, { results: 1 });
+            geocoder.then(function(res) {
+                const firstGeoObject = res.geoObjects.get(0);
+                if (!firstGeoObject) {
+                    alert('Не удалось определить координаты точки отправления');
+                    return;
+                }
+
+                fromCoords = firstGeoObject.geometry.getCoordinates();
+                setPoint('from', fromCoords);
+
+                // Геокодируем вторую точку
+                const geocoderTo = ymaps.geocode(to, { results: 1 });
+                geocoderTo.then(function(resTo) {
+                    const firstGeoObjectTo = resTo.geoObjects.get(0);
+                    if (!firstGeoObjectTo) {
+                        alert('Не удалось определить координаты точки назначения');
+                        return;
+                    }
+
+                    toCoords = firstGeoObjectTo.geometry.getCoordinates();
+                    setPoint('to', toCoords);
+
+                    // Строим маршрут
+                    calculateRoute();
+                });
+            });
+        });
+
+        // Табы
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+                tab.classList.add('active');
+                document.getElementById(`${tab.dataset.tab}-tab`).classList.add('active');
+            });
+        });
+
+        // Модальные окна авторизации
+        const loginBtn = document.getElementById('loginBtn');
+        const registerBtn = document.getElementById('registerBtn');
+        const loginModal = document.getElementById('loginModal');
+        const registerModal = document.getElementById('registerModal');
+        const showRegister = document.getElementById('showRegister');
+        const showLogin = document.getElementById('showLogin');
+        const closeButtons = document.querySelectorAll('.close-btn');
+
+        loginBtn.addEventListener('click', () => {
+            loginModal.classList.add('active');
+        });
+
+        registerBtn.addEventListener('click', () => {
+            registerModal.classList.add('active');
+        });
+
+        showRegister.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginModal.classList.remove('active');
+            registerModal.classList.add('active');
+        });
+
+        showLogin.addEventListener('click', (e) => {
+            e.preventDefault();
+            registerModal.classList.remove('active');
+            loginModal.classList.add('active');
+        });
+
+        closeButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                loginModal.classList.remove('active');
+                registerModal.classList.remove('active');
+            });
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === loginModal) {
+                loginModal.classList.remove('active');
+            }
+            if (e.target === registerModal) {
+                registerModal.classList.remove('active');
+            }
+        });
+
+        // Топливный калькулятор
+        const carTypeSelect = document.getElementById('car-type');
+        const customConsumptionGroup = document.getElementById('custom-consumption-group');
+        const calculateBtn = document.getElementById('calculate-btn');
+        const calculationResult = document.getElementById('calculation-result');
+
+        carTypeSelect.addEventListener('change', () => {
+            if (carTypeSelect.value === 'custom') {
+                customConsumptionGroup.style.display = 'block';
+            } else {
+                customConsumptionGroup.style.display = 'none';
+            }
+        });
+
+        calculateBtn.addEventListener('click', () => {
+            let consumption;
+
+            switch(carTypeSelect.value) {
+                case 'sedan':
+                    consumption = 8;
+                    break;
+                case 'suv':
+                    consumption = 12;
+                    break;
+                case 'truck':
+                    consumption = 18;
+                    break;
+                case 'custom':
+                    consumption = parseFloat(document.getElementById('custom-consumption').value) || 8;
+                    break;
+                default:
+                    consumption = 8;
+            }
+
+            const fuelPrice = parseFloat(document.getElementById('fuel-price').value) || 55;
+            const distance = parseFloat(document.getElementById('distance').value) || 100;
+
+            const fuelNeeded = (consumption * distance) / 100;
+            const tripCost = fuelNeeded * fuelPrice;
+
+            document.getElementById('fuel-needed').textContent = fuelNeeded.toFixed(1);
+            document.getElementById('trip-cost').textContent = tripCost.toFixed(0);
+
+            calculationResult.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
