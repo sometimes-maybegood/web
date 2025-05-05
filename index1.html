@@ -600,609 +600,639 @@
             </form>
         </div>
     </div>
-
     <script>
-        // Инициализация Яндекс.Карты
-        ymaps.ready(initMap);
+    // Инициализация Яндекс.Карты
+    ymaps.ready(initMap);
 
-        let map, placemarkFrom, placemarkTo, route, routes = [];
-        let fromCoords, toCoords;
-        let hotelsData = [];
-        let hotelPlacemarks = [];
+    let map, placemarkFrom, placemarkTo, route, routes = [];
+    let fromCoords, toCoords;
+    let hotelsData = [];
+    let hotelPlacemarks = [];
 
-        // Загрузка данных об отелях
-        fetch('hotels_russia.json')
-            .then(response => response.json())
-            .then(data => {
-                hotelsData = data;
-            })
-            .catch(error => console.error('Ошибка загрузки данных об отелях:', error));
+    // Загрузка данных об отелях
+    fetch('hotels_russia.json')
+        .then(response => response.json())
+        .then(data => {
+            hotelsData = data;
+        })
+        .catch(error => console.error('Ошибка загрузки данных об отелях:', error));
 
-        function initMap() {
-            map = new ymaps.Map("yandex-map", {
-                center: [55.76, 37.64], // Москва
-                zoom: 7,
-                controls: []
-            });
-
-            // Добавляем элементы управления
-            map.controls.add('zoomControl', {
-                position: {right: 10, top: 50}
-            });
-            map.controls.add('geolocationControl', {
-                position: {right: 10, top: 100}
-            });
-            map.controls.add('typeSelector');
-            map.controls.add('fullscreenControl');
-
-            // Обработчик клика по карте
-            map.events.add('click', function(e) {
-                const coords = e.get('coords');
-
-                if (!document.getElementById('from').value) {
-                    setPoint('from', coords);
-                } else if (!document.getElementById('to').value) {
-                    setPoint('to', coords);
-                }
-            });
-
-            // Инициализация элементов управления
-            document.getElementById('zoom-in').addEventListener('click', function() {
-                map.setZoom(map.getZoom() + 1);
-            });
-
-            document.getElementById('zoom-out').addEventListener('click', function() {
-                map.setZoom(map.getZoom() - 1);
-            });
-
-            document.getElementById('current-location').addEventListener('click', function() {
-                ymaps.geolocation.get({
-                    provider: 'browser',
-                    mapStateAutoApply: true
-                }).then(function(result) {
-                    map.setCenter(result.geoObjects.position, 15);
-                });
-            });
-        }
-
-        function setPoint(field, coords) {
-            // Удаляем предыдущую метку
-            if (field === 'from' && placemarkFrom) {
-                map.geoObjects.remove(placemarkFrom);
-            } else if (field === 'to' && placemarkTo) {
-                map.geoObjects.remove(placemarkTo);
-                clearHotels();
-            }
-
-            // Создаем новую метку
-            const placemark = new ymaps.Placemark(coords, {
-                hintContent: field === 'from' ? 'Точка отправления' : 'Точка назначения',
-                balloonContent: 'Координаты: ' + coords
-            }, {
-                preset: field === 'from' ? 'islands#redDotIcon' : 'islands#blueDotIcon'
-            });
-
-            // Добавляем метку на карту
-            map.geoObjects.add(placemark);
-
-            // Сохраняем ссылку на метку
-            if (field === 'from') {
-                placemarkFrom = placemark;
-                fromCoords = coords;
-            } else {
-                placemarkTo = placemark;
-                toCoords = coords;
-                showNearbyHotels(coords);
-            }
-
-            // Устанавливаем значение в поле ввода
-            document.getElementById(field).value = coords.join(', ');
-
-            // Если есть обе точки, строим маршрут
-            if (placemarkFrom && placemarkTo) {
-                calculateRoute();
-            }
-        }
-
-        function clearHotels() {
-            // Удаляем все метки отелей с карты
-            hotelPlacemarks.forEach(placemark => {
-                map.geoObjects.remove(placemark);
-            });
-            hotelPlacemarks = [];
-        }
-
-        function showNearbyHotels(destinationCoords) {
-            if (!hotelsData.length) return;
-
-            // Находим ближайшие отели
-            const nearbyHotels = findNearbyHotels(destinationCoords);
-
-            // Отображаем отели в списке
-            displayHotels(nearbyHotels, 'hotels-results');
-            displayHotels(nearbyHotels, 'hotels-tab-results');
-
-            // Добавляем метки отелей на карту
-            addHotelMarkers(nearbyHotels);
-        }
-
-        function findNearbyHotels(destinationCoords) {
-    const [destLat, destLon] = destinationCoords;
-    const allHotels = [];
-
-    // Находим город, ближайший к точке назначения
-    let closestCity = null;
-    let minCityDistance = Infinity;
-
-    hotelsData.forEach(city => {
-        const cityLat = city.city === "Moscow" ? 55.7558 :
-                       city.city === "Saint Petersburg" ? 59.9343 :
-                       city.lat || 0;
-        const cityLon = city.city === "Moscow" ? 37.6173 :
-                       city.city === "Saint Petersburg" ? 30.3351 :
-                       city.lon || 0;
-
-        const distance = getDistance(destLat, destLon, cityLat, cityLon);
-        if (distance < minCityDistance) {
-            minCityDistance = distance;
-            closestCity = city;
-        }
-    });
-
-    if (!closestCity) return [];
-
-    // Получаем все отели из ближайшего города
-    closestCity.hotels.forEach(hotel => {
-        const hotelLat = hotel.coordinates.latitude;
-        const hotelLon = hotel.coordinates.longitude;
-        const distance = getDistance(destLat, destLon, hotelLat, hotelLon);
-
-        allHotels.push({
-            ...hotel,
-            distance: distance,
-            city: closestCity.city
+    function initMap() {
+        map = new ymaps.Map("yandex-map", {
+            center: [55.76, 37.64], // Москва
+            zoom: 7,
+            controls: []
         });
-    });
 
-    // Сортируем по расстоянию и берем 5 ближайших
-    return allHotels.sort((a, b) => a.distance - b.distance).slice(0, 5);
-}
+        // Добавляем элементы управления
+        map.controls.add('zoomControl', {
+            position: {right: 10, top: 50}
+        });
+        map.controls.add('geolocationControl', {
+            position: {right: 10, top: 100}
+        });
+        map.controls.add('typeSelector');
+        map.controls.add('fullscreenControl');
 
-        function getDistance(lat1, lon1, lat2, lon2) {
-            // Формула гаверсинусов для расчета расстояния между точками
-            const R = 6371; // Радиус Земли в км
-            const dLat = (lat2 - lat1) * Math.PI / 180;
-            const dLon = (lon2 - lon1) * Math.PI / 180;
-            const a =
-                Math.sin(dLat/2) * Math.sin(dLat/2) +
-                Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-                Math.sin(dLon/2) * Math.sin(dLon/2);
-            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-            return R * c; // Расстояние в км
+        // Обработчик клика по карте
+        map.events.add('click', function(e) {
+            const coords = e.get('coords');
+
+            if (!document.getElementById('from').value) {
+                setPoint('from', coords);
+            } else if (!document.getElementById('to').value) {
+                setPoint('to', coords);
+            }
+        });
+
+        // Инициализация элементов управления
+        document.getElementById('zoom-in').addEventListener('click', function() {
+            map.setZoom(map.getZoom() + 1);
+        });
+
+        document.getElementById('zoom-out').addEventListener('click', function() {
+            map.setZoom(map.getZoom() - 1);
+        });
+
+        document.getElementById('current-location').addEventListener('click', function() {
+            ymaps.geolocation.get({
+                provider: 'browser',
+                mapStateAutoApply: true
+            }).then(function(result) {
+                map.setCenter(result.geoObjects.position, 15);
+            });
+        });
+    }
+
+    function setPoint(field, coords) {
+        // Удаляем предыдущую метку
+        if (field === 'from' && placemarkFrom) {
+            map.geoObjects.remove(placemarkFrom);
+        } else if (field === 'to' && placemarkTo) {
+            map.geoObjects.remove(placemarkTo);
+            clearHotels();
         }
 
-        function displayHotels(hotels, containerId) {
-            const container = document.getElementById(containerId);
+        // Создаем новую метку
+        const placemark = new ymaps.Placemark(coords, {
+            hintContent: field === 'from' ? 'Точка отправления' : 'Точка назначения',
+            balloonContent: 'Координаты: ' + coords
+        }, {
+            preset: field === 'from' ? 'islands#redDotIcon' : 'islands#blueDotIcon',
+            draggable: false // Делаем метки неподвижными
+        });
 
-            if (!hotels.length) {
-                container.innerHTML = '<p style="text-align: center; color: var(--medium-gray);">Отели не найдены</p>';
-                return;
+        // Добавляем метку на карту
+        map.geoObjects.add(placemark);
+
+        // Сохраняем ссылку на метку
+        if (field === 'from') {
+            placemarkFrom = placemark;
+            fromCoords = coords;
+        } else {
+            placemarkTo = placemark;
+            toCoords = coords;
+            showNearbyHotels(coords);
+        }
+
+        // Устанавливаем значение в поле ввода
+        document.getElementById(field).value = coords.join(', ');
+
+        // Если есть обе точки, строим маршрут
+        if (placemarkFrom && placemarkTo) {
+            calculateRoute();
+        }
+    }
+
+    function clearHotels() {
+        // Удаляем все метки отелей с карты
+        hotelPlacemarks.forEach(placemark => {
+            map.geoObjects.remove(placemark);
+        });
+        hotelPlacemarks = [];
+    }
+
+    function showNearbyHotels(destinationCoords) {
+        if (!hotelsData.length) return;
+
+        // Находим ближайшие отели
+        const nearbyHotels = findNearbyHotels(destinationCoords);
+
+        // Отображаем отели в списке
+        displayHotels(nearbyHotels, 'hotels-results');
+        displayHotels(nearbyHotels, 'hotels-tab-results');
+
+        // Добавляем метки отелей на карту
+        addHotelMarkers(nearbyHotels);
+    }
+
+    function findNearbyHotels(destinationCoords) {
+        const [destLat, destLon] = destinationCoords;
+        const allHotels = [];
+
+        // Находим город, ближайший к точке назначения
+        let closestCity = null;
+        let minCityDistance = Infinity;
+
+        hotelsData.forEach(city => {
+            const cityLat = city.city === "Moscow" ? 55.7558 :
+                           city.city === "Saint Petersburg" ? 59.9343 :
+                           city.lat || 0;
+            const cityLon = city.city === "Moscow" ? 37.6173 :
+                           city.city === "Saint Petersburg" ? 30.3351 :
+                           city.lon || 0;
+
+            const distance = getDistance(destLat, destLon, cityLat, cityLon);
+            if (distance < minCityDistance) {
+                minCityDistance = distance;
+                closestCity = city;
             }
+        });
 
-            let html = '';
-            hotels.forEach(hotel => {
-                const price = hotel.price_per_day_usd;
-                let priceCategory = '';
+        if (!closestCity) return [];
 
-                if (price <= 40) priceCategory = 'Бюджет';
-                else if (price <= 60) priceCategory = 'Средний';
-                else priceCategory = 'Люкс';
+        // Получаем все отели из ближайшего города
+        closestCity.hotels.forEach(hotel => {
+            const hotelLat = hotel.coordinates.latitude;
+            const hotelLon = hotel.coordinates.longitude;
+            const distance = getDistance(destLat, destLon, hotelLat, hotelLon);
 
-                html += `
-                    <div class="hotel-item">
-                        <div class="hotel-header">
-                            <span class="hotel-title">${hotel.name}</span>
-                            <span class="hotel-price">$${price.toFixed(2)}</span>
-                        </div>
-                        <div class="hotel-details">
-                            <span class="hotel-distance">${hotel.distance.toFixed(2)} км от центра</span>
-                            <span>${priceCategory}</span>
-                        </div>
-                        <div class="hotel-details">
-                            <span>${hotel.city}</span>
-                        </div>
-                        <button class="book-btn" onclick="bookHotel('${hotel.name}', ${price})">Забронировать</button>
+            allHotels.push({
+                ...hotel,
+                distance: distance,
+                city: closestCity.city
+            });
+        });
+
+        // Сортируем по расстоянию и берем 5 ближайших
+        return allHotels.sort((a, b) => a.distance - b.distance).slice(0, 5);
+    }
+
+    function getDistance(lat1, lon1, lat2, lon2) {
+        // Формула гаверсинусов для расчета расстояния между точками
+        const R = 6371; // Радиус Земли в км
+        const dLat = (lat2 - lat1) * Math.PI / 180;
+        const dLon = (lon2 - lon1) * Math.PI / 180;
+        const a =
+            Math.sin(dLat/2) * Math.sin(dLat/2) +
+            Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+            Math.sin(dLon/2) * Math.sin(dLon/2);
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        return R * c; // Расстояние в км
+    }
+
+    function displayHotels(hotels, containerId) {
+        const container = document.getElementById(containerId);
+
+        if (!hotels.length) {
+            container.innerHTML = '<p style="text-align: center; color: var(--medium-gray);">Отели не найдены</p>';
+            return;
+        }
+
+        let html = '';
+        hotels.forEach(hotel => {
+            const price = hotel.price_per_day_usd;
+            let priceCategory = '';
+
+            if (price <= 40) priceCategory = 'Бюджет';
+            else if (price <= 60) priceCategory = 'Средний';
+            else priceCategory = 'Люкс';
+
+            html += `
+                <div class="hotel-item">
+                    <div class="hotel-header">
+                        <span class="hotel-title">${hotel.name}</span>
+                        <span class="hotel-price">$${price.toFixed(2)}</span>
                     </div>
-                `;
+                    <div class="hotel-details">
+                        <span class="hotel-distance">${hotel.distance.toFixed(2)} км от центра</span>
+                        <span>${priceCategory}</span>
+                    </div>
+                    <div class="hotel-details">
+                        <span>${hotel.city}</span>
+                    </div>
+                    <button class="book-btn" onclick="bookHotel('${hotel.name}', ${price})">Забронировать</button>
+                </div>
+            `;
+        });
+
+        container.innerHTML = html;
+    }
+
+    function addHotelMarkers(hotels) {
+        // Очищаем предыдущие метки
+        clearHotels();
+
+        hotels.forEach(hotel => {
+            const coords = [hotel.coordinates.latitude, hotel.coordinates.longitude];
+            const placemark = new ymaps.Placemark(coords, {
+                hintContent: hotel.name,
+                balloonContent: `
+                    <b>${hotel.name}</b><br>
+                    Цена: $${hotel.price_per_day_usd.toFixed(2)}<br>
+                    Расстояние: ${hotel.distance.toFixed(2)} км<br>
+                    <button onclick="bookHotel('${hotel.name}', ${hotel.price_per_day_usd})"
+                            style="margin-top: 5px; padding: 5px 10px; background: #4a76a8; color: white; border: none; border-radius: 3px; cursor: pointer;">
+                        Забронировать
+                    </button>
+                `
+            }, {
+                preset: 'islands#greenDotIcon',
+                draggable: false // Делаем метки отелей неподвижными
             });
 
-            container.innerHTML = html;
+            map.geoObjects.add(placemark);
+            hotelPlacemarks.push(placemark);
+        });
+    }
+
+    function calculateRoute() {
+        // Удаляем предыдущий маршрут
+        if (route) {
+            map.geoObjects.remove(route);
         }
 
+        const transportType = document.getElementById('transport-type').value;
+        let routingMode;
 
+        switch(transportType) {
+            case 'auto':
+                routingMode = 'auto';
+                break;
+            case 'masstransit':
+                routingMode = 'masstransit';
+                break;
+            case 'multimodal':
+                routingMode = 'multimodal';
+                break;
+            case 'pedestrian':
+                routingMode = 'pedestrian';
+                break;
+            default:
+                routingMode = 'auto';
+        }
 
-        function calculateRoute() {
-            // Удаляем предыдущий маршрут
-            if (route) {
-                map.geoObjects.remove(route);
-            }
+        // Показываем индикатор загрузки
+        document.getElementById('searchBtnText').style.display = 'none';
+        document.getElementById('searchBtnLoader').style.display = 'inline-block';
+        document.getElementById('routes-results').innerHTML = '<p style="text-align: center; color: var(--medium-gray);"><span class="loading"></span> Поиск маршрутов...</p>';
 
-            const transportType = document.getElementById('transport-type').value;
-            let routingMode;
+        // Используем мультимодальный маршрут
+        ymaps.route([
+            { type: 'wayPoint', point: fromCoords },
+            { type: 'wayPoint', point: toCoords }
+        ], {
+            mapStateAutoApply: true,
+            routingMode: routingMode,
+            avoidTrafficJams: true,
+            multiRoute: true
+        }).then(function(multiRoute) {
+            route = multiRoute;
+            map.geoObjects.add(multiRoute);
 
-            switch(transportType) {
-                case 'auto':
-                    routingMode = 'auto';
-                    break;
-                case 'masstransit':
-                    routingMode = 'masstransit';
-                    break;
-                case 'multimodal':
-                    routingMode = 'multimodal';
-                    break;
-                case 'pedestrian':
-                    routingMode = 'pedestrian';
-                    break;
-                default:
-                    routingMode = 'auto';
-            }
+            // Скрываем индикатор загрузки
+            document.getElementById('searchBtnText').style.display = 'inline';
+            document.getElementById('searchBtnLoader').style.display = 'none';
 
-            // Показываем индикатор загрузки
-            document.getElementById('searchBtnText').style.display = 'none';
-            document.getElementById('searchBtnLoader').style.display = 'inline-block';
-            document.getElementById('routes-results').innerHTML = '<p style="text-align: center; color: var(--medium-gray);"><span class="loading"></span> Поиск маршрутов...</p>';
+            // Обрабатываем результаты маршрута
+            processRouteResults(multiRoute);
 
-            // Используем мультимодальный маршрут
-            ymaps.route([
-                { type: 'wayPoint', point: fromCoords },
-                { type: 'wayPoint', point: toCoords }
-            ], {
-                mapStateAutoApply: true,
-                routingMode: routingMode,
-                avoidTrafficJams: true,
-                multiRoute: true
-            }).then(function(multiRoute) {
-                route = multiRoute;
-                map.geoObjects.add(multiRoute);
-
-                // Скрываем индикатор загрузки
-                document.getElementById('searchBtnText').style.display = 'inline';
-                document.getElementById('searchBtnLoader').style.display = 'none';
-
-                // Обрабатываем результаты маршрута
+            // Подписываемся на событие обновления маршрута
+            multiRoute.model.events.add('requestsuccess', function() {
                 processRouteResults(multiRoute);
-
-                // Подписываемся на событие обновления маршрута
-                multiRoute.model.events.add('requestsuccess', function() {
-                    processRouteResults(multiRoute);
-                });
-            }, function(error) {
-                console.error('Ошибка построения маршрута: ', error);
-                document.getElementById('searchBtnText').style.display = 'inline';
-                document.getElementById('searchBtnLoader').style.display = 'none';
-                document.getElementById('routes-results').innerHTML = '<p style="text-align: center; color: var(--accent-color);">Ошибка при построении маршрута. Пожалуйста, попробуйте другие точки.</p>';
             });
+        }, function(error) {
+            console.error('Ошибка построения маршрута: ', error);
+            document.getElementById('searchBtnText').style.display = 'inline';
+            document.getElementById('searchBtnLoader').style.display = 'none';
+            document.getElementById('routes-results').innerHTML = '<p style="text-align: center; color: var(--accent-color);">Ошибка при построении маршрута. Пожалуйста, попробуйте другие точки.</p>';
+        });
+    }
+
+    function processRouteResults(multiRoute) {
+        const activeRoute = multiRoute.getActiveRoute();
+        if (!activeRoute) return;
+
+        const properties = activeRoute.properties.getAll();
+        const routesContainer = document.getElementById('routes-results');
+
+        // Очищаем предыдущие результаты
+        routesContainer.innerHTML = '';
+
+        // Получаем все возможные маршруты
+        const routes = multiRoute.getRoutes();
+
+        if (routes.length === 0) {
+            routesContainer.innerHTML = '<p style="text-align: center; color: var(--medium-gray);">Маршруты не найдены</p>';
+            return;
         }
 
-        function processRouteResults(multiRoute) {
-            const activeRoute = multiRoute.getActiveRoute();
-            if (!activeRoute) return;
+        // Сортируем маршруты по времени в пути
+        routes.sort((a, b) => {
+            const aTime = a.properties.get('duration').value;
+            const bTime = b.properties.get('duration').value;
+            return aTime - bTime;
+        });
 
-            const properties = activeRoute.properties.getAll();
-            const routesContainer = document.getElementById('routes-results');
-
-            // Очищаем предыдущие результаты
-            routesContainer.innerHTML = '';
-
-            // Получаем все возможные маршруты
-            const routes = multiRoute.getRoutes();
-
-            if (routes.length === 0) {
-                routesContainer.innerHTML = '<p style="text-align: center; color: var(--medium-gray);">Маршруты не найдены</p>';
-                return;
-            }
-
-            // Сортируем маршруты по времени в пути
-            routes.sort((a, b) => {
-                const aTime = a.properties.get('duration').value;
-                const bTime = b.properties.get('duration').value;
-                return aTime - bTime;
-            });
-
-            // Отображаем каждый маршрут
-            routes.forEach((route, index) => {
-                const props = route.properties.getAll();
-                const distance = props.distance.text;
-                const duration = props.duration.text;
-                const segments = route.properties.get('segments');
-
-                // Определяем типы транспорта
-                const transportTypes = new Set();
-                segments.forEach(segment => {
-                    const type = segment.properties.get('type');
-                    transportTypes.add(type);
-                });
-
-                // Создаем элемент маршрута
-                const routeElement = document.createElement('div');
-                routeElement.className = 'route-item';
-                routeElement.innerHTML = `
-                    <div class="route-header">
-                        <span class="route-title">Маршрут ${index + 1}</span>
-                        <span class="route-duration">${duration}</span>
-                    </div>
-                    <div class="route-details">
-                        <span>${distance}</span>
-                        <span>${segments.length > 1 ? segments.length - 1 + ' пересадок' : 'Без пересадок'}</span>
-                    </div>
-                    <div class="route-transport" id="transport-icons-${index}"></div>
-                    <div class="route-info">
-                        ${getRouteDescription(segments)}
-                    </div>
-                    <button class="btn btn-outline" style="width: 100%; margin-top: 0.5rem;" onclick="showRouteDetails(${index})">Подробнее</button>
-                `;
-
-                routesContainer.appendChild(routeElement);
-
-                // Добавляем иконки транспорта
-                const transportIconsContainer = document.getElementById(`transport-icons-${index}`);
-                transportTypes.forEach(type => {
-                    const icon = document.createElement('div');
-                    icon.className = 'transport-icon';
-                    icon.title = getTransportName(type);
-
-                    const iconElement = document.createElement('i');
-                    iconElement.className = getTransportIcon(type);
-                    icon.appendChild(iconElement);
-
-                    transportIconsContainer.appendChild(icon);
-                });
-            });
-
-            // Сохраняем маршруты для детального просмотра
-            window.routes = routes;
-        }
-
-        function getTransportName(type) {
-            switch(type) {
-                case 'walking': return 'Пешком';
-                case 'driving': return 'Автомобиль';
-                case 'taxi': return 'Такси';
-                case 'bus': return 'Автобус';
-                case 'trolleybus': return 'Троллейбус';
-                case 'tramway': return 'Трамвай';
-                case 'suburban': return 'Электричка';
-                case 'underground': return 'Метро';
-                case 'train': return 'Поезд';
-                case 'water': return 'Водный транспорт';
-                case 'funicular': return 'Фуникулер';
-                case 'cable': return 'Канатная дорога';
-                case 'plane': return 'Самолет';
-                default: return type;
-            }
-        }
-
-        function getTransportIcon(type) {
-            switch(type) {
-                case 'walking': return 'fas fa-walking';
-                case 'driving': return 'fas fa-car';
-                case 'taxi': return 'fas fa-taxi';
-                case 'bus': return 'fas fa-bus';
-                case 'trolleybus': return 'fas fa-bus';
-                case 'tramway': return 'fas fa-tram';
-                case 'suburban': return 'fas fa-train';
-                case 'underground': return 'fas fa-subway';
-                case 'train': return 'fas fa-train';
-                case 'water': return 'fas fa-ship';
-                case 'funicular': return 'fas fa-mountain';
-                case 'cable': return 'fas fa-cable-car';
-                case 'plane': return 'fas fa-plane';
-                default: return 'fas fa-question';
-            }
-        }
-
-        function getRouteDescription(segments) {
-            let description = '';
-
-            segments.forEach((segment, index) => {
-                const props = segment.properties.getAll();
-                const type = props.type;
-                const distance = props.distance.text;
-                const duration = props.duration.text;
-
-                if (index > 0) {
-                    description += ' → ';
-                }
-
-                description += `${getTransportName(type)} (${duration}, ${distance})`;
-            });
-
-            return description;
-        }
-
-        function showRouteDetails(index) {
-            const route = window.routes[index];
-            if (!route) return;
-
+        // Отображаем каждый маршрут
+        routes.forEach((route, index) => {
             const props = route.properties.getAll();
+            const distance = props.distance.text;
+            const duration = props.duration.text;
             const segments = route.properties.get('segments');
 
-            let detailsHtml = `
-                <div style="background-color: white; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
-                    <h3 style="margin-bottom: 1rem; color: var(--primary-color);">Детали маршрута</h3>
-                    <p><strong>Общее время:</strong> ${props.duration.text}</p>
-                    <p><strong>Расстояние:</strong> ${props.distance.text}</p>
-                    <h4 style="margin: 1rem 0 0.5rem 0; color: var(--dark-gray);">Этапы маршрута:</h4>
-                    <ul style="padding-left: 1.5rem;">
-            `;
-
-            segments.forEach((segment, segIndex) => {
-                const segProps = segment.properties.getAll();
-                detailsHtml += `
-                    <li style="margin-bottom: 0.5rem;">
-                        <strong>Этап ${segIndex + 1}:</strong> ${getTransportName(segProps.type)}<br>
-                        <span style="font-size: 0.9rem; color: var(--medium-gray);">
-                            ${segProps.duration.text}, ${segProps.distance.text}
-                        </span>
-                    </li>
-                `;
+            // Определяем типы транспорта
+            const transportTypes = new Set();
+            segments.forEach(segment => {
+                const type = segment.properties.get('type');
+                transportTypes.add(type);
             });
 
-            detailsHtml += `</ul></div>`;
+            // Создаем элемент маршрута
+            const routeElement = document.createElement('div');
+            routeElement.className = 'route-item';
+            routeElement.innerHTML = `
+                <div class="route-header">
+                    <span class="route-title">Маршрут ${index + 1}</span>
+                    <span class="route-duration">${duration}</span>
+                </div>
+                <div class="route-details">
+                    <span>${distance}</span>
+                    <span>${segments.length > 1 ? segments.length - 1 + ' пересадок' : 'Без пересадок'}</span>
+                </div>
+                <div class="route-transport" id="transport-icons-${index}"></div>
+                <div class="route-info">
+                    ${getRouteDescription(segments)}
+                </div>
+                <button class="btn btn-outline" style="width: 100%; margin-top: 0.5rem;" onclick="showRouteDetails(${index})">Подробнее</button>
+            `;
 
-            // Показываем детали в модальном окне или в отдельном блоке
-            alert(detailsHtml.replace(/<[^>]*>/g, '')); // Упрощенный вывод для примера
+            routesContainer.appendChild(routeElement);
+
+            // Добавляем иконки транспорта
+            const transportIconsContainer = document.getElementById(`transport-icons-${index}`);
+            transportTypes.forEach(type => {
+                const icon = document.createElement('div');
+                icon.className = 'transport-icon';
+                icon.title = getTransportName(type);
+
+                const iconElement = document.createElement('i');
+                iconElement.className = getTransportIcon(type);
+                icon.appendChild(iconElement);
+
+                transportIconsContainer.appendChild(icon);
+            });
+        });
+
+        // Сохраняем маршруты для детального просмотра
+        window.routes = routes;
+    }
+
+    function getTransportName(type) {
+        switch(type) {
+            case 'walking': return 'Пешком';
+            case 'driving': return 'Автомобиль';
+            case 'taxi': return 'Такси';
+            case 'bus': return 'Автобус';
+            case 'trolleybus': return 'Троллейбус';
+            case 'tramway': return 'Трамвай';
+            case 'suburban': return 'Электричка';
+            case 'underground': return 'Метро';
+            case 'train': return 'Поезд';
+            case 'water': return 'Водный транспорт';
+            case 'funicular': return 'Фуникулер';
+            case 'cable': return 'Канатная дорога';
+            case 'plane': return 'Самолет';
+            default: return type;
+        }
+    }
+
+    function getTransportIcon(type) {
+        switch(type) {
+            case 'walking': return 'fas fa-walking';
+            case 'driving': return 'fas fa-car';
+            case 'taxi': return 'fas fa-taxi';
+            case 'bus': return 'fas fa-bus';
+            case 'trolleybus': return 'fas fa-bus';
+            case 'tramway': return 'fas fa-tram';
+            case 'suburban': return 'fas fa-train';
+            case 'underground': return 'fas fa-subway';
+            case 'train': return 'fas fa-train';
+            case 'water': return 'fas fa-ship';
+            case 'funicular': return 'fas fa-mountain';
+            case 'cable': return 'fas fa-cable-car';
+            case 'plane': return 'fas fa-plane';
+            default: return 'fas fa-question';
+        }
+    }
+
+    function getRouteDescription(segments) {
+        let description = '';
+
+        segments.forEach((segment, index) => {
+            const props = segment.properties.getAll();
+            const type = props.type;
+            const distance = props.distance.text;
+            const duration = props.duration.text;
+
+            if (index > 0) {
+                description += ' → ';
+            }
+
+            description += `${getTransportName(type)} (${duration}, ${distance})`;
+        });
+
+        return description;
+    }
+
+    function showRouteDetails(index) {
+        const route = window.routes[index];
+        if (!route) return;
+
+        const props = route.properties.getAll();
+        const segments = route.properties.get('segments');
+
+        let detailsHtml = `
+            <div style="background-color: white; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
+                <h3 style="margin-bottom: 1rem; color: var(--primary-color);">Детали маршрута</h3>
+                <p><strong>Общее время:</strong> ${props.duration.text}</p>
+                <p><strong>Расстояние:</strong> ${props.distance.text}</p>
+                <h4 style="margin: 1rem 0 0.5rem 0; color: var(--dark-gray);">Этапы маршрута:</h4>
+                <ul style="padding-left: 1.5rem;">
+        `;
+
+        segments.forEach((segment, segIndex) => {
+            const segProps = segment.properties.getAll();
+            detailsHtml += `
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Этап ${segIndex + 1}:</strong> ${getTransportName(segProps.type)}<br>
+                    <span style="font-size: 0.9rem; color: var(--medium-gray);">
+                        ${segProps.duration.text}, ${segProps.distance.text}
+                    </span>
+                </li>
+            `;
+        });
+
+        detailsHtml += `</ul></div>`;
+
+        // Показываем детали в модальном окне или в отдельном блоке
+        alert(detailsHtml.replace(/<[^>]*>/g, '')); // Упрощенный вывод для примера
+    }
+
+    // Обработчик формы поиска маршрута
+    document.getElementById('routeForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const from = document.getElementById('from').value;
+        const to = document.getElementById('to').value;
+
+        if (!from || !to) {
+            alert('Пожалуйста, укажите точки отправления и назначения');
+            return;
         }
 
-        // Обработчик формы поиска маршрута
-        document.getElementById('routeForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+        // Если координаты уже есть, строим маршрут
+        if (fromCoords && toCoords) {
+            calculateRoute();
+            return;
+        }
 
-            const from = document.getElementById('from').value;
-            const to = document.getElementById('to').value;
-
-            if (!from || !to) {
-                alert('Пожалуйста, укажите точки отправления и назначения');
+        // Иначе геокодируем адреса
+        const geocoder = ymaps.geocode(from, { results: 1 });
+        geocoder.then(function(res) {
+            const firstGeoObject = res.geoObjects.get(0);
+            if (!firstGeoObject) {
+                alert('Не удалось определить координаты точки отправления');
                 return;
             }
 
-            // Если координаты уже есть, строим маршрут
-            if (fromCoords && toCoords) {
-                calculateRoute();
-                return;
-            }
+            fromCoords = firstGeoObject.geometry.getCoordinates();
+            setPoint('from', fromCoords);
 
-            // Иначе геокодируем адреса
-            const geocoder = ymaps.geocode(from, { results: 1 });
-            geocoder.then(function(res) {
-                const firstGeoObject = res.geoObjects.get(0);
-                if (!firstGeoObject) {
-                    alert('Не удалось определить координаты точки отправления');
+            // Геокодируем вторую точку
+            const geocoderTo = ymaps.geocode(to, { results: 1 });
+            geocoderTo.then(function(resTo) {
+                const firstGeoObjectTo = resTo.geoObjects.get(0);
+                if (!firstGeoObjectTo) {
+                    alert('Не удалось определить координаты точки назначения');
                     return;
                 }
 
-                fromCoords = firstGeoObject.geometry.getCoordinates();
-                setPoint('from', fromCoords);
+                toCoords = firstGeoObjectTo.geometry.getCoordinates();
+                setPoint('to', toCoords);
 
-                // Геокодируем вторую точку
-                const geocoderTo = ymaps.geocode(to, { results: 1 });
-                geocoderTo.then(function(resTo) {
-                    const firstGeoObjectTo = resTo.geoObjects.get(0);
-                    if (!firstGeoObjectTo) {
-                        alert('Не удалось определить координаты точки назначения');
-                        return;
-                    }
-
-                    toCoords = firstGeoObjectTo.geometry.getCoordinates();
-                    setPoint('to', toCoords);
-
-                    // Строим маршрут
-                    calculateRoute();
-                });
+                // Строим маршрут
+                calculateRoute();
             });
         });
+    });
 
-        // Табы
-        document.querySelectorAll('.tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    // Табы
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
 
-                tab.classList.add('active');
-                document.getElementById(`${tab.dataset.tab}-tab`).classList.add('active');
-            });
+            tab.classList.add('active');
+            document.getElementById(`${tab.dataset.tab}-tab`).classList.add('active');
         });
+    });
 
-        // Модальные окна авторизации
-        const loginBtn = document.getElementById('loginBtn');
-        const registerBtn = document.getElementById('registerBtn');
-        const loginModal = document.getElementById('loginModal');
-        const registerModal = document.getElementById('registerModal');
-        const showRegister = document.getElementById('showRegister');
-        const showLogin = document.getElementById('showLogin');
-        const closeButtons = document.querySelectorAll('.close-btn');
+    // Модальные окна авторизации
+    const loginBtn = document.getElementById('loginBtn');
+    const registerBtn = document.getElementById('registerBtn');
+    const loginModal = document.getElementById('loginModal');
+    const registerModal = document.getElementById('registerModal');
+    const showRegister = document.getElementById('showRegister');
+    const showLogin = document.getElementById('showLogin');
+    const closeButtons = document.querySelectorAll('.close-btn');
 
-        loginBtn.addEventListener('click', () => {
-            loginModal.classList.add('active');
-        });
+    loginBtn.addEventListener('click', () => {
+        loginModal.classList.add('active');
+    });
 
-        registerBtn.addEventListener('click', () => {
-            registerModal.classList.add('active');
-        });
+    registerBtn.addEventListener('click', () => {
+        registerModal.classList.add('active');
+    });
 
-        showRegister.addEventListener('click', (e) => {
-            e.preventDefault();
+    showRegister.addEventListener('click', (e) => {
+        e.preventDefault();
+        loginModal.classList.remove('active');
+        registerModal.classList.add('active');
+    });
+
+    showLogin.addEventListener('click', (e) => {
+        e.preventDefault();
+        registerModal.classList.remove('active');
+        loginModal.classList.add('active');
+    });
+
+    closeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
             loginModal.classList.remove('active');
-            registerModal.classList.add('active');
-        });
-
-        showLogin.addEventListener('click', (e) => {
-            e.preventDefault();
             registerModal.classList.remove('active');
-            loginModal.classList.add('active');
         });
+    });
 
-        closeButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                loginModal.classList.remove('active');
-                registerModal.classList.remove('active');
-            });
-        });
+    window.addEventListener('click', (e) => {
+        if (e.target === loginModal) {
+            loginModal.classList.remove('active');
+        }
+        if (e.target === registerModal) {
+            registerModal.classList.remove('active');
+        }
+    });
 
-        window.addEventListener('click', (e) => {
-            if (e.target === loginModal) {
-                loginModal.classList.remove('active');
-            }
-            if (e.target === registerModal) {
-                registerModal.classList.remove('active');
-            }
-        });
+    // Топливный калькулятор
+    const carTypeSelect = document.getElementById('car-type');
+    const customConsumptionGroup = document.getElementById('custom-consumption-group');
+    const calculateBtn = document.getElementById('calculate-btn');
+    const calculationResult = document.getElementById('calculation-result');
 
-        // Топливный калькулятор
-        const carTypeSelect = document.getElementById('car-type');
-        const customConsumptionGroup = document.getElementById('custom-consumption-group');
-        const calculateBtn = document.getElementById('calculate-btn');
-        const calculationResult = document.getElementById('calculation-result');
+    carTypeSelect.addEventListener('change', () => {
+        if (carTypeSelect.value === 'custom') {
+            customConsumptionGroup.style.display = 'block';
+        } else {
+            customConsumptionGroup.style.display = 'none';
+        }
+    });
 
-        carTypeSelect.addEventListener('change', () => {
-            if (carTypeSelect.value === 'custom') {
-                customConsumptionGroup.style.display = 'block';
-            } else {
-                customConsumptionGroup.style.display = 'none';
-            }
-        });
+    calculateBtn.addEventListener('click', () => {
+        let consumption;
 
-        calculateBtn.addEventListener('click', () => {
-            let consumption;
+        switch(carTypeSelect.value) {
+            case 'sedan':
+                consumption = 8;
+                break;
+            case 'suv':
+                consumption = 12;
+                break;
+            case 'truck':
+                consumption = 18;
+                break;
+            case 'custom':
+                consumption = parseFloat(document.getElementById('custom-consumption').value) || 8;
+                break;
+            default:
+                consumption = 8;
+        }
 
-            switch(carTypeSelect.value) {
-                case 'sedan':
-                    consumption = 8;
-                    break;
-                case 'suv':
-                    consumption = 12;
-                    break;
-                case 'truck':
-                    consumption = 18;
-                    break;
-                case 'custom':
-                    consumption = parseFloat(document.getElementById('custom-consumption').value) || 8;
-                    break;
-                default:
-                    consumption = 8;
-            }
+        const fuelPrice = parseFloat(document.getElementById('fuel-price').value) || 55;
+        const distance = parseFloat(document.getElementById('distance').value) || 100;
 
-            const fuelPrice = parseFloat(document.getElementById('fuel-price').value) || 55;
-            const distance = parseFloat(document.getElementById('distance').value) || 100;
+        const fuelNeeded = (consumption * distance) / 100;
+        const tripCost = fuelNeeded * fuelPrice;
 
-            const fuelNeeded = (consumption * distance) / 100;
-            const tripCost = fuelNeeded * fuelPrice;
+        document.getElementById('fuel-needed').textContent = fuelNeeded.toFixed(1);
+        document.getElementById('trip-cost').textContent = tripCost.toFixed(0);
 
-            document.getElementById('fuel-needed').textContent = fuelNeeded.toFixed(1);
-            document.getElementById('trip-cost').textContent = tripCost.toFixed(0);
+        calculationResult.style.display = 'block';
+    });
 
-            calculationResult.style.display = 'block';
-        });
+    // Функция бронирования отеля
+    function bookHotel(name, price) {
+        alert(`Отель "${name}" забронирован!\nЦена: $${price.toFixed(2)} за ночь`);
+    }
     </script>
 </body>
 </html>
