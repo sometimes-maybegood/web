@@ -1,1010 +1,6482 @@
 [
-    {
-        "city": "Moscow",
-        "hotels": [
-            {
-                "name": "Mövenpick Moscow Taganskaya",
-                "price_per_day_usd": 80.0,
-                "coordinates": {
-                    "latitude": 55.7415,
-                    "longitude": 37.6521
-                }
-            },
-            {
-                "name": "Mercure Arbat Moscow",
-                "price_per_day_usd": 60.0,
-                "coordinates": {
-                    "latitude": 55.7479,
-                    "longitude": 37.5864
-                }
-            },
-            {
-                "name": "Hilton Moscow Leningradskaya",
-                "price_per_day_usd": 75.0,
-                "coordinates": {
-                    "latitude": 55.7753,
-                    "longitude": 37.6513
-                }
-            },
-            {
-                "name": "Pentahotel Moscow, Arbat",
-                "price_per_day_usd": 70.0,
-                "coordinates": {
-                    "latitude": 55.7472,
-                    "longitude": 37.5918
-                }
-            },
-            {
-                "name": "National Hotel Moscow",
-                "price_per_day_usd": 85.0,
-                "coordinates": {
-                    "latitude": 55.7567,
-                    "longitude": 37.6149
-                }
-            },
-            {
-                "name": "Izmailovo Alfa",
-                "price_per_day_usd": 50.0,
-                "coordinates": {
-                    "latitude": 55.7914,
-                    "longitude": 37.7519
-                }
-            },
-            {
-                "name": "Radisson Collection Hotel Moscow",
-                "price_per_day_usd": 90.0,
-                "coordinates": {
-                    "latitude": 55.7411,
-                    "longitude": 37.5823
-                }
-            },
-            {
-                "name": "Crowne Plaza Moscow World Trade Centre",
-                "price_per_day_usd": 65.0,
-                "coordinates": {
-                    "latitude": 55.7475,
-                    "longitude": 37.5362
-                }
-            },
-            {
-                "name": "Novotel Moscow City",
-                "price_per_day_usd": 70.0,
-                "coordinates": {
-                    "latitude": 55.7491,
-                    "longitude": 37.5394
-                }
-            },
-            {
-                "name": "Holiday Inn Moscow Sokolniki",
-                "price_per_day_usd": 55.0,
-                "coordinates": {
-                    "latitude": 55.7919,
-                    "longitude": 37.6718
-                }
-            },
-            {
-                "name": "Metropol Moscow",
-                "price_per_day_usd": 95.0,
-                "coordinates": {
-                    "latitude": 55.7592,
-                    "longitude": 37.6214
-                }
-            },
-            {
-                "name": "Cosmos Hotel Moscow",
-                "price_per_day_usd": 45.0,
-                "coordinates": {
-                    "latitude": 55.8223,
-                    "longitude": 37.6421
-                }
-            },
-            {
-                "name": "Azimut Hotel Smolenskaya Moscow",
-                "price_per_day_usd": 60.0,
-                "coordinates": {
-                    "latitude": 55.7478,
-                    "longitude": 37.5812
-                }
-            },
-            {
-                "name": "Ibis Moscow Kievskaya",
-                "price_per_day_usd": 40.0,
-                "coordinates": {
-                    "latitude": 55.7432,
-                    "longitude": 37.5598
-                }
-            },
-            {
-                "name": "StandArt Hotel Moscow",
-                "price_per_day_usd": 80.0,
-                "coordinates": {
-                    "latitude": 55.7661,
-                    "longitude": 37.6047
-                }
-            },
-            {
-                "name": "President Hotel Moscow",
-                "price_per_day_usd": 85.0,
-                "coordinates": {
-                    "latitude": 55.7342,
-                    "longitude": 37.6198
-                }
-            },
-            {
-                "name": "Aerostar Hotel Moscow",
-                "price_per_day_usd": 50.0,
-                "coordinates": {
-                    "latitude": 55.7901,
-                    "longitude": 37.5346
-                }
-            },
-            {
-                "name": "Katerina City Hotel",
-                "price_per_day_usd": 55.0,
-                "coordinates": {
-                    "latitude": 55.7324,
-                    "longitude": 37.6453
-                }
-            },
-            {
-                "name": "Maxima Panorama Hotel",
-                "price_per_day_usd": 45.0,
-                "coordinates": {
-                    "latitude": 55.7087,
-                    "longitude": 37.6471
-                }
-            },
-            {
-                "name": "Golden Ring Hotel Moscow",
-                "price_per_day_usd": 70.0,
-                "coordinates": {
-                    "latitude": 55.7498,
-                    "longitude": 37.5789
-                }
-            },
-            {
-                "name": "Marriott Moscow Grand Hotel",
-                "price_per_day_usd": 85.0,
-                "coordinates": {
-                    "latitude": 55.7601,
-                    "longitude": 37.5965
-                }
-            },
-            {
-                "name": "InterContinental Moscow Tverskaya",
-                "price_per_day_usd": 90.0,
-                "coordinates": {
-                    "latitude": 55.7668,
-                    "longitude": 37.6002
-                }
-            },
-            {
-                "name": "Hotel Baltschug Kempinski Moscow",
-                "price_per_day_usd": 100.0,
-                "coordinates": {
-                    "latitude": 55.7476,
-                    "longitude": 37.6274
-                }
-            },
-            {
-                "name": "Vega Izmailovo Hotel",
-                "price_per_day_usd": 50.0,
-                "coordinates": {
-                    "latitude": 55.7918,
-                    "longitude": 37.7523
-                }
-            },
-            {
-                "name": "Sheraton Palace Hotel Moscow",
-                "price_per_day_usd": 80.0,
-                "coordinates": {
-                    "latitude": 55.7712,
-                    "longitude": 37.5921
-                }
-            }
-        ]
-    },
-    {
-        "city": "Saint Petersburg",
-        "hotels": [
-            {
-                "name": "Kravt Nevsky Hotel & Spa",
-                "price_per_day_usd": 60.0,
-                "coordinates": {
-                    "latitude": 59.9351,
-                    "longitude": 30.3265
-                }
-            },
-            {
-                "name": "Hotel Moscow",
-                "price_per_day_usd": 50.0,
-                "coordinates": {
-                    "latitude": 59.9296,
-                    "longitude": 30.3647
-                }
-            },
-            {
-                "name": "Renaissance St. Petersburg Baltic Hotel",
-                "price_per_day_usd": 75.0,
-                "coordinates": {
-                    "latitude": 59.9382,
-                    "longitude": 30.3106
-                }
-            },
-            {
-                "name": "Azimut Hotel Saint-Petersburg",
-                "price_per_day_usd": 45.0,
-                "coordinates": {
-                    "latitude": 59.9114,
-                    "longitude": 30.3087
-                }
-            },
-            {
-                "name": "Corinthia Hotel St Petersburg",
-                "price_per_day_usd": 80.0,
-                "coordinates": {
-                    "latitude": 59.9337,
-                    "longitude": 30.3281
-                }
-            },
-            {
-                "name": "Grand Hotel Europe",
-                "price_per_day_usd": 90.0,
-                "coordinates": {
-                    "latitude": 59.9356,
-                    "longitude": 30.3314
-                }
-            },
-            {
-                "name": "Solo Sokos Hotel Palace Bridge",
-                "price_per_day_usd": 70.0,
-                "coordinates": {
-                    "latitude": 59.9471,
-                    "longitude": 30.2932
-                }
-            },
-            {
-                "name": "Petro Palace Hotel",
-                "price_per_day_usd": 65.0,
-                "coordinates": {
-                    "latitude": 59.9362,
-                    "longitude": 30.3143
-                }
-            },
-            {
-                "name": "Angleterre Hotel",
-                "price_per_day_usd": 85.0,
-                "coordinates": {
-                    "latitude": 59.9341,
-                    "longitude": 30.3098
-                }
-            },
-            {
-                "name": "Park Inn by Radisson Nevsky",
-                "price_per_day_usd": 55.0,
-                "coordinates": {
-                    "latitude": 59.9304,
-                    "longitude": 30.3592
-                }
-            },
-            {
-                "name": "Ibis St Petersburg Centre",
-                "price_per_day_usd": 40.0,
-                "coordinates": {
-                    "latitude": 59.9247,
-                    "longitude": 30.3456
-                }
-            },
-            {
-                "name": "Okhtinskaya Hotel",
-                "price_per_day_usd": 45.0,
-                "coordinates": {
-                    "latitude": 59.9489,
-                    "longitude": 30.4062
-                }
-            },
-            {
-                "name": "Nevsky Forum Hotel",
-                "price_per_day_usd": 60.0,
-                "coordinates": {
-                    "latitude": 59.9331,
-                    "longitude": 30.3467
-                }
-            },
-            {
-                "name": "Dostoevsky Hotel",
-                "price_per_day_usd": 50.0,
-                "coordinates": {
-                    "latitude": 59.9278,
-                    "longitude": 30.3471
-                }
-            },
-            {
-                "name": "Radisson Sonya Hotel",
-                "price_per_day_usd": 70.0,
-                "coordinates": {
-                    "latitude": 59.9462,
-                    "longitude": 30.3419
-                }
-            },
-            {
-                "name": "Wawelberg Hotel",
-                "price_per_day_usd": 95.0,
-                "coordinates": {
-                    "latitude": 59.9367,
-                    "longitude": 30.3174
-                }
-            },
-            {
-                "name": "Hotel Indigo St Petersburg Tchaikovskogo",
-                "price_per_day_usd": 75.0,
-                "coordinates": {
-                    "latitude": 59.9451,
-                    "longitude": 30.3478
-                }
-            },
-            {
-                "name": "Pushka Inn Hotel",
-                "price_per_day_usd": 65.0,
-                "coordinates": {
-                    "latitude": 59.9432,
-                    "longitude": 30.3216
-                }
-            },
-            {
-                "name": "Belmond Grand Hotel Europe",
-                "price_per_day_usd": 100.0,
-                "coordinates": {
-                    "latitude": 59.9358,
-                    "longitude": 30.3312
-                }
-            },
-            {
-                "name": "Astoria Hotel",
-                "price_per_day_usd": 85.0,
-                "coordinates": {
-                    "latitude": 59.9339,
-                    "longitude": 30.3089
-                }
-            }
-        ]
-    },
-    {
-        "city": "Novosibirsk",
-        "hotels": [
-            {
-                "name": "DoubleTree by Hilton Novosibirsk",
-                "price_per_day_usd": 70.0,
-                "coordinates": {
-                    "latitude": 55.0305,
-                    "longitude": 82.9178
-                }
-            },
-            {
-                "name": "Azimut Hotel Siberia",
-                "price_per_day_usd": 50.0,
-                "coordinates": {
-                    "latitude": 55.0332,
-                    "longitude": 82.9214
-                }
-            },
-            {
-                "name": "Marins Park Hotel Novosibirsk",
-                "price_per_day_usd": 45.0,
-                "coordinates": {
-                    "latitude": 55.0287,
-                    "longitude": 82.9281
-                }
-            },
-            {
-                "name": "Domina Hotel Novosibirsk",
-                "price_per_day_usd": 60.0,
-                "coordinates": {
-                    "latitude": 55.0412,
-                    "longitude": 82.9123
-                }
-            },
-            {
-                "name": "River Park Hotel",
-                "price_per_day_usd": 55.0,
-                "coordinates": {
-                    "latitude": 55.0156,
-                    "longitude": 82.9345
-                }
-            },
-            {
-                "name": "Gorskiy City Hotel",
-                "price_per_day_usd": 65.0,
-                "coordinates": {
-                    "latitude": 55.0378,
-                    "longitude": 82.9056
-                }
-            },
-            {
-                "name": "Novosibirsk Marriott Hotel",
-                "price_per_day_usd": 80.0,
-                "coordinates": {
-                    "latitude": 55.0319,
-                    "longitude": 82.9147
-                }
-            },
-            {
-                "name": "Park Inn by Radisson Novosibirsk",
-                "price_per_day_usd": 60.0,
-                "coordinates": {
-                    "latitude": 55.0293,
-                    "longitude": 82.9302
-                }
-            },
-            {
-                "name": "Ibis Novosibirsk",
-                "price_per_day_usd": 40.0,
-                "coordinates": {
-                    "latitude": 55.0351,
-                    "longitude": 82.9189
-                }
-            },
-            {
-                "name": "City Hotel Novosibirsk",
-                "price_per_day_usd": 45.0,
-                "coordinates": {
-                    "latitude": 55.0276,
-                    "longitude": 82.9254
-                }
-            }
-        ]
-    },
-    {
-        "city": "Yekaterinburg",
-        "hotels": [
-            {
-                "name": "Hyatt Regency Ekaterinburg",
-                "price_per_day_usd": 85.0,
-                "coordinates": {
-                    "latitude": 56.8402,
-                    "longitude": 60.6034
-                }
-            },
-            {
-                "name": "Novotel Ekaterinburg Centre",
-                "price_per_day_usd": 65.0,
-                "coordinates": {
-                    "latitude": 56.8378,
-                    "longitude": 60.6091
-                }
-            },
-            {
-                "name": "Atrium Palace Hotel",
-                "price_per_day_usd": 60.0,
-                "coordinates": {
-                    "latitude": 56.8354,
-                    "longitude": 60.6123
-                }
-            },
-            {
-                "name": "Ramada by Wyndham Yekaterinburg",
-                "price_per_day_usd": 70.0,
-                "coordinates": {
-                    "latitude": 56.8291,
-                    "longitude": 60.5987
-                }
-            },
-            {
-                "name": "Marins Park Hotel Yekaterinburg",
-                "price_per_day_usd": 50.0,
-                "coordinates": {
-                    "latitude": 56.8423,
-                    "longitude": 60.6156
-                }
-            },
-            {
-                "name": "Park Inn by Radisson Ekaterinburg",
-                "price_per_day_usd": 55.0,
-                "coordinates": {
-                    "latitude": 56.8397,
-                    "longitude": 60.6078
-                }
-            },
-            {
-                "name": "Vysotsky Hotel",
-                "price_per_day_usd": 75.0,
-                "coordinates": {
-                    "latitude": 56.8412,
-                    "longitude": 60.6119
-                }
-            },
-            {
-                "name": "Ibis Yekaterinburg",
-                "price_per_day_usd": 40.0,
-                "coordinates": {
-                    "latitude": 56.8365,
-                    "longitude": 60.6045
-                }
-            }
-        ]
-    },
-    {
-        "city": "Kazan",
-        "hotels": [
-            {
-                "name": "Courtyard by Marriott Kazan Kremlin",
-                "price_per_day_usd": 70.0,
-                "coordinates": {
-                    "latitude": 55.8312,
-                    "longitude": 49.0689
-                }
-            },
-            {
-                "name": "Riviera Hotel Kazan",
-                "price_per_day_usd": 65.0,
-                "coordinates": {
-                    "latitude": 55.8378,
-                    "longitude": 49.0723
-                }
-            },
-            {
-                "name": "Ibis Kazan Centre",
-                "price_per_day_usd": 40.0,
-                "coordinates": {
-                    "latitude": 55.8294,
-                    "longitude": 49.0654
-                }
-            },
-            {
-                "name": "DoubleTree by Hilton Kazan",
-                "price_per_day_usd": 75.0,
-                "coordinates": {
-                    "latitude": 55.8331,
-                    "longitude": 49.0701
-                }
-            },
-            {
-                "name": "Korston Tower Kazan",
-                "price_per_day_usd": 60.0,
-                "coordinates": {
-                    "latitude": 55.8256,
-                    "longitude": 49.0678
-                }
-            },
-            {
-                "name": "Park Inn by Radisson Kazan",
-                "price_per_day_usd": 55.0,
-                "coordinates": {
-                    "latitude": 55.8345,
-                    "longitude": 49.0642
-                }
-            },
-            {
-                "name": "Shalyapin Palace Hotel",
-                "price_per_day_usd": 50.0,
-                "coordinates": {
-                    "latitude": 55.8308,
-                    "longitude": 49.0695
-                }
-            },
-            {
-                "name": "Mirage Hotel Kazan",
-                "price_per_day_usd": 80.0,
-                "coordinates": {
-                    "latitude": 55.8323,
-                    "longitude": 49.0667
-                }
-            }
-        ]
-    },
-    {
-        "city": "Nizhny Novgorod",
-        "hotels": [
-            {
-                "name": "Sheraton Nizhny Novgorod Kremlin",
-                "price_per_day_usd": 70.0,
-                "coordinates": {
-                    "latitude": 56.2978,
-                    "longitude": 43.9356
-                }
-            },
-            {
-                "name": "Marins Park Hotel Nizhny Novgorod",
-                "price_per_day_usd": 50.0,
-                "coordinates": {
-                    "latitude": 56.2954,
-                    "longitude": 43.9389
-                }
-            },
-            {
-                "name": "Gorky Hotel",
-                "price_per_day_usd": 45.0,
-                "coordinates": {
-                    "latitude": 56.2991,
-                    "longitude": 43.9342
-                }
-            },
-            {
-                "name": "Kulibin Park Hotel",
-                "price_per_day_usd": 60.0,
-                "coordinates": {
-                    "latitude": 56.2967,
-                    "longitude": 43.9401
-                }
-            },
-            {
-                "name": "Ibis Nizhny Novgorod",
-                "price_per_day_usd": 40.0,
-                "coordinates": {
-                    "latitude": 56.2983,
-                    "longitude": 43.9374
-                }
-            }
-        ]
-    },
-    {
-        "city": "Chelyabinsk",
-        "hotels": [
-            {
-                "name": "Radisson Blu Chelyabinsk",
-                "price_per_day_usd": 70.0,
-                "coordinates": {
-                    "latitude": 55.1652,
-                    "longitude": 61.4356
-                }
-            },
-            {
-                "name": "Holiday Inn Chelyabinsk",
-                "price_per_day_usd": 60.0,
-                "coordinates": {
-                    "latitude": 55.1628,
-                    "longitude": 61.4389
-                }
-            },
-            {
-                "name": "Markstadt Hotel",
-                "price_per_day_usd": 50.0,
-                "coordinates": {
-                    "latitude": 55.1674,
-                    "longitude": 61.4342
-                }
-            },
-            {
-                "name": "Arbat Hotel Chelyabinsk",
-                "price_per_day_usd": 45.0,
-                "coordinates": {
-                    "latitude": 55.1641,
-                    "longitude": 61.4401
-                }
-            }
-        ]
-    },
-    {
-        "city": "Samara",
-        "hotels": [
-            {
-                "name": "Holiday Inn Samara",
-                "price_per_day_usd": 65.0,
-                "coordinates": {
-                    "latitude": 53.1967,
-                    "longitude": 50.0987
-                }
-            },
-            {
-                "name": "Renaissance Samara Hotel",
-                "price_per_day_usd": 70.0,
-                "coordinates": {
-                    "latitude": 53.1943,
-                    "longitude": 50.1012
-                }
-            },
-            {
-                "name": "Hampton by Hilton Samara",
-                "price_per_day_usd": 55.0,
-                "coordinates": {
-                    "latitude": 53.1989,
-                    "longitude": 50.0965
-                }
-            },
-            {
-                "name": "Ibis Samara",
-                "price_per_day_usd": 40.0,
-                "coordinates": {
-                    "latitude": 53.1921,
-                    "longitude": 50.1034
-                }
-            }
-        ]
-    },
-    {
-        "city": "Ufa",
-        "hotels": [
-            {
-                "name": "Hilton Garden Inn Ufa Riverside",
-                "price_per_day_usd": 65.0,
-                "coordinates": {
-                    "latitude": 54.7395,
-                    "longitude": 55.9712
-                }
-            },
-            {
-                "name": "President Hotel Ufa",
-                "price_per_day_usd": 60.0,
-                "coordinates": {
-                    "latitude": 54.7371,
-                    "longitude": 55.9745
-                }
-            },
-            {
-                "name": "Iremel Hotel",
-                "price_per_day_usd": 50.0,
-                "coordinates": {
-                    "latitude": 54.7418,
-                    "longitude": 55.9689
-                }
-            },
-            {
-                "name": "Azimut Hotel Ufa",
-                "price_per_day_usd": 45.0,
-                "coordinates": {
-                    "latitude": 54.7364,
-                    "longitude": 55.9767
-                }
-            }
-        ]
-    },
-    {
-        "city": "Rostov-on-Don",
-        "hotels": [
-            {
-                "name": "Mercure Rostov-on-Don Center",
-                "price_per_day_usd": 65.0,
-                "coordinates": {
-                    "latitude": 47.2364,
-                    "longitude": 39.7002
-                }
-            },
-            {
-                "name": "Don Plaza Hotel",
-                "price_per_day_usd": 60.0,
-                "coordinates": {
-                    "latitude": 47.2341,
-                    "longitude": 39.7034
-                }
-            },
-            {
-                "name": "Attache Hotel",
-                "price_per_day_usd": 55.0,
-                "coordinates": {
-                    "latitude": 47.2387,
-                    "longitude": 39.6989
-                }
-            },
-            {
-                "name": "Marins Park Hotel Rostov",
-                "price_per_day_usd": 50.0,
-                "coordinates": {
-                    "latitude": 47.2323,
-                    "longitude": 39.7056
-                }
-            }
-        ]
-    },
-    {
-        "city": "Omsk",
-        "hotels": [
-            {
-                "name": "Ibis Sibir Omsk",
-                "price_per_day_usd": 40.0,
-                "coordinates": {
-                    "latitude": 54.9892,
-                    "longitude": 73.3234
-                }
-            },
-            {
-                "name": "Mayak Hotel Omsk",
-                "price_per_day_usd": 45.0,
-                "coordinates": {
-                    "latitude": 54.9876,
-                    "longitude": 73.3267
-                }
-            },
-            {
-                "name": "Aurora Hotel Omsk",
-                "price_per_day_usd": 50.0,
-                "coordinates": {
-                    "latitude": 54.9913,
-                    "longitude": 73.3201
-                }
-            }
-        ]
-    },
-    {
-        "city": "Krasnoyarsk",
-        "hotels": [
-            {
-                "name": "Hilton Garden Inn Krasnoyarsk",
-                "price_per_day_usd": 65.0,
-                "coordinates": {
-                    "latitude": 56.0192,
-                    "longitude": 92.8664
-                }
-            },
-            {
-                "name": "Metelitsa Hotel",
-                "price_per_day_usd": 50.0,
-                "coordinates": {
-                    "latitude": 56.0178,
-                    "longitude": 92.8697
-                }
-            },
-            {
-                "name": "Siberia Hotel",
-                "price_per_day_usd": 55.0,
-                "coordinates": {
-                    "latitude": 56.0204,
-                    "longitude": 92.8642
-                }
-            }
-        ]
-    },
-    {
-        "city": "Voronezh",
-        "hotels": [
-            {
-                "name": "Hampton by Hilton Voronezh",
-                "price_per_day_usd": 55.0,
-                "coordinates": {
-                    "latitude": 51.6762,
-                    "longitude": 39.2078
-                }
-            },
-            {
-                "name": "Degas Hotel",
-                "price_per_day_usd": 50.0,
-                "coordinates": {
-                    "latitude": 51.6748,
-                    "longitude": 39.2101
-                }
-            },
-            {
-                "name": "Mercure Voronezh Centre",
-                "price_per_day_usd": 60.0,
-                "coordinates": {
-                    "latitude": 51.6774,
-                    "longitude": 39.2056
-                }
-            }
-        ]
-    },
-    {
-        "city": "Perm",
-        "hotels": [
-            {
-                "name": "Hilton Garden Inn Perm",
-                "price_per_day_usd": 65.0,
-                "coordinates": {
-                    "latitude": 58.0112,
-                    "longitude": 56.2284
-                }
-            },
-            {
-                "name": "Ural Hotel",
-                "price_per_day_usd": 50.0,
-                "coordinates": {
-                    "latitude": 58.0098,
-                    "longitude": 56.2317
-                }
-            },
-            {
-                "name": "New Star Hotel",
-                "price_per_day_usd": 45.0,
-                "coordinates": {
-                    "latitude": 58.0124,
-                    "longitude": 56.2269
-                }
-            }
-        ]
-    },
-    {
-        "city": "Volgograd",
-        "hotels": [
-            {
-                "name": "Hampton by Hilton Volgograd Profsoyuznaya",
-                "price_per_day_usd": 55.0,
-                "coordinates": {
-                    "latitude": 48.7043,
-                    "longitude": 44.5167
-                }
-            },
-            {
-                "name": "Hotel Volgograd",
-                "price_per_day_usd": 50.0,
-                "coordinates": {
-                    "latitude": 48.7121,
-                    "longitude": 44.5062
-                }
-            },
-            {
-                "name": "Yuzhny Hotel",
-                "price_per_day_usd": 45.0,
-                "coordinates": {
-                    "latitude": 48.6987,
-                    "longitude": 44.5201
-                }
-            },
-            {
-                "name": "Intourist Hotel Volgograd",
-                "price_per_day_usd": 60.0,
-                "coordinates": {
-                    "latitude": 48.7078,
-                    "longitude": 44.5143
-                }
-            },
-            {
-                "name": "Park Inn by Radisson Volgograd",
-                "price_per_day_usd": 65.0,
-                "coordinates": {
-                    "latitude": 48.7154,
-                    "longitude": 44.5109
-                }
-            },
-            {
-                "name": "Tsaritsyn Hotel",
-                "price_per_day_usd": 40.0,
-                "coordinates": {
-                    "latitude": 48.7002,
-                    "longitude": 44.5256
-                }
-            },
-            {
-                "name": "Gallery Park Volgograd",
-                "price_per_day_usd": 50.0,
-                "coordinates": {
-                    "latitude": 48.7091,
-                    "longitude": 44.5087
-                }
-            },
-            {
-                "name": "Volgograd Boutique Hotel",
-                "price_per_day_usd": 55.0,
-                "coordinates": {
-                    "latitude": 48.7065,
-                    "longitude": 44.5178
-                }
-            }
-        ]
-    },
-    {
-        "city": "Krasnodar",
-        "hotels": [
-            {
-                "name": "Hilton Garden Inn Krasnodar",
-                "price_per_day_usd": 65.0,
-                "coordinates": {
-                    "latitude": 45.0401,
-                    "longitude": 38.9864
-                }
-            },
-            {
-                "name": "Crowne Plaza Krasnodar",
-                "price_per_day_usd": 70.0,
-                "coordinates": {
-                    "latitude": 45.0387,
-                    "longitude": 38.9897
-                }
-            },
-            {
-                "name": "Ibis Krasnodar",
-                "price_per_day_usd": 40.0,
-                "coordinates": {
-                    "latitude": 45.0413,
-                    "longitude": 38.9842
-                }
-            },
-            {
-                "name": "Marriott Krasnodar",
-                "price_per_day_usd": 75.0,
-                "coordinates": {
-                    "latitude": 45.0398,
-                    "longitude": 38.9876
-                }
-            }
-        ]
-    }
+  {
+    "city": "Moscow",
+    "hotels": [
+      {
+        "name": "Mövenpick Moscow Taganskaya",
+        "price_per_day_usd": 80.0,
+        "coordinates": {
+          "latitude": 55.7415,
+          "longitude": 37.6521
+        }
+      },
+      {
+        "name": "Mercure Arbat Moscow",
+        "price_per_day_usd": 60.0,
+        "coordinates": {
+          "latitude": 55.7479,
+          "longitude": 37.5864
+        }
+      },
+      {
+        "name": "Hilton Moscow Leningradskaya",
+        "price_per_day_usd": 75.0,
+        "coordinates": {
+          "latitude": 55.7753,
+          "longitude": 37.6513
+        }
+      },
+      {
+        "name": "Pentahotel Moscow, Arbat",
+        "price_per_day_usd": 70.0,
+        "coordinates": {
+          "latitude": 55.7472,
+          "longitude": 37.5918
+        }
+      },
+      {
+        "name": "National Hotel Moscow",
+        "price_per_day_usd": 85.0,
+        "coordinates": {
+          "latitude": 55.7567,
+          "longitude": 37.6149
+        }
+      },
+      {
+        "name": "Izmailovo Alfa",
+        "price_per_day_usd": 50.0,
+        "coordinates": {
+          "latitude": 55.7914,
+          "longitude": 37.7519
+        }
+      },
+      {
+        "name": "Radisson Collection Hotel Moscow",
+        "price_per_day_usd": 90.0,
+        "coordinates": {
+          "latitude": 55.7411,
+          "longitude": 37.5823
+        }
+      },
+      {
+        "name": "Crowne Plaza Moscow World Trade Centre",
+        "price_per_day_usd": 65.0,
+        "coordinates": {
+          "latitude": 55.7475,
+          "longitude": 37.5362
+        }
+      },
+      {
+        "name": "Novotel Moscow City",
+        "price_per_day_usd": 70.0,
+        "coordinates": {
+          "latitude": 55.7491,
+          "longitude": 37.5394
+        }
+      },
+      {
+        "name": "Holiday Inn Moscow Sokolniki",
+        "price_per_day_usd": 55.0,
+        "coordinates": {
+          "latitude": 55.7919,
+          "longitude": 37.6718
+        }
+      },
+      {
+        "name": "Metropol Moscow",
+        "price_per_day_usd": 95.0,
+        "coordinates": {
+          "latitude": 55.7592,
+          "longitude": 37.6214
+        }
+      },
+      {
+        "name": "Cosmos Hotel Moscow",
+        "price_per_day_usd": 45.0,
+        "coordinates": {
+          "latitude": 55.8223,
+          "longitude": 37.6421
+        }
+      },
+      {
+        "name": "Azimut Hotel Smolenskaya Moscow",
+        "price_per_day_usd": 60.0,
+        "coordinates": {
+          "latitude": 55.7478,
+          "longitude": 37.5812
+        }
+      },
+      {
+        "name": "Ibis Moscow Kievskaya",
+        "price_per_day_usd": 40.0,
+        "coordinates": {
+          "latitude": 55.7432,
+          "longitude": 37.5598
+        }
+      },
+      {
+        "name": "StandArt Hotel Moscow",
+        "price_per_day_usd": 80.0,
+        "coordinates": {
+          "latitude": 55.7661,
+          "longitude": 37.6047
+        }
+      },
+      {
+        "name": "President Hotel Moscow",
+        "price_per_day_usd": 85.0,
+        "coordinates": {
+          "latitude": 55.7342,
+          "longitude": 37.6198
+        }
+      },
+      {
+        "name": "Aerostar Hotel Moscow",
+        "price_per_day_usd": 50.0,
+        "coordinates": {
+          "latitude": 55.7901,
+          "longitude": 37.5346
+        }
+      },
+      {
+        "name": "Katerina City Hotel",
+        "price_per_day_usd": 55.0,
+        "coordinates": {
+          "latitude": 55.7324,
+          "longitude": 37.6453
+        }
+      },
+      {
+        "name": "Maxima Panorama Hotel",
+        "price_per_day_usd": 45.0,
+        "coordinates": {
+          "latitude": 55.7087,
+          "longitude": 37.6471
+        }
+      },
+      {
+        "name": "Golden Ring Hotel Moscow",
+        "price_per_day_usd": 70.0,
+        "coordinates": {
+          "latitude": 55.7498,
+          "longitude": 37.5789
+        }
+      },
+      {
+        "name": "Marriott Moscow Grand Hotel",
+        "price_per_day_usd": 85.0,
+        "coordinates": {
+          "latitude": 55.7601,
+          "longitude": 37.5965
+        }
+      },
+      {
+        "name": "InterContinental Moscow Tverskaya",
+        "price_per_day_usd": 90.0,
+        "coordinates": {
+          "latitude": 55.7668,
+          "longitude": 37.6002
+        }
+      },
+      {
+        "name": "Hotel Baltschug Kempinski Moscow",
+        "price_per_day_usd": 100.0,
+        "coordinates": {
+          "latitude": 55.7476,
+          "longitude": 37.6274
+        }
+      },
+      {
+        "name": "Vega Izmailovo Hotel",
+        "price_per_day_usd": 50.0,
+        "coordinates": {
+          "latitude": 55.7918,
+          "longitude": 37.7523
+        }
+      },
+      {
+        "name": "Sheraton Palace Hotel Moscow",
+        "price_per_day_usd": 80.0,
+        "coordinates": {
+          "latitude": 55.7712,
+          "longitude": 37.5921
+        }
+      },
+      {
+        "name": "Отель Астра",
+        "price_per_night_rub": 9846,
+        "coordinates": {
+          "latitude": 55.732942,
+          "longitude": 37.640355
+        }
+      },
+      {
+        "name": "Бутик-отель Версаль",
+        "price_per_night_rub": 4673,
+        "coordinates": {
+          "latitude": 55.739065,
+          "longitude": 37.642532
+        }
+      },
+      {
+        "name": "Хостел Империя",
+        "price_per_night_rub": 6905,
+        "coordinates": {
+          "latitude": 55.840357,
+          "longitude": 37.6944
+        }
+      },
+      {
+        "name": "Хостел Салют",
+        "price_per_night_rub": 11633,
+        "coordinates": {
+          "latitude": 55.724395,
+          "longitude": 37.548313
+        }
+      },
+      {
+        "name": "Мини-отель Астра",
+        "price_per_night_rub": 6438,
+        "coordinates": {
+          "latitude": 55.749589,
+          "longitude": 37.578791
+        }
+      },
+      {
+        "name": "Гостиница Элегант",
+        "price_per_night_rub": 6697,
+        "coordinates": {
+          "latitude": 55.713413,
+          "longitude": 37.537239
+        }
+      },
+      {
+        "name": "Мини-отель Достоевский",
+        "price_per_night_rub": 3424,
+        "coordinates": {
+          "latitude": 55.758897,
+          "longitude": 37.670793
+        }
+      },
+      {
+        "name": "Мини-отель Байкал",
+        "price_per_night_rub": 11377,
+        "coordinates": {
+          "latitude": 55.801964,
+          "longitude": 37.578437
+        }
+      },
+      {
+        "name": "Отель Бриз",
+        "price_per_night_rub": 4692,
+        "coordinates": {
+          "latitude": 55.665372,
+          "longitude": 37.521263
+        }
+      },
+      {
+        "name": "Мини-отель Салют",
+        "price_per_night_rub": 10488,
+        "coordinates": {
+          "latitude": 55.77914,
+          "longitude": 37.677813
+        }
+      },
+      {
+        "name": "Гостиница Олимп",
+        "price_per_night_rub": 8179,
+        "coordinates": {
+          "latitude": 55.842395,
+          "longitude": 37.604598
+        }
+      },
+      {
+        "name": "Гостиница Империя",
+        "price_per_night_rub": 10401,
+        "coordinates": {
+          "latitude": 55.79271,
+          "longitude": 37.669975
+        }
+      },
+      {
+        "name": "Отель Урал",
+        "price_per_night_rub": 7966,
+        "coordinates": {
+          "latitude": 55.799299,
+          "longitude": 37.602608
+        }
+      },
+      {
+        "name": "Гостиница Элегант",
+        "price_per_night_rub": 2191,
+        "coordinates": {
+          "latitude": 55.703458,
+          "longitude": 37.549486
+        }
+      },
+      {
+        "name": "Отель Сибирь",
+        "price_per_night_rub": 8141,
+        "coordinates": {
+          "latitude": 55.678225,
+          "longitude": 37.537744
+        }
+      },
+      {
+        "name": "Бутик-отель Достоевский",
+        "price_per_night_rub": 7566,
+        "coordinates": {
+          "latitude": 55.819851,
+          "longitude": 37.645798
+        }
+      },
+      {
+        "name": "Отель Меридиан",
+        "price_per_night_rub": 9644,
+        "coordinates": {
+          "latitude": 55.823739,
+          "longitude": 37.644656
+        }
+      },
+      {
+        "name": "Бутик-отель Империя",
+        "price_per_night_rub": 10792,
+        "coordinates": {
+          "latitude": 55.69437,
+          "longitude": 37.685094
+        }
+      },
+      {
+        "name": "Бутик-отель Лагуна",
+        "price_per_night_rub": 7181,
+        "coordinates": {
+          "latitude": 55.795731,
+          "longitude": 37.609084
+        }
+      },
+      {
+        "name": "Отель Элегант",
+        "price_per_night_rub": 3994,
+        "coordinates": {
+          "latitude": 55.728818,
+          "longitude": 37.695307
+        }
+      },
+      {
+        "name": "Отель Меридиан",
+        "price_per_night_rub": 4117,
+        "coordinates": {
+          "latitude": 55.838327,
+          "longitude": 37.677112
+        }
+      },
+      {
+        "name": "Мини-отель Премьер",
+        "price_per_night_rub": 10939,
+        "coordinates": {
+          "latitude": 55.774827,
+          "longitude": 37.686265
+        }
+      },
+      {
+        "name": "Мини-отель Гринвич",
+        "price_per_night_rub": 9744,
+        "coordinates": {
+          "latitude": 55.731282,
+          "longitude": 37.654241
+        }
+      },
+      {
+        "name": "Отель Вега",
+        "price_per_night_rub": 8390,
+        "coordinates": {
+          "latitude": 55.752003,
+          "longitude": 37.520727
+        }
+      },
+      {
+        "name": "Мини-отель Премьер",
+        "price_per_night_rub": 6955,
+        "coordinates": {
+          "latitude": 55.660068,
+          "longitude": 37.658006
+        }
+      }
+    ]
+  },
+  {
+    "city": "Saint Petersburg",
+    "hotels": [
+      {
+        "name": "Kravt Nevsky Hotel & Spa",
+        "price_per_day_usd": 60.0,
+        "coordinates": {
+          "latitude": 59.9351,
+          "longitude": 30.3265
+        }
+      },
+      {
+        "name": "Hotel Moscow",
+        "price_per_day_usd": 50.0,
+        "coordinates": {
+          "latitude": 59.9296,
+          "longitude": 30.3647
+        }
+      },
+      {
+        "name": "Renaissance St. Petersburg Baltic Hotel",
+        "price_per_day_usd": 75.0,
+        "coordinates": {
+          "latitude": 59.9382,
+          "longitude": 30.3106
+        }
+      },
+      {
+        "name": "Azimut Hotel Saint-Petersburg",
+        "price_per_day_usd": 45.0,
+        "coordinates": {
+          "latitude": 59.9114,
+          "longitude": 30.3087
+        }
+      },
+      {
+        "name": "Corinthia Hotel St Petersburg",
+        "price_per_day_usd": 80.0,
+        "coordinates": {
+          "latitude": 59.9337,
+          "longitude": 30.3281
+        }
+      },
+      {
+        "name": "Grand Hotel Europe",
+        "price_per_day_usd": 90.0,
+        "coordinates": {
+          "latitude": 59.9356,
+          "longitude": 30.3314
+        }
+      },
+      {
+        "name": "Solo Sokos Hotel Palace Bridge",
+        "price_per_day_usd": 70.0,
+        "coordinates": {
+          "latitude": 59.9471,
+          "longitude": 30.2932
+        }
+      },
+      {
+        "name": "Petro Palace Hotel",
+        "price_per_day_usd": 65.0,
+        "coordinates": {
+          "latitude": 59.9362,
+          "longitude": 30.3143
+        }
+      },
+      {
+        "name": "Angleterre Hotel",
+        "price_per_day_usd": 85.0,
+        "coordinates": {
+          "latitude": 59.9341,
+          "longitude": 30.3098
+        }
+      },
+      {
+        "name": "Park Inn by Radisson Nevsky",
+        "price_per_day_usd": 55.0,
+        "coordinates": {
+          "latitude": 59.9304,
+          "longitude": 30.3592
+        }
+      },
+      {
+        "name": "Ibis St Petersburg Centre",
+        "price_per_day_usd": 40.0,
+        "coordinates": {
+          "latitude": 59.9247,
+          "longitude": 30.3456
+        }
+      },
+      {
+        "name": "Okhtinskaya Hotel",
+        "price_per_day_usd": 45.0,
+        "coordinates": {
+          "latitude": 59.9489,
+          "longitude": 30.4062
+        }
+      },
+      {
+        "name": "Nevsky Forum Hotel",
+        "price_per_day_usd": 60.0,
+        "coordinates": {
+          "latitude": 59.9331,
+          "longitude": 30.3467
+        }
+      },
+      {
+        "name": "Dostoevsky Hotel",
+        "price_per_day_usd": 50.0,
+        "coordinates": {
+          "latitude": 59.9278,
+          "longitude": 30.3471
+        }
+      },
+      {
+        "name": "Radisson Sonya Hotel",
+        "price_per_day_usd": 70.0,
+        "coordinates": {
+          "latitude": 59.9462,
+          "longitude": 30.3419
+        }
+      },
+      {
+        "name": "Wawelberg Hotel",
+        "price_per_day_usd": 95.0,
+        "coordinates": {
+          "latitude": 59.9367,
+          "longitude": 30.3174
+        }
+      },
+      {
+        "name": "Hotel Indigo St Petersburg Tchaikovskogo",
+        "price_per_day_usd": 75.0,
+        "coordinates": {
+          "latitude": 59.9451,
+          "longitude": 30.3478
+        }
+      },
+      {
+        "name": "Pushka Inn Hotel",
+        "price_per_day_usd": 65.0,
+        "coordinates": {
+          "latitude": 59.9432,
+          "longitude": 30.3216
+        }
+      },
+      {
+        "name": "Belmond Grand Hotel Europe",
+        "price_per_day_usd": 100.0,
+        "coordinates": {
+          "latitude": 59.9358,
+          "longitude": 30.3312
+        }
+      },
+      {
+        "name": "Astoria Hotel",
+        "price_per_day_usd": 85.0,
+        "coordinates": {
+          "latitude": 59.9339,
+          "longitude": 30.3089
+        }
+      },
+      {
+        "name": "Бутик-отель Плаза",
+        "price_per_night_rub": 3569,
+        "coordinates": {
+          "latitude": 55.753329,
+          "longitude": 37.513597
+        }
+      },
+      {
+        "name": "Бутик-отель Аврора",
+        "price_per_night_rub": 9840,
+        "coordinates": {
+          "latitude": 55.829686,
+          "longitude": 37.586896
+        }
+      },
+      {
+        "name": "Бутик-отель Лагуна",
+        "price_per_night_rub": 2170,
+        "coordinates": {
+          "latitude": 55.664454,
+          "longitude": 37.695604
+        }
+      },
+      {
+        "name": "Отель Вега",
+        "price_per_night_rub": 9538,
+        "coordinates": {
+          "latitude": 55.674659,
+          "longitude": 37.648878
+        }
+      },
+      {
+        "name": "Отель Достоевский",
+        "price_per_night_rub": 3181,
+        "coordinates": {
+          "latitude": 55.802673,
+          "longitude": 37.600369
+        }
+      },
+      {
+        "name": "Мини-отель Лагуна",
+        "price_per_night_rub": 5936,
+        "coordinates": {
+          "latitude": 55.655793,
+          "longitude": 37.594489
+        }
+      },
+      {
+        "name": "Отель Байкал",
+        "price_per_night_rub": 3245,
+        "coordinates": {
+          "latitude": 55.828213,
+          "longitude": 37.528318
+        }
+      },
+      {
+        "name": "Хостел Меридиан",
+        "price_per_night_rub": 11203,
+        "coordinates": {
+          "latitude": 55.819066,
+          "longitude": 37.569332
+        }
+      },
+      {
+        "name": "Отель Урал",
+        "price_per_night_rub": 2915,
+        "coordinates": {
+          "latitude": 55.798725,
+          "longitude": 37.706884
+        }
+      },
+      {
+        "name": "Отель Галактика",
+        "price_per_night_rub": 8198,
+        "coordinates": {
+          "latitude": 55.657419,
+          "longitude": 37.628216
+        }
+      },
+      {
+        "name": "Апарт-отель Арбат",
+        "price_per_night_rub": 3177,
+        "coordinates": {
+          "latitude": 55.75586,
+          "longitude": 37.510044
+        }
+      },
+      {
+        "name": "Хостел Сити",
+        "price_per_night_rub": 9707,
+        "coordinates": {
+          "latitude": 55.813341,
+          "longitude": 37.625351
+        }
+      },
+      {
+        "name": "Мини-отель Нева",
+        "price_per_night_rub": 6694,
+        "coordinates": {
+          "latitude": 55.733065,
+          "longitude": 37.594038
+        }
+      },
+      {
+        "name": "Бутик-отель Сити",
+        "price_per_night_rub": 10813,
+        "coordinates": {
+          "latitude": 55.72203,
+          "longitude": 37.561913
+        }
+      },
+      {
+        "name": "Хостел Плаза",
+        "price_per_night_rub": 8635,
+        "coordinates": {
+          "latitude": 55.7018,
+          "longitude": 37.596114
+        }
+      },
+      {
+        "name": "Отель Элегант",
+        "price_per_night_rub": 2287,
+        "coordinates": {
+          "latitude": 55.746459,
+          "longitude": 37.518838
+        }
+      },
+      {
+        "name": "Апарт-отель Нева",
+        "price_per_night_rub": 6651,
+        "coordinates": {
+          "latitude": 55.772883,
+          "longitude": 37.655547
+        }
+      },
+      {
+        "name": "Отель Центральный",
+        "price_per_night_rub": 8424,
+        "coordinates": {
+          "latitude": 55.795351,
+          "longitude": 37.586224
+        }
+      },
+      {
+        "name": "Апарт-отель Спутник",
+        "price_per_night_rub": 6327,
+        "coordinates": {
+          "latitude": 55.658848,
+          "longitude": 37.626054
+        }
+      },
+      {
+        "name": "Бутик-отель Меридиан",
+        "price_per_night_rub": 8931,
+        "coordinates": {
+          "latitude": 55.726896,
+          "longitude": 37.619738
+        }
+      },
+      {
+        "name": "Отель Премьер",
+        "price_per_night_rub": 9584,
+        "coordinates": {
+          "latitude": 55.728365,
+          "longitude": 37.621881
+        }
+      },
+      {
+        "name": "Отель Достоевский",
+        "price_per_night_rub": 10557,
+        "coordinates": {
+          "latitude": 55.832962,
+          "longitude": 37.558078
+        }
+      },
+      {
+        "name": "Хостел Гринвич",
+        "price_per_night_rub": 7494,
+        "coordinates": {
+          "latitude": 55.714749,
+          "longitude": 37.661945
+        }
+      },
+      {
+        "name": "Хостел Лагуна",
+        "price_per_night_rub": 11416,
+        "coordinates": {
+          "latitude": 55.754695,
+          "longitude": 37.575752
+        }
+      },
+      {
+        "name": "Гостиница Русь",
+        "price_per_night_rub": 8428,
+        "coordinates": {
+          "latitude": 55.833096,
+          "longitude": 37.602797
+        }
+      },
+      {
+        "name": "Отель Байкал",
+        "price_per_night_rub": 9942,
+        "coordinates": {
+          "latitude": 55.718017,
+          "longitude": 37.591501
+        }
+      },
+      {
+        "name": "Бутик-отель Сити",
+        "price_per_night_rub": 11248,
+        "coordinates": {
+          "latitude": 55.724726,
+          "longitude": 37.644627
+        }
+      },
+      {
+        "name": "Хостел Урал",
+        "price_per_night_rub": 3753,
+        "coordinates": {
+          "latitude": 55.794372,
+          "longitude": 37.600087
+        }
+      },
+      {
+        "name": "Бутик-отель Капитал",
+        "price_per_night_rub": 9503,
+        "coordinates": {
+          "latitude": 55.740953,
+          "longitude": 37.542574
+        }
+      },
+      {
+        "name": "Хостел Сибирь",
+        "price_per_night_rub": 6697,
+        "coordinates": {
+          "latitude": 55.71638,
+          "longitude": 37.565823
+        }
+      }
+    ]
+  },
+  {
+    "city": "Novosibirsk",
+    "hotels": [
+      {
+        "name": "DoubleTree by Hilton Novosibirsk",
+        "price_per_day_usd": 70.0,
+        "coordinates": {
+          "latitude": 55.0305,
+          "longitude": 82.9178
+        }
+      },
+      {
+        "name": "Azimut Hotel Siberia",
+        "price_per_day_usd": 50.0,
+        "coordinates": {
+          "latitude": 55.0332,
+          "longitude": 82.9214
+        }
+      },
+      {
+        "name": "Marins Park Hotel Novosibirsk",
+        "price_per_day_usd": 45.0,
+        "coordinates": {
+          "latitude": 55.0287,
+          "longitude": 82.9281
+        }
+      },
+      {
+        "name": "Domina Hotel Novosibirsk",
+        "price_per_day_usd": 60.0,
+        "coordinates": {
+          "latitude": 55.0412,
+          "longitude": 82.9123
+        }
+      },
+      {
+        "name": "River Park Hotel",
+        "price_per_day_usd": 55.0,
+        "coordinates": {
+          "latitude": 55.0156,
+          "longitude": 82.9345
+        }
+      },
+      {
+        "name": "Gorskiy City Hotel",
+        "price_per_day_usd": 65.0,
+        "coordinates": {
+          "latitude": 55.0378,
+          "longitude": 82.9056
+        }
+      },
+      {
+        "name": "Novosibirsk Marriott Hotel",
+        "price_per_day_usd": 80.0,
+        "coordinates": {
+          "latitude": 55.0319,
+          "longitude": 82.9147
+        }
+      },
+      {
+        "name": "Park Inn by Radisson Novosibirsk",
+        "price_per_day_usd": 60.0,
+        "coordinates": {
+          "latitude": 55.0293,
+          "longitude": 82.9302
+        }
+      },
+      {
+        "name": "Ibis Novosibirsk",
+        "price_per_day_usd": 40.0,
+        "coordinates": {
+          "latitude": 55.0351,
+          "longitude": 82.9189
+        }
+      },
+      {
+        "name": "City Hotel Novosibirsk",
+        "price_per_day_usd": 45.0,
+        "coordinates": {
+          "latitude": 55.0276,
+          "longitude": 82.9254
+        }
+      },
+      {
+        "name": "Апарт-отель Аврора",
+        "price_per_night_rub": 4327,
+        "coordinates": {
+          "latitude": 55.796903,
+          "longitude": 37.559891
+        }
+      },
+      {
+        "name": "Хостел Астра",
+        "price_per_night_rub": 3492,
+        "coordinates": {
+          "latitude": 55.822426,
+          "longitude": 37.602966
+        }
+      },
+      {
+        "name": "Бутик-отель Лагуна",
+        "price_per_night_rub": 4251,
+        "coordinates": {
+          "latitude": 55.823963,
+          "longitude": 37.57118
+        }
+      },
+      {
+        "name": "Мини-отель Меридиан",
+        "price_per_night_rub": 7761,
+        "coordinates": {
+          "latitude": 55.817499,
+          "longitude": 37.693871
+        }
+      },
+      {
+        "name": "Бутик-отель Элегант",
+        "price_per_night_rub": 5876,
+        "coordinates": {
+          "latitude": 55.757642,
+          "longitude": 37.577324
+        }
+      },
+      {
+        "name": "Отель Премьер",
+        "price_per_night_rub": 3386,
+        "coordinates": {
+          "latitude": 55.680722,
+          "longitude": 37.533356
+        }
+      },
+      {
+        "name": "Апарт-отель Версаль",
+        "price_per_night_rub": 5370,
+        "coordinates": {
+          "latitude": 55.840393,
+          "longitude": 37.599109
+        }
+      },
+      {
+        "name": "Отель Плаза",
+        "price_per_night_rub": 2229,
+        "coordinates": {
+          "latitude": 55.680731,
+          "longitude": 37.702972
+        }
+      },
+      {
+        "name": "Отель Капитал",
+        "price_per_night_rub": 2282,
+        "coordinates": {
+          "latitude": 55.666871,
+          "longitude": 37.680684
+        }
+      },
+      {
+        "name": "Бутик-отель Премьер",
+        "price_per_night_rub": 2018,
+        "coordinates": {
+          "latitude": 55.781677,
+          "longitude": 37.631643
+        }
+      },
+      {
+        "name": "Хостел Капитал",
+        "price_per_night_rub": 10954,
+        "coordinates": {
+          "latitude": 55.809304,
+          "longitude": 37.682361
+        }
+      },
+      {
+        "name": "Хостел Сибирь",
+        "price_per_night_rub": 7571,
+        "coordinates": {
+          "latitude": 55.845185,
+          "longitude": 37.592126
+        }
+      },
+      {
+        "name": "Отель Ренессанс",
+        "price_per_night_rub": 8350,
+        "coordinates": {
+          "latitude": 55.680157,
+          "longitude": 37.702606
+        }
+      },
+      {
+        "name": "Хостел Кремль",
+        "price_per_night_rub": 10048,
+        "coordinates": {
+          "latitude": 55.785961,
+          "longitude": 37.534486
+        }
+      },
+      {
+        "name": "Гостиница Кремль",
+        "price_per_night_rub": 3938,
+        "coordinates": {
+          "latitude": 55.840803,
+          "longitude": 37.664835
+        }
+      },
+      {
+        "name": "Хостел Плаза",
+        "price_per_night_rub": 7470,
+        "coordinates": {
+          "latitude": 55.682142,
+          "longitude": 37.513306
+        }
+      },
+      {
+        "name": "Отель Олимп",
+        "price_per_night_rub": 2115,
+        "coordinates": {
+          "latitude": 55.793414,
+          "longitude": 37.662648
+        }
+      },
+      {
+        "name": "Хостел Капитал",
+        "price_per_night_rub": 11190,
+        "coordinates": {
+          "latitude": 55.726521,
+          "longitude": 37.634142
+        }
+      },
+      {
+        "name": "Хостел Спутник",
+        "price_per_night_rub": 11167,
+        "coordinates": {
+          "latitude": 55.703771,
+          "longitude": 37.534886
+        }
+      },
+      {
+        "name": "Бутик-отель Сити",
+        "price_per_night_rub": 9484,
+        "coordinates": {
+          "latitude": 55.679944,
+          "longitude": 37.562562
+        }
+      },
+      {
+        "name": "Бутик-отель Астра",
+        "price_per_night_rub": 7790,
+        "coordinates": {
+          "latitude": 55.837971,
+          "longitude": 37.542551
+        }
+      },
+      {
+        "name": "Отель Арбат",
+        "price_per_night_rub": 6500,
+        "coordinates": {
+          "latitude": 55.76671,
+          "longitude": 37.600923
+        }
+      },
+      {
+        "name": "Отель Премьер",
+        "price_per_night_rub": 11264,
+        "coordinates": {
+          "latitude": 55.689113,
+          "longitude": 37.59907
+        }
+      },
+      {
+        "name": "Апарт-отель Арбат",
+        "price_per_night_rub": 8186,
+        "coordinates": {
+          "latitude": 55.710403,
+          "longitude": 37.545457
+        }
+      },
+      {
+        "name": "Отель Олимп",
+        "price_per_night_rub": 4879,
+        "coordinates": {
+          "latitude": 55.783284,
+          "longitude": 37.592439
+        }
+      },
+      {
+        "name": "Отель Спутник",
+        "price_per_night_rub": 3194,
+        "coordinates": {
+          "latitude": 55.734841,
+          "longitude": 37.559824
+        }
+      },
+      {
+        "name": "Отель Арбат",
+        "price_per_night_rub": 9580,
+        "coordinates": {
+          "latitude": 55.742393,
+          "longitude": 37.540337
+        }
+      },
+      {
+        "name": "Отель Капитал",
+        "price_per_night_rub": 9023,
+        "coordinates": {
+          "latitude": 55.768035,
+          "longitude": 37.615941
+        }
+      },
+      {
+        "name": "Гостиница Космос",
+        "price_per_night_rub": 3387,
+        "coordinates": {
+          "latitude": 55.67029,
+          "longitude": 37.689124
+        }
+      },
+      {
+        "name": "Бутик-отель Лагуна",
+        "price_per_night_rub": 5692,
+        "coordinates": {
+          "latitude": 55.755162,
+          "longitude": 37.550148
+        }
+      },
+      {
+        "name": "Гостиница Плаза",
+        "price_per_night_rub": 3969,
+        "coordinates": {
+          "latitude": 55.792152,
+          "longitude": 37.55738
+        }
+      },
+      {
+        "name": "Отель Вега",
+        "price_per_night_rub": 10262,
+        "coordinates": {
+          "latitude": 55.715798,
+          "longitude": 37.522657
+        }
+      },
+      {
+        "name": "Бутик-отель Меридиан",
+        "price_per_night_rub": 10906,
+        "coordinates": {
+          "latitude": 55.749362,
+          "longitude": 37.70333
+        }
+      },
+      {
+        "name": "Отель Бриз",
+        "price_per_night_rub": 8715,
+        "coordinates": {
+          "latitude": 55.776983,
+          "longitude": 37.702381
+        }
+      },
+      {
+        "name": "Гостиница Арбат",
+        "price_per_night_rub": 5963,
+        "coordinates": {
+          "latitude": 55.819888,
+          "longitude": 37.582789
+        }
+      },
+      {
+        "name": "Отель Меридиан",
+        "price_per_night_rub": 3121,
+        "coordinates": {
+          "latitude": 55.739577,
+          "longitude": 37.510372
+        }
+      },
+      {
+        "name": "Гостиница Империя",
+        "price_per_night_rub": 7969,
+        "coordinates": {
+          "latitude": 55.827648,
+          "longitude": 37.687882
+        }
+      },
+      {
+        "name": "Бутик-отель Нева",
+        "price_per_night_rub": 10265,
+        "coordinates": {
+          "latitude": 55.756311,
+          "longitude": 37.591344
+        }
+      },
+      {
+        "name": "Бутик-отель Сибирь",
+        "price_per_night_rub": 11430,
+        "coordinates": {
+          "latitude": 55.74931,
+          "longitude": 37.695156
+        }
+      },
+      {
+        "name": "Бутик-отель Урал",
+        "price_per_night_rub": 3146,
+        "coordinates": {
+          "latitude": 55.662569,
+          "longitude": 37.635349
+        }
+      }
+    ]
+  },
+  {
+    "city": "Yekaterinburg",
+    "hotels": [
+      {
+        "name": "Hyatt Regency Ekaterinburg",
+        "price_per_day_usd": 85.0,
+        "coordinates": {
+          "latitude": 56.8402,
+          "longitude": 60.6034
+        }
+      },
+      {
+        "name": "Novotel Ekaterinburg Centre",
+        "price_per_day_usd": 65.0,
+        "coordinates": {
+          "latitude": 56.8378,
+          "longitude": 60.6091
+        }
+      },
+      {
+        "name": "Atrium Palace Hotel",
+        "price_per_day_usd": 60.0,
+        "coordinates": {
+          "latitude": 56.8354,
+          "longitude": 60.6123
+        }
+      },
+      {
+        "name": "Ramada by Wyndham Yekaterinburg",
+        "price_per_day_usd": 70.0,
+        "coordinates": {
+          "latitude": 56.8291,
+          "longitude": 60.5987
+        }
+      },
+      {
+        "name": "Marins Park Hotel Yekaterinburg",
+        "price_per_day_usd": 50.0,
+        "coordinates": {
+          "latitude": 56.8423,
+          "longitude": 60.6156
+        }
+      },
+      {
+        "name": "Park Inn by Radisson Ekaterinburg",
+        "price_per_day_usd": 55.0,
+        "coordinates": {
+          "latitude": 56.8397,
+          "longitude": 60.6078
+        }
+      },
+      {
+        "name": "Vysotsky Hotel",
+        "price_per_day_usd": 75.0,
+        "coordinates": {
+          "latitude": 56.8412,
+          "longitude": 60.6119
+        }
+      },
+      {
+        "name": "Ibis Yekaterinburg",
+        "price_per_day_usd": 40.0,
+        "coordinates": {
+          "latitude": 56.8365,
+          "longitude": 60.6045
+        }
+      },
+      {
+        "name": "Отель Достоевский",
+        "price_per_night_rub": 11603,
+        "coordinates": {
+          "latitude": 55.723867,
+          "longitude": 37.625282
+        }
+      },
+      {
+        "name": "Отель Галактика",
+        "price_per_night_rub": 11833,
+        "coordinates": {
+          "latitude": 55.779891,
+          "longitude": 37.511833
+        }
+      },
+      {
+        "name": "Апарт-отель Астра",
+        "price_per_night_rub": 5194,
+        "coordinates": {
+          "latitude": 55.72457,
+          "longitude": 37.535085
+        }
+      },
+      {
+        "name": "Апарт-отель Арбат",
+        "price_per_night_rub": 9749,
+        "coordinates": {
+          "latitude": 55.765496,
+          "longitude": 37.674714
+        }
+      },
+      {
+        "name": "Апарт-отель Урал",
+        "price_per_night_rub": 11632,
+        "coordinates": {
+          "latitude": 55.809874,
+          "longitude": 37.686877
+        }
+      },
+      {
+        "name": "Мини-отель Москва",
+        "price_per_night_rub": 4071,
+        "coordinates": {
+          "latitude": 55.664818,
+          "longitude": 37.512659
+        }
+      },
+      {
+        "name": "Отель Салют",
+        "price_per_night_rub": 11724,
+        "coordinates": {
+          "latitude": 55.721757,
+          "longitude": 37.6677
+        }
+      },
+      {
+        "name": "Апарт-отель Гринвич",
+        "price_per_night_rub": 8436,
+        "coordinates": {
+          "latitude": 55.770181,
+          "longitude": 37.60009
+        }
+      },
+      {
+        "name": "Апарт-отель Капитал",
+        "price_per_night_rub": 7731,
+        "coordinates": {
+          "latitude": 55.662864,
+          "longitude": 37.589831
+        }
+      },
+      {
+        "name": "Мини-отель Спутник",
+        "price_per_night_rub": 3854,
+        "coordinates": {
+          "latitude": 55.683896,
+          "longitude": 37.580221
+        }
+      },
+      {
+        "name": "Хостел Спутник",
+        "price_per_night_rub": 10612,
+        "coordinates": {
+          "latitude": 55.698359,
+          "longitude": 37.512724
+        }
+      },
+      {
+        "name": "Отель Кремль",
+        "price_per_night_rub": 4045,
+        "coordinates": {
+          "latitude": 55.83958,
+          "longitude": 37.69699
+        }
+      },
+      {
+        "name": "Отель Бриз",
+        "price_per_night_rub": 4734,
+        "coordinates": {
+          "latitude": 55.719902,
+          "longitude": 37.67359
+        }
+      },
+      {
+        "name": "Апарт-отель Арбат",
+        "price_per_night_rub": 6687,
+        "coordinates": {
+          "latitude": 55.832599,
+          "longitude": 37.577977
+        }
+      },
+      {
+        "name": "Гостиница Достоевский",
+        "price_per_night_rub": 10787,
+        "coordinates": {
+          "latitude": 55.701369,
+          "longitude": 37.539541
+        }
+      },
+      {
+        "name": "Отель Урал",
+        "price_per_night_rub": 6977,
+        "coordinates": {
+          "latitude": 55.844332,
+          "longitude": 37.677381
+        }
+      },
+      {
+        "name": "Отель Спутник",
+        "price_per_night_rub": 7557,
+        "coordinates": {
+          "latitude": 55.835062,
+          "longitude": 37.596432
+        }
+      },
+      {
+        "name": "Отель Астра",
+        "price_per_night_rub": 6812,
+        "coordinates": {
+          "latitude": 55.809561,
+          "longitude": 37.64974
+        }
+      },
+      {
+        "name": "Отель Москва",
+        "price_per_night_rub": 2676,
+        "coordinates": {
+          "latitude": 55.794689,
+          "longitude": 37.525562
+        }
+      },
+      {
+        "name": "Мини-отель Капитал",
+        "price_per_night_rub": 6886,
+        "coordinates": {
+          "latitude": 55.800468,
+          "longitude": 37.55323
+        }
+      },
+      {
+        "name": "Отель Гринвич",
+        "price_per_night_rub": 10032,
+        "coordinates": {
+          "latitude": 55.677522,
+          "longitude": 37.62654
+        }
+      },
+      {
+        "name": "Хостел Русь",
+        "price_per_night_rub": 4882,
+        "coordinates": {
+          "latitude": 55.675545,
+          "longitude": 37.650815
+        }
+      },
+      {
+        "name": "Апарт-отель Салют",
+        "price_per_night_rub": 11246,
+        "coordinates": {
+          "latitude": 55.838673,
+          "longitude": 37.666404
+        }
+      },
+      {
+        "name": "Гостиница Элегант",
+        "price_per_night_rub": 5476,
+        "coordinates": {
+          "latitude": 55.812224,
+          "longitude": 37.672083
+        }
+      },
+      {
+        "name": "Апарт-отель Аврора",
+        "price_per_night_rub": 2679,
+        "coordinates": {
+          "latitude": 55.816703,
+          "longitude": 37.518273
+        }
+      },
+      {
+        "name": "Хостел Байкал",
+        "price_per_night_rub": 9937,
+        "coordinates": {
+          "latitude": 55.768207,
+          "longitude": 37.616688
+        }
+      },
+      {
+        "name": "Отель Русь",
+        "price_per_night_rub": 6704,
+        "coordinates": {
+          "latitude": 55.754044,
+          "longitude": 37.68428
+        }
+      },
+      {
+        "name": "Мини-отель Кремль",
+        "price_per_night_rub": 11185,
+        "coordinates": {
+          "latitude": 55.696793,
+          "longitude": 37.612297
+        }
+      },
+      {
+        "name": "Мини-отель Русь",
+        "price_per_night_rub": 2094,
+        "coordinates": {
+          "latitude": 55.79572,
+          "longitude": 37.699182
+        }
+      },
+      {
+        "name": "Бутик-отель Лагуна",
+        "price_per_night_rub": 11289,
+        "coordinates": {
+          "latitude": 55.833992,
+          "longitude": 37.680484
+        }
+      },
+      {
+        "name": "Бутик-отель Олимп",
+        "price_per_night_rub": 10953,
+        "coordinates": {
+          "latitude": 55.757146,
+          "longitude": 37.56515
+        }
+      },
+      {
+        "name": "Гостиница Нева",
+        "price_per_night_rub": 6656,
+        "coordinates": {
+          "latitude": 55.685609,
+          "longitude": 37.666088
+        }
+      },
+      {
+        "name": "Отель Капитал",
+        "price_per_night_rub": 9653,
+        "coordinates": {
+          "latitude": 55.676812,
+          "longitude": 37.63926
+        }
+      },
+      {
+        "name": "Мини-отель Вега",
+        "price_per_night_rub": 8010,
+        "coordinates": {
+          "latitude": 55.701184,
+          "longitude": 37.687347
+        }
+      },
+      {
+        "name": "Отель Центральный",
+        "price_per_night_rub": 8210,
+        "coordinates": {
+          "latitude": 55.729309,
+          "longitude": 37.574734
+        }
+      },
+      {
+        "name": "Хостел Галактика",
+        "price_per_night_rub": 8624,
+        "coordinates": {
+          "latitude": 55.78879,
+          "longitude": 37.541687
+        }
+      },
+      {
+        "name": "Гостиница Сибирь",
+        "price_per_night_rub": 4150,
+        "coordinates": {
+          "latitude": 55.784382,
+          "longitude": 37.656067
+        }
+      },
+      {
+        "name": "Апарт-отель Галактика",
+        "price_per_night_rub": 3833,
+        "coordinates": {
+          "latitude": 55.751337,
+          "longitude": 37.659918
+        }
+      },
+      {
+        "name": "Отель Лагуна",
+        "price_per_night_rub": 8316,
+        "coordinates": {
+          "latitude": 55.752664,
+          "longitude": 37.658289
+        }
+      },
+      {
+        "name": "Отель Олимп",
+        "price_per_night_rub": 3649,
+        "coordinates": {
+          "latitude": 55.734924,
+          "longitude": 37.525403
+        }
+      },
+      {
+        "name": "Отель Сити",
+        "price_per_night_rub": 7178,
+        "coordinates": {
+          "latitude": 55.771668,
+          "longitude": 37.595918
+        }
+      },
+      {
+        "name": "Гостиница Сибирь",
+        "price_per_night_rub": 2272,
+        "coordinates": {
+          "latitude": 55.747004,
+          "longitude": 37.597808
+        }
+      }
+    ]
+  },
+  {
+    "city": "Kazan",
+    "hotels": [
+      {
+        "name": "Courtyard by Marriott Kazan Kremlin",
+        "price_per_day_usd": 70.0,
+        "coordinates": {
+          "latitude": 55.8312,
+          "longitude": 49.0689
+        }
+      },
+      {
+        "name": "Riviera Hotel Kazan",
+        "price_per_day_usd": 65.0,
+        "coordinates": {
+          "latitude": 55.8378,
+          "longitude": 49.0723
+        }
+      },
+      {
+        "name": "Ibis Kazan Centre",
+        "price_per_day_usd": 40.0,
+        "coordinates": {
+          "latitude": 55.8294,
+          "longitude": 49.0654
+        }
+      },
+      {
+        "name": "DoubleTree by Hilton Kazan",
+        "price_per_day_usd": 75.0,
+        "coordinates": {
+          "latitude": 55.8331,
+          "longitude": 49.0701
+        }
+      },
+      {
+        "name": "Korston Tower Kazan",
+        "price_per_day_usd": 60.0,
+        "coordinates": {
+          "latitude": 55.8256,
+          "longitude": 49.0678
+        }
+      },
+      {
+        "name": "Park Inn by Radisson Kazan",
+        "price_per_day_usd": 55.0,
+        "coordinates": {
+          "latitude": 55.8345,
+          "longitude": 49.0642
+        }
+      },
+      {
+        "name": "Shalyapin Palace Hotel",
+        "price_per_day_usd": 50.0,
+        "coordinates": {
+          "latitude": 55.8308,
+          "longitude": 49.0695
+        }
+      },
+      {
+        "name": "Mirage Hotel Kazan",
+        "price_per_day_usd": 80.0,
+        "coordinates": {
+          "latitude": 55.8323,
+          "longitude": 49.0667
+        }
+      },
+      {
+        "name": "Хостел Галактика",
+        "price_per_night_rub": 9976,
+        "coordinates": {
+          "latitude": 55.739285,
+          "longitude": 37.621972
+        }
+      },
+      {
+        "name": "Бутик-отель Галактика",
+        "price_per_night_rub": 6672,
+        "coordinates": {
+          "latitude": 55.753418,
+          "longitude": 37.65631
+        }
+      },
+      {
+        "name": "Отель Достоевский",
+        "price_per_night_rub": 7280,
+        "coordinates": {
+          "latitude": 55.760552,
+          "longitude": 37.618545
+        }
+      },
+      {
+        "name": "Мини-отель Астра",
+        "price_per_night_rub": 4395,
+        "coordinates": {
+          "latitude": 55.755135,
+          "longitude": 37.564419
+        }
+      },
+      {
+        "name": "Отель Лагуна",
+        "price_per_night_rub": 3775,
+        "coordinates": {
+          "latitude": 55.694747,
+          "longitude": 37.569067
+        }
+      },
+      {
+        "name": "Гостиница Кремль",
+        "price_per_night_rub": 10969,
+        "coordinates": {
+          "latitude": 55.799073,
+          "longitude": 37.606649
+        }
+      },
+      {
+        "name": "Отель Сити",
+        "price_per_night_rub": 11891,
+        "coordinates": {
+          "latitude": 55.705057,
+          "longitude": 37.550839
+        }
+      },
+      {
+        "name": "Хостел Байкал",
+        "price_per_night_rub": 9988,
+        "coordinates": {
+          "latitude": 55.718457,
+          "longitude": 37.520696
+        }
+      },
+      {
+        "name": "Бутик-отель Плаза",
+        "price_per_night_rub": 4438,
+        "coordinates": {
+          "latitude": 55.685418,
+          "longitude": 37.59534
+        }
+      },
+      {
+        "name": "Отель Аврора",
+        "price_per_night_rub": 6656,
+        "coordinates": {
+          "latitude": 55.654131,
+          "longitude": 37.530153
+        }
+      },
+      {
+        "name": "Мини-отель Сити",
+        "price_per_night_rub": 2906,
+        "coordinates": {
+          "latitude": 55.728805,
+          "longitude": 37.51538
+        }
+      },
+      {
+        "name": "Отель Меридиан",
+        "price_per_night_rub": 7200,
+        "coordinates": {
+          "latitude": 55.655062,
+          "longitude": 37.618637
+        }
+      },
+      {
+        "name": "Мини-отель Русь",
+        "price_per_night_rub": 9250,
+        "coordinates": {
+          "latitude": 55.686061,
+          "longitude": 37.63746
+        }
+      },
+      {
+        "name": "Отель Русь",
+        "price_per_night_rub": 9297,
+        "coordinates": {
+          "latitude": 55.701781,
+          "longitude": 37.59501
+        }
+      },
+      {
+        "name": "Отель Галактика",
+        "price_per_night_rub": 8009,
+        "coordinates": {
+          "latitude": 55.827646,
+          "longitude": 37.533396
+        }
+      },
+      {
+        "name": "Гостиница Версаль",
+        "price_per_night_rub": 9833,
+        "coordinates": {
+          "latitude": 55.715243,
+          "longitude": 37.650909
+        }
+      },
+      {
+        "name": "Апарт-отель Достоевский",
+        "price_per_night_rub": 3059,
+        "coordinates": {
+          "latitude": 55.657627,
+          "longitude": 37.596645
+        }
+      },
+      {
+        "name": "Мини-отель Плаза",
+        "price_per_night_rub": 2980,
+        "coordinates": {
+          "latitude": 55.708226,
+          "longitude": 37.577736
+        }
+      },
+      {
+        "name": "Апарт-отель Версаль",
+        "price_per_night_rub": 5212,
+        "coordinates": {
+          "latitude": 55.772431,
+          "longitude": 37.696741
+        }
+      },
+      {
+        "name": "Отель Премьер",
+        "price_per_night_rub": 4420,
+        "coordinates": {
+          "latitude": 55.663745,
+          "longitude": 37.512504
+        }
+      },
+      {
+        "name": "Отель Аврора",
+        "price_per_night_rub": 9280,
+        "coordinates": {
+          "latitude": 55.702222,
+          "longitude": 37.618334
+        }
+      },
+      {
+        "name": "Гостиница Урал",
+        "price_per_night_rub": 3073,
+        "coordinates": {
+          "latitude": 55.729854,
+          "longitude": 37.527589
+        }
+      },
+      {
+        "name": "Отель Космос",
+        "price_per_night_rub": 4771,
+        "coordinates": {
+          "latitude": 55.815976,
+          "longitude": 37.626729
+        }
+      },
+      {
+        "name": "Отель Аврора",
+        "price_per_night_rub": 6041,
+        "coordinates": {
+          "latitude": 55.670285,
+          "longitude": 37.557013
+        }
+      },
+      {
+        "name": "Отель Версаль",
+        "price_per_night_rub": 6455,
+        "coordinates": {
+          "latitude": 55.779328,
+          "longitude": 37.606391
+        }
+      },
+      {
+        "name": "Отель Космос",
+        "price_per_night_rub": 7280,
+        "coordinates": {
+          "latitude": 55.658928,
+          "longitude": 37.582029
+        }
+      },
+      {
+        "name": "Отель Бриз",
+        "price_per_night_rub": 2877,
+        "coordinates": {
+          "latitude": 55.781764,
+          "longitude": 37.674671
+        }
+      },
+      {
+        "name": "Отель Урал",
+        "price_per_night_rub": 9465,
+        "coordinates": {
+          "latitude": 55.662577,
+          "longitude": 37.633526
+        }
+      },
+      {
+        "name": "Мини-отель Москва",
+        "price_per_night_rub": 11921,
+        "coordinates": {
+          "latitude": 55.658545,
+          "longitude": 37.6309
+        }
+      },
+      {
+        "name": "Бутик-отель Сибирь",
+        "price_per_night_rub": 5433,
+        "coordinates": {
+          "latitude": 55.697037,
+          "longitude": 37.617381
+        }
+      },
+      {
+        "name": "Мини-отель Спутник",
+        "price_per_night_rub": 3128,
+        "coordinates": {
+          "latitude": 55.67671,
+          "longitude": 37.596697
+        }
+      },
+      {
+        "name": "Мини-отель Элегант",
+        "price_per_night_rub": 9388,
+        "coordinates": {
+          "latitude": 55.672501,
+          "longitude": 37.515479
+        }
+      },
+      {
+        "name": "Отель Галактика",
+        "price_per_night_rub": 5206,
+        "coordinates": {
+          "latitude": 55.841981,
+          "longitude": 37.605107
+        }
+      },
+      {
+        "name": "Отель Галактика",
+        "price_per_night_rub": 4511,
+        "coordinates": {
+          "latitude": 55.840577,
+          "longitude": 37.514518
+        }
+      },
+      {
+        "name": "Отель Урал",
+        "price_per_night_rub": 3109,
+        "coordinates": {
+          "latitude": 55.658793,
+          "longitude": 37.676814
+        }
+      },
+      {
+        "name": "Отель Арбат",
+        "price_per_night_rub": 9191,
+        "coordinates": {
+          "latitude": 55.713354,
+          "longitude": 37.601152
+        }
+      },
+      {
+        "name": "Бутик-отель Капитал",
+        "price_per_night_rub": 2088,
+        "coordinates": {
+          "latitude": 55.824367,
+          "longitude": 37.584873
+        }
+      },
+      {
+        "name": "Отель Олимп",
+        "price_per_night_rub": 7680,
+        "coordinates": {
+          "latitude": 55.692529,
+          "longitude": 37.525273
+        }
+      },
+      {
+        "name": "Хостел Империя",
+        "price_per_night_rub": 4083,
+        "coordinates": {
+          "latitude": 55.701781,
+          "longitude": 37.701404
+        }
+      },
+      {
+        "name": "Апарт-отель Премьер",
+        "price_per_night_rub": 2433,
+        "coordinates": {
+          "latitude": 55.721001,
+          "longitude": 37.650343
+        }
+      },
+      {
+        "name": "Гостиница Капитал",
+        "price_per_night_rub": 3527,
+        "coordinates": {
+          "latitude": 55.797875,
+          "longitude": 37.559589
+        }
+      },
+      {
+        "name": "Отель Центральный",
+        "price_per_night_rub": 2110,
+        "coordinates": {
+          "latitude": 55.698111,
+          "longitude": 37.700595
+        }
+      }
+    ]
+  },
+  {
+    "city": "Nizhny Novgorod",
+    "hotels": [
+      {
+        "name": "Sheraton Nizhny Novgorod Kremlin",
+        "price_per_day_usd": 70.0,
+        "coordinates": {
+          "latitude": 56.2978,
+          "longitude": 43.9356
+        }
+      },
+      {
+        "name": "Marins Park Hotel Nizhny Novgorod",
+        "price_per_day_usd": 50.0,
+        "coordinates": {
+          "latitude": 56.2954,
+          "longitude": 43.9389
+        }
+      },
+      {
+        "name": "Gorky Hotel",
+        "price_per_day_usd": 45.0,
+        "coordinates": {
+          "latitude": 56.2991,
+          "longitude": 43.9342
+        }
+      },
+      {
+        "name": "Kulibin Park Hotel",
+        "price_per_day_usd": 60.0,
+        "coordinates": {
+          "latitude": 56.2967,
+          "longitude": 43.9401
+        }
+      },
+      {
+        "name": "Ibis Nizhny Novgorod",
+        "price_per_day_usd": 40.0,
+        "coordinates": {
+          "latitude": 56.2983,
+          "longitude": 43.9374
+        }
+      },
+      {
+        "name": "Отель Меридиан",
+        "price_per_night_rub": 3746,
+        "coordinates": {
+          "latitude": 55.770555,
+          "longitude": 37.625405
+        }
+      },
+      {
+        "name": "Отель Меридиан",
+        "price_per_night_rub": 7347,
+        "coordinates": {
+          "latitude": 55.837172,
+          "longitude": 37.611666
+        }
+      },
+      {
+        "name": "Отель Спутник",
+        "price_per_night_rub": 4055,
+        "coordinates": {
+          "latitude": 55.730158,
+          "longitude": 37.570475
+        }
+      },
+      {
+        "name": "Отель Плаза",
+        "price_per_night_rub": 2959,
+        "coordinates": {
+          "latitude": 55.728623,
+          "longitude": 37.512734
+        }
+      },
+      {
+        "name": "Гостиница Гринвич",
+        "price_per_night_rub": 7117,
+        "coordinates": {
+          "latitude": 55.672531,
+          "longitude": 37.705547
+        }
+      },
+      {
+        "name": "Отель Версаль",
+        "price_per_night_rub": 9373,
+        "coordinates": {
+          "latitude": 55.792074,
+          "longitude": 37.544015
+        }
+      },
+      {
+        "name": "Отель Кремль",
+        "price_per_night_rub": 6024,
+        "coordinates": {
+          "latitude": 55.802166,
+          "longitude": 37.608301
+        }
+      },
+      {
+        "name": "Хостел Спутник",
+        "price_per_night_rub": 3970,
+        "coordinates": {
+          "latitude": 55.779073,
+          "longitude": 37.515484
+        }
+      },
+      {
+        "name": "Бутик-отель Нева",
+        "price_per_night_rub": 5800,
+        "coordinates": {
+          "latitude": 55.662254,
+          "longitude": 37.706455
+        }
+      },
+      {
+        "name": "Отель Нева",
+        "price_per_night_rub": 8560,
+        "coordinates": {
+          "latitude": 55.694975,
+          "longitude": 37.660363
+        }
+      },
+      {
+        "name": "Апарт-отель Вега",
+        "price_per_night_rub": 6864,
+        "coordinates": {
+          "latitude": 55.800548,
+          "longitude": 37.538218
+        }
+      },
+      {
+        "name": "Бутик-отель Достоевский",
+        "price_per_night_rub": 10373,
+        "coordinates": {
+          "latitude": 55.835272,
+          "longitude": 37.625244
+        }
+      },
+      {
+        "name": "Мини-отель Ренессанс",
+        "price_per_night_rub": 9357,
+        "coordinates": {
+          "latitude": 55.834288,
+          "longitude": 37.686949
+        }
+      },
+      {
+        "name": "Отель Аврора",
+        "price_per_night_rub": 3261,
+        "coordinates": {
+          "latitude": 55.80514,
+          "longitude": 37.586647
+        }
+      },
+      {
+        "name": "Отель Ренессанс",
+        "price_per_night_rub": 6506,
+        "coordinates": {
+          "latitude": 55.668938,
+          "longitude": 37.60885
+        }
+      },
+      {
+        "name": "Мини-отель Премьер",
+        "price_per_night_rub": 10875,
+        "coordinates": {
+          "latitude": 55.813852,
+          "longitude": 37.559829
+        }
+      },
+      {
+        "name": "Апарт-отель Центральный",
+        "price_per_night_rub": 7700,
+        "coordinates": {
+          "latitude": 55.720977,
+          "longitude": 37.531697
+        }
+      },
+      {
+        "name": "Гостиница Меридиан",
+        "price_per_night_rub": 3019,
+        "coordinates": {
+          "latitude": 55.657353,
+          "longitude": 37.590774
+        }
+      },
+      {
+        "name": "Мини-отель Астра",
+        "price_per_night_rub": 10209,
+        "coordinates": {
+          "latitude": 55.761992,
+          "longitude": 37.70249
+        }
+      },
+      {
+        "name": "Гостиница Аврора",
+        "price_per_night_rub": 4857,
+        "coordinates": {
+          "latitude": 55.727378,
+          "longitude": 37.51951
+        }
+      },
+      {
+        "name": "Отель Плаза",
+        "price_per_night_rub": 8865,
+        "coordinates": {
+          "latitude": 55.794241,
+          "longitude": 37.521705
+        }
+      },
+      {
+        "name": "Мини-отель Спутник",
+        "price_per_night_rub": 3809,
+        "coordinates": {
+          "latitude": 55.658436,
+          "longitude": 37.583089
+        }
+      },
+      {
+        "name": "Мини-отель Арбат",
+        "price_per_night_rub": 3679,
+        "coordinates": {
+          "latitude": 55.832276,
+          "longitude": 37.59154
+        }
+      },
+      {
+        "name": "Мини-отель Аврора",
+        "price_per_night_rub": 2129,
+        "coordinates": {
+          "latitude": 55.673721,
+          "longitude": 37.574078
+        }
+      },
+      {
+        "name": "Бутик-отель Астра",
+        "price_per_night_rub": 7942,
+        "coordinates": {
+          "latitude": 55.772436,
+          "longitude": 37.561068
+        }
+      },
+      {
+        "name": "Гостиница Аврора",
+        "price_per_night_rub": 6372,
+        "coordinates": {
+          "latitude": 55.815955,
+          "longitude": 37.562508
+        }
+      },
+      {
+        "name": "Гостиница Капитал",
+        "price_per_night_rub": 5416,
+        "coordinates": {
+          "latitude": 55.835251,
+          "longitude": 37.547475
+        }
+      },
+      {
+        "name": "Отель Вега",
+        "price_per_night_rub": 9457,
+        "coordinates": {
+          "latitude": 55.842058,
+          "longitude": 37.696402
+        }
+      },
+      {
+        "name": "Отель Байкал",
+        "price_per_night_rub": 3052,
+        "coordinates": {
+          "latitude": 55.676645,
+          "longitude": 37.667037
+        }
+      },
+      {
+        "name": "Отель Москва",
+        "price_per_night_rub": 10974,
+        "coordinates": {
+          "latitude": 55.705492,
+          "longitude": 37.549078
+        }
+      },
+      {
+        "name": "Отель Космос",
+        "price_per_night_rub": 8246,
+        "coordinates": {
+          "latitude": 55.826964,
+          "longitude": 37.554903
+        }
+      },
+      {
+        "name": "Отель Урал",
+        "price_per_night_rub": 7734,
+        "coordinates": {
+          "latitude": 55.847308,
+          "longitude": 37.633949
+        }
+      },
+      {
+        "name": "Отель Премьер",
+        "price_per_night_rub": 11930,
+        "coordinates": {
+          "latitude": 55.750831,
+          "longitude": 37.600568
+        }
+      },
+      {
+        "name": "Апарт-отель Вега",
+        "price_per_night_rub": 4721,
+        "coordinates": {
+          "latitude": 55.844263,
+          "longitude": 37.553169
+        }
+      },
+      {
+        "name": "Мини-отель Русь",
+        "price_per_night_rub": 8304,
+        "coordinates": {
+          "latitude": 55.748133,
+          "longitude": 37.67493
+        }
+      },
+      {
+        "name": "Бутик-отель Салют",
+        "price_per_night_rub": 9738,
+        "coordinates": {
+          "latitude": 55.835637,
+          "longitude": 37.523477
+        }
+      },
+      {
+        "name": "Мини-отель Астра",
+        "price_per_night_rub": 5992,
+        "coordinates": {
+          "latitude": 55.736268,
+          "longitude": 37.686385
+        }
+      },
+      {
+        "name": "Мини-отель Бриз",
+        "price_per_night_rub": 4261,
+        "coordinates": {
+          "latitude": 55.81004,
+          "longitude": 37.620618
+        }
+      },
+      {
+        "name": "Отель Версаль",
+        "price_per_night_rub": 6388,
+        "coordinates": {
+          "latitude": 55.719671,
+          "longitude": 37.635109
+        }
+      },
+      {
+        "name": "Гостиница Космос",
+        "price_per_night_rub": 9935,
+        "coordinates": {
+          "latitude": 55.685223,
+          "longitude": 37.543633
+        }
+      },
+      {
+        "name": "Отель Кремль",
+        "price_per_night_rub": 4970,
+        "coordinates": {
+          "latitude": 55.756903,
+          "longitude": 37.572959
+        }
+      },
+      {
+        "name": "Отель Вега",
+        "price_per_night_rub": 3212,
+        "coordinates": {
+          "latitude": 55.776467,
+          "longitude": 37.688802
+        }
+      },
+      {
+        "name": "Гостиница Сибирь",
+        "price_per_night_rub": 8055,
+        "coordinates": {
+          "latitude": 55.708229,
+          "longitude": 37.6462
+        }
+      },
+      {
+        "name": "Отель Сибирь",
+        "price_per_night_rub": 4216,
+        "coordinates": {
+          "latitude": 55.799292,
+          "longitude": 37.624626
+        }
+      },
+      {
+        "name": "Отель Кремль",
+        "price_per_night_rub": 7832,
+        "coordinates": {
+          "latitude": 55.838143,
+          "longitude": 37.634199
+        }
+      }
+    ]
+  },
+  {
+    "city": "Chelyabinsk",
+    "hotels": [
+      {
+        "name": "Radisson Blu Chelyabinsk",
+        "price_per_day_usd": 70.0,
+        "coordinates": {
+          "latitude": 55.1652,
+          "longitude": 61.4356
+        }
+      },
+      {
+        "name": "Holiday Inn Chelyabinsk",
+        "price_per_day_usd": 60.0,
+        "coordinates": {
+          "latitude": 55.1628,
+          "longitude": 61.4389
+        }
+      },
+      {
+        "name": "Markstadt Hotel",
+        "price_per_day_usd": 50.0,
+        "coordinates": {
+          "latitude": 55.1674,
+          "longitude": 61.4342
+        }
+      },
+      {
+        "name": "Arbat Hotel Chelyabinsk",
+        "price_per_day_usd": 45.0,
+        "coordinates": {
+          "latitude": 55.1641,
+          "longitude": 61.4401
+        }
+      },
+      {
+        "name": "Бутик-отель Нева",
+        "price_per_night_rub": 6190,
+        "coordinates": {
+          "latitude": 55.763139,
+          "longitude": 37.56258
+        }
+      },
+      {
+        "name": "Хостел Капитал",
+        "price_per_night_rub": 8493,
+        "coordinates": {
+          "latitude": 55.675987,
+          "longitude": 37.672925
+        }
+      },
+      {
+        "name": "Бутик-отель Гринвич",
+        "price_per_night_rub": 10307,
+        "coordinates": {
+          "latitude": 55.656806,
+          "longitude": 37.541161
+        }
+      },
+      {
+        "name": "Апарт-отель Сити",
+        "price_per_night_rub": 11127,
+        "coordinates": {
+          "latitude": 55.832082,
+          "longitude": 37.706348
+        }
+      },
+      {
+        "name": "Бутик-отель Сибирь",
+        "price_per_night_rub": 8370,
+        "coordinates": {
+          "latitude": 55.750876,
+          "longitude": 37.5127
+        }
+      },
+      {
+        "name": "Отель Москва",
+        "price_per_night_rub": 2184,
+        "coordinates": {
+          "latitude": 55.776887,
+          "longitude": 37.655492
+        }
+      },
+      {
+        "name": "Хостел Галактика",
+        "price_per_night_rub": 3598,
+        "coordinates": {
+          "latitude": 55.75355,
+          "longitude": 37.526925
+        }
+      },
+      {
+        "name": "Апарт-отель Элегант",
+        "price_per_night_rub": 9319,
+        "coordinates": {
+          "latitude": 55.709847,
+          "longitude": 37.61649
+        }
+      },
+      {
+        "name": "Отель Достоевский",
+        "price_per_night_rub": 11932,
+        "coordinates": {
+          "latitude": 55.829887,
+          "longitude": 37.685689
+        }
+      },
+      {
+        "name": "Хостел Империя",
+        "price_per_night_rub": 6804,
+        "coordinates": {
+          "latitude": 55.814014,
+          "longitude": 37.640707
+        }
+      },
+      {
+        "name": "Мини-отель Гринвич",
+        "price_per_night_rub": 11125,
+        "coordinates": {
+          "latitude": 55.670265,
+          "longitude": 37.680328
+        }
+      },
+      {
+        "name": "Отель Капитал",
+        "price_per_night_rub": 2080,
+        "coordinates": {
+          "latitude": 55.725194,
+          "longitude": 37.539222
+        }
+      },
+      {
+        "name": "Отель Сити",
+        "price_per_night_rub": 5711,
+        "coordinates": {
+          "latitude": 55.794329,
+          "longitude": 37.600928
+        }
+      },
+      {
+        "name": "Хостел Вега",
+        "price_per_night_rub": 6321,
+        "coordinates": {
+          "latitude": 55.749924,
+          "longitude": 37.632778
+        }
+      },
+      {
+        "name": "Отель Капитал",
+        "price_per_night_rub": 7531,
+        "coordinates": {
+          "latitude": 55.848962,
+          "longitude": 37.635454
+        }
+      },
+      {
+        "name": "Отель Бриз",
+        "price_per_night_rub": 10753,
+        "coordinates": {
+          "latitude": 55.756489,
+          "longitude": 37.640716
+        }
+      },
+      {
+        "name": "Бутик-отель Урал",
+        "price_per_night_rub": 8538,
+        "coordinates": {
+          "latitude": 55.767595,
+          "longitude": 37.680716
+        }
+      },
+      {
+        "name": "Апарт-отель Кремль",
+        "price_per_night_rub": 10837,
+        "coordinates": {
+          "latitude": 55.665467,
+          "longitude": 37.552998
+        }
+      },
+      {
+        "name": "Гостиница Сити",
+        "price_per_night_rub": 11263,
+        "coordinates": {
+          "latitude": 55.690419,
+          "longitude": 37.510724
+        }
+      },
+      {
+        "name": "Отель Плаза",
+        "price_per_night_rub": 5493,
+        "coordinates": {
+          "latitude": 55.674649,
+          "longitude": 37.567777
+        }
+      },
+      {
+        "name": "Бутик-отель Вега",
+        "price_per_night_rub": 4181,
+        "coordinates": {
+          "latitude": 55.688402,
+          "longitude": 37.615158
+        }
+      },
+      {
+        "name": "Отель Арбат",
+        "price_per_night_rub": 2398,
+        "coordinates": {
+          "latitude": 55.654064,
+          "longitude": 37.614828
+        }
+      },
+      {
+        "name": "Отель Центральный",
+        "price_per_night_rub": 8321,
+        "coordinates": {
+          "latitude": 55.652047,
+          "longitude": 37.606743
+        }
+      },
+      {
+        "name": "Отель Гринвич",
+        "price_per_night_rub": 4926,
+        "coordinates": {
+          "latitude": 55.734272,
+          "longitude": 37.62226
+        }
+      },
+      {
+        "name": "Гостиница Меридиан",
+        "price_per_night_rub": 4512,
+        "coordinates": {
+          "latitude": 55.69797,
+          "longitude": 37.571229
+        }
+      },
+      {
+        "name": "Отель Русь",
+        "price_per_night_rub": 11644,
+        "coordinates": {
+          "latitude": 55.774451,
+          "longitude": 37.611872
+        }
+      },
+      {
+        "name": "Гостиница Кремль",
+        "price_per_night_rub": 9911,
+        "coordinates": {
+          "latitude": 55.660325,
+          "longitude": 37.625563
+        }
+      },
+      {
+        "name": "Отель Арбат",
+        "price_per_night_rub": 3386,
+        "coordinates": {
+          "latitude": 55.824092,
+          "longitude": 37.677798
+        }
+      },
+      {
+        "name": "Отель Аврора",
+        "price_per_night_rub": 3746,
+        "coordinates": {
+          "latitude": 55.815828,
+          "longitude": 37.616408
+        }
+      },
+      {
+        "name": "Отель Олимп",
+        "price_per_night_rub": 7701,
+        "coordinates": {
+          "latitude": 55.692747,
+          "longitude": 37.541169
+        }
+      },
+      {
+        "name": "Отель Байкал",
+        "price_per_night_rub": 8870,
+        "coordinates": {
+          "latitude": 55.668023,
+          "longitude": 37.57114
+        }
+      },
+      {
+        "name": "Гостиница Галактика",
+        "price_per_night_rub": 2528,
+        "coordinates": {
+          "latitude": 55.740536,
+          "longitude": 37.687252
+        }
+      },
+      {
+        "name": "Отель Байкал",
+        "price_per_night_rub": 4078,
+        "coordinates": {
+          "latitude": 55.739385,
+          "longitude": 37.661154
+        }
+      },
+      {
+        "name": "Мини-отель Лагуна",
+        "price_per_night_rub": 6747,
+        "coordinates": {
+          "latitude": 55.784126,
+          "longitude": 37.60978
+        }
+      },
+      {
+        "name": "Отель Версаль",
+        "price_per_night_rub": 8500,
+        "coordinates": {
+          "latitude": 55.714189,
+          "longitude": 37.598569
+        }
+      },
+      {
+        "name": "Бутик-отель Астра",
+        "price_per_night_rub": 11855,
+        "coordinates": {
+          "latitude": 55.773944,
+          "longitude": 37.664742
+        }
+      },
+      {
+        "name": "Отель Аврора",
+        "price_per_night_rub": 10075,
+        "coordinates": {
+          "latitude": 55.73498,
+          "longitude": 37.532703
+        }
+      },
+      {
+        "name": "Гостиница Империя",
+        "price_per_night_rub": 6051,
+        "coordinates": {
+          "latitude": 55.690335,
+          "longitude": 37.683148
+        }
+      },
+      {
+        "name": "Гостиница Лагуна",
+        "price_per_night_rub": 6492,
+        "coordinates": {
+          "latitude": 55.715262,
+          "longitude": 37.647178
+        }
+      },
+      {
+        "name": "Мини-отель Центральный",
+        "price_per_night_rub": 9700,
+        "coordinates": {
+          "latitude": 55.685303,
+          "longitude": 37.560376
+        }
+      },
+      {
+        "name": "Хостел Гринвич",
+        "price_per_night_rub": 11996,
+        "coordinates": {
+          "latitude": 55.660004,
+          "longitude": 37.625213
+        }
+      },
+      {
+        "name": "Апарт-отель Премьер",
+        "price_per_night_rub": 8909,
+        "coordinates": {
+          "latitude": 55.665007,
+          "longitude": 37.640465
+        }
+      },
+      {
+        "name": "Отель Империя",
+        "price_per_night_rub": 6660,
+        "coordinates": {
+          "latitude": 55.825803,
+          "longitude": 37.559546
+        }
+      },
+      {
+        "name": "Мини-отель Галактика",
+        "price_per_night_rub": 7753,
+        "coordinates": {
+          "latitude": 55.806218,
+          "longitude": 37.673284
+        }
+      },
+      {
+        "name": "Отель Москва",
+        "price_per_night_rub": 7308,
+        "coordinates": {
+          "latitude": 55.656751,
+          "longitude": 37.661794
+        }
+      },
+      {
+        "name": "Отель Байкал",
+        "price_per_night_rub": 9290,
+        "coordinates": {
+          "latitude": 55.680961,
+          "longitude": 37.557027
+        }
+      }
+    ]
+  },
+  {
+    "city": "Samara",
+    "hotels": [
+      {
+        "name": "Holiday Inn Samara",
+        "price_per_day_usd": 65.0,
+        "coordinates": {
+          "latitude": 53.1967,
+          "longitude": 50.0987
+        }
+      },
+      {
+        "name": "Renaissance Samara Hotel",
+        "price_per_day_usd": 70.0,
+        "coordinates": {
+          "latitude": 53.1943,
+          "longitude": 50.1012
+        }
+      },
+      {
+        "name": "Hampton by Hilton Samara",
+        "price_per_day_usd": 55.0,
+        "coordinates": {
+          "latitude": 53.1989,
+          "longitude": 50.0965
+        }
+      },
+      {
+        "name": "Ibis Samara",
+        "price_per_day_usd": 40.0,
+        "coordinates": {
+          "latitude": 53.1921,
+          "longitude": 50.1034
+        }
+      },
+      {
+        "name": "Отель Астра",
+        "price_per_night_rub": 6181,
+        "coordinates": {
+          "latitude": 55.722471,
+          "longitude": 37.510998
+        }
+      },
+      {
+        "name": "Гостиница Нева",
+        "price_per_night_rub": 10350,
+        "coordinates": {
+          "latitude": 55.7492,
+          "longitude": 37.59039
+        }
+      },
+      {
+        "name": "Мини-отель Нева",
+        "price_per_night_rub": 2256,
+        "coordinates": {
+          "latitude": 55.835736,
+          "longitude": 37.703613
+        }
+      },
+      {
+        "name": "Апарт-отель Лагуна",
+        "price_per_night_rub": 11400,
+        "coordinates": {
+          "latitude": 55.744615,
+          "longitude": 37.696473
+        }
+      },
+      {
+        "name": "Гостиница Спутник",
+        "price_per_night_rub": 11684,
+        "coordinates": {
+          "latitude": 55.714979,
+          "longitude": 37.524476
+        }
+      },
+      {
+        "name": "Отель Русь",
+        "price_per_night_rub": 3584,
+        "coordinates": {
+          "latitude": 55.776763,
+          "longitude": 37.612406
+        }
+      },
+      {
+        "name": "Гостиница Вега",
+        "price_per_night_rub": 6891,
+        "coordinates": {
+          "latitude": 55.781552,
+          "longitude": 37.601648
+        }
+      },
+      {
+        "name": "Мини-отель Москва",
+        "price_per_night_rub": 4955,
+        "coordinates": {
+          "latitude": 55.684587,
+          "longitude": 37.565884
+        }
+      },
+      {
+        "name": "Апарт-отель Москва",
+        "price_per_night_rub": 4330,
+        "coordinates": {
+          "latitude": 55.782947,
+          "longitude": 37.519836
+        }
+      },
+      {
+        "name": "Отель Астра",
+        "price_per_night_rub": 8497,
+        "coordinates": {
+          "latitude": 55.728718,
+          "longitude": 37.564943
+        }
+      },
+      {
+        "name": "Отель Нева",
+        "price_per_night_rub": 5133,
+        "coordinates": {
+          "latitude": 55.823357,
+          "longitude": 37.620419
+        }
+      },
+      {
+        "name": "Отель Центральный",
+        "price_per_night_rub": 6893,
+        "coordinates": {
+          "latitude": 55.68661,
+          "longitude": 37.65491
+        }
+      },
+      {
+        "name": "Мини-отель Аврора",
+        "price_per_night_rub": 9683,
+        "coordinates": {
+          "latitude": 55.812271,
+          "longitude": 37.516041
+        }
+      },
+      {
+        "name": "Отель Плаза",
+        "price_per_night_rub": 2659,
+        "coordinates": {
+          "latitude": 55.701858,
+          "longitude": 37.630278
+        }
+      },
+      {
+        "name": "Отель Галактика",
+        "price_per_night_rub": 4874,
+        "coordinates": {
+          "latitude": 55.692942,
+          "longitude": 37.516293
+        }
+      },
+      {
+        "name": "Мини-отель Меридиан",
+        "price_per_night_rub": 5338,
+        "coordinates": {
+          "latitude": 55.730908,
+          "longitude": 37.619222
+        }
+      },
+      {
+        "name": "Апарт-отель Гринвич",
+        "price_per_night_rub": 5235,
+        "coordinates": {
+          "latitude": 55.679855,
+          "longitude": 37.515685
+        }
+      },
+      {
+        "name": "Апарт-отель Москва",
+        "price_per_night_rub": 10286,
+        "coordinates": {
+          "latitude": 55.691387,
+          "longitude": 37.639356
+        }
+      },
+      {
+        "name": "Мини-отель Спутник",
+        "price_per_night_rub": 11642,
+        "coordinates": {
+          "latitude": 55.740946,
+          "longitude": 37.587207
+        }
+      },
+      {
+        "name": "Отель Аврора",
+        "price_per_night_rub": 3203,
+        "coordinates": {
+          "latitude": 55.741619,
+          "longitude": 37.595683
+        }
+      },
+      {
+        "name": "Отель Аврора",
+        "price_per_night_rub": 5308,
+        "coordinates": {
+          "latitude": 55.722439,
+          "longitude": 37.571612
+        }
+      },
+      {
+        "name": "Гостиница Достоевский",
+        "price_per_night_rub": 10071,
+        "coordinates": {
+          "latitude": 55.847045,
+          "longitude": 37.597139
+        }
+      },
+      {
+        "name": "Мини-отель Центральный",
+        "price_per_night_rub": 6997,
+        "coordinates": {
+          "latitude": 55.813628,
+          "longitude": 37.574539
+        }
+      },
+      {
+        "name": "Мини-отель Сити",
+        "price_per_night_rub": 2229,
+        "coordinates": {
+          "latitude": 55.664188,
+          "longitude": 37.517289
+        }
+      },
+      {
+        "name": "Бутик-отель Бриз",
+        "price_per_night_rub": 6811,
+        "coordinates": {
+          "latitude": 55.738092,
+          "longitude": 37.577237
+        }
+      },
+      {
+        "name": "Отель Сибирь",
+        "price_per_night_rub": 6612,
+        "coordinates": {
+          "latitude": 55.73201,
+          "longitude": 37.55661
+        }
+      },
+      {
+        "name": "Отель Русь",
+        "price_per_night_rub": 7443,
+        "coordinates": {
+          "latitude": 55.782536,
+          "longitude": 37.651635
+        }
+      },
+      {
+        "name": "Отель Русь",
+        "price_per_night_rub": 2599,
+        "coordinates": {
+          "latitude": 55.746665,
+          "longitude": 37.653737
+        }
+      },
+      {
+        "name": "Гостиница Салют",
+        "price_per_night_rub": 3205,
+        "coordinates": {
+          "latitude": 55.74305,
+          "longitude": 37.563731
+        }
+      },
+      {
+        "name": "Мини-отель Русь",
+        "price_per_night_rub": 11896,
+        "coordinates": {
+          "latitude": 55.692142,
+          "longitude": 37.701453
+        }
+      },
+      {
+        "name": "Мини-отель Центральный",
+        "price_per_night_rub": 5918,
+        "coordinates": {
+          "latitude": 55.729801,
+          "longitude": 37.583222
+        }
+      },
+      {
+        "name": "Отель Бриз",
+        "price_per_night_rub": 5382,
+        "coordinates": {
+          "latitude": 55.788006,
+          "longitude": 37.645868
+        }
+      },
+      {
+        "name": "Апарт-отель Космос",
+        "price_per_night_rub": 11093,
+        "coordinates": {
+          "latitude": 55.746243,
+          "longitude": 37.685039
+        }
+      },
+      {
+        "name": "Мини-отель Сибирь",
+        "price_per_night_rub": 11630,
+        "coordinates": {
+          "latitude": 55.663449,
+          "longitude": 37.631528
+        }
+      },
+      {
+        "name": "Апарт-отель Лагуна",
+        "price_per_night_rub": 8750,
+        "coordinates": {
+          "latitude": 55.810948,
+          "longitude": 37.598843
+        }
+      },
+      {
+        "name": "Мини-отель Урал",
+        "price_per_night_rub": 4814,
+        "coordinates": {
+          "latitude": 55.794256,
+          "longitude": 37.518139
+        }
+      },
+      {
+        "name": "Гостиница Олимп",
+        "price_per_night_rub": 10848,
+        "coordinates": {
+          "latitude": 55.676002,
+          "longitude": 37.52197
+        }
+      },
+      {
+        "name": "Гостиница Сити",
+        "price_per_night_rub": 6009,
+        "coordinates": {
+          "latitude": 55.835881,
+          "longitude": 37.56682
+        }
+      },
+      {
+        "name": "Отель Аврора",
+        "price_per_night_rub": 2122,
+        "coordinates": {
+          "latitude": 55.832772,
+          "longitude": 37.627686
+        }
+      },
+      {
+        "name": "Хостел Олимп",
+        "price_per_night_rub": 7736,
+        "coordinates": {
+          "latitude": 55.840653,
+          "longitude": 37.609758
+        }
+      },
+      {
+        "name": "Отель Меридиан",
+        "price_per_night_rub": 5023,
+        "coordinates": {
+          "latitude": 55.704159,
+          "longitude": 37.57726
+        }
+      },
+      {
+        "name": "Отель Центральный",
+        "price_per_night_rub": 10025,
+        "coordinates": {
+          "latitude": 55.759066,
+          "longitude": 37.698587
+        }
+      },
+      {
+        "name": "Отель Плаза",
+        "price_per_night_rub": 7919,
+        "coordinates": {
+          "latitude": 55.838039,
+          "longitude": 37.539001
+        }
+      },
+      {
+        "name": "Апарт-отель Арбат",
+        "price_per_night_rub": 2706,
+        "coordinates": {
+          "latitude": 55.840195,
+          "longitude": 37.549477
+        }
+      },
+      {
+        "name": "Отель Плаза",
+        "price_per_night_rub": 10416,
+        "coordinates": {
+          "latitude": 55.781155,
+          "longitude": 37.602632
+        }
+      },
+      {
+        "name": "Гостиница Аврора",
+        "price_per_night_rub": 9842,
+        "coordinates": {
+          "latitude": 55.80337,
+          "longitude": 37.599713
+        }
+      }
+    ]
+  },
+  {
+    "city": "Ufa",
+    "hotels": [
+      {
+        "name": "Hilton Garden Inn Ufa Riverside",
+        "price_per_day_usd": 65.0,
+        "coordinates": {
+          "latitude": 54.7395,
+          "longitude": 55.9712
+        }
+      },
+      {
+        "name": "President Hotel Ufa",
+        "price_per_day_usd": 60.0,
+        "coordinates": {
+          "latitude": 54.7371,
+          "longitude": 55.9745
+        }
+      },
+      {
+        "name": "Iremel Hotel",
+        "price_per_day_usd": 50.0,
+        "coordinates": {
+          "latitude": 54.7418,
+          "longitude": 55.9689
+        }
+      },
+      {
+        "name": "Azimut Hotel Ufa",
+        "price_per_day_usd": 45.0,
+        "coordinates": {
+          "latitude": 54.7364,
+          "longitude": 55.9767
+        }
+      },
+      {
+        "name": "Бутик-отель Нева",
+        "price_per_night_rub": 5574,
+        "coordinates": {
+          "latitude": 55.770273,
+          "longitude": 37.69271
+        }
+      },
+      {
+        "name": "Отель Центральный",
+        "price_per_night_rub": 6811,
+        "coordinates": {
+          "latitude": 55.826444,
+          "longitude": 37.589205
+        }
+      },
+      {
+        "name": "Отель Сибирь",
+        "price_per_night_rub": 6012,
+        "coordinates": {
+          "latitude": 55.667244,
+          "longitude": 37.68148
+        }
+      },
+      {
+        "name": "Мини-отель Байкал",
+        "price_per_night_rub": 7593,
+        "coordinates": {
+          "latitude": 55.79014,
+          "longitude": 37.553173
+        }
+      },
+      {
+        "name": "Мини-отель Элегант",
+        "price_per_night_rub": 7394,
+        "coordinates": {
+          "latitude": 55.834508,
+          "longitude": 37.706739
+        }
+      },
+      {
+        "name": "Гостиница Достоевский",
+        "price_per_night_rub": 10285,
+        "coordinates": {
+          "latitude": 55.772423,
+          "longitude": 37.515304
+        }
+      },
+      {
+        "name": "Гостиница Байкал",
+        "price_per_night_rub": 4933,
+        "coordinates": {
+          "latitude": 55.684155,
+          "longitude": 37.553184
+        }
+      },
+      {
+        "name": "Отель Салют",
+        "price_per_night_rub": 10158,
+        "coordinates": {
+          "latitude": 55.825347,
+          "longitude": 37.517756
+        }
+      },
+      {
+        "name": "Гостиница Аврора",
+        "price_per_night_rub": 6484,
+        "coordinates": {
+          "latitude": 55.653662,
+          "longitude": 37.567216
+        }
+      },
+      {
+        "name": "Отель Галактика",
+        "price_per_night_rub": 6126,
+        "coordinates": {
+          "latitude": 55.690621,
+          "longitude": 37.583705
+        }
+      },
+      {
+        "name": "Мини-отель Премьер",
+        "price_per_night_rub": 10699,
+        "coordinates": {
+          "latitude": 55.818998,
+          "longitude": 37.602139
+        }
+      },
+      {
+        "name": "Хостел Сити",
+        "price_per_night_rub": 6951,
+        "coordinates": {
+          "latitude": 55.659424,
+          "longitude": 37.512703
+        }
+      },
+      {
+        "name": "Апарт-отель Аврора",
+        "price_per_night_rub": 5592,
+        "coordinates": {
+          "latitude": 55.702134,
+          "longitude": 37.674339
+        }
+      },
+      {
+        "name": "Апарт-отель Достоевский",
+        "price_per_night_rub": 7412,
+        "coordinates": {
+          "latitude": 55.727996,
+          "longitude": 37.638035
+        }
+      },
+      {
+        "name": "Отель Элегант",
+        "price_per_night_rub": 5229,
+        "coordinates": {
+          "latitude": 55.775202,
+          "longitude": 37.52786
+        }
+      },
+      {
+        "name": "Отель Центральный",
+        "price_per_night_rub": 4785,
+        "coordinates": {
+          "latitude": 55.843608,
+          "longitude": 37.653636
+        }
+      },
+      {
+        "name": "Отель Аврора",
+        "price_per_night_rub": 5766,
+        "coordinates": {
+          "latitude": 55.74844,
+          "longitude": 37.530696
+        }
+      },
+      {
+        "name": "Отель Аврора",
+        "price_per_night_rub": 7414,
+        "coordinates": {
+          "latitude": 55.789316,
+          "longitude": 37.526974
+        }
+      },
+      {
+        "name": "Гостиница Меридиан",
+        "price_per_night_rub": 11741,
+        "coordinates": {
+          "latitude": 55.731445,
+          "longitude": 37.514522
+        }
+      },
+      {
+        "name": "Мини-отель Меридиан",
+        "price_per_night_rub": 10498,
+        "coordinates": {
+          "latitude": 55.699752,
+          "longitude": 37.57576
+        }
+      },
+      {
+        "name": "Апарт-отель Олимп",
+        "price_per_night_rub": 11638,
+        "coordinates": {
+          "latitude": 55.681488,
+          "longitude": 37.537306
+        }
+      },
+      {
+        "name": "Мини-отель Аврора",
+        "price_per_night_rub": 2311,
+        "coordinates": {
+          "latitude": 55.658606,
+          "longitude": 37.555553
+        }
+      },
+      {
+        "name": "Апарт-отель Вега",
+        "price_per_night_rub": 7255,
+        "coordinates": {
+          "latitude": 55.671955,
+          "longitude": 37.615437
+        }
+      },
+      {
+        "name": "Отель Кремль",
+        "price_per_night_rub": 11188,
+        "coordinates": {
+          "latitude": 55.687231,
+          "longitude": 37.552331
+        }
+      },
+      {
+        "name": "Отель Бриз",
+        "price_per_night_rub": 4796,
+        "coordinates": {
+          "latitude": 55.711417,
+          "longitude": 37.661735
+        }
+      },
+      {
+        "name": "Отель Достоевский",
+        "price_per_night_rub": 10341,
+        "coordinates": {
+          "latitude": 55.684821,
+          "longitude": 37.526038
+        }
+      },
+      {
+        "name": "Гостиница Лагуна",
+        "price_per_night_rub": 9396,
+        "coordinates": {
+          "latitude": 55.806704,
+          "longitude": 37.510842
+        }
+      },
+      {
+        "name": "Отель Аврора",
+        "price_per_night_rub": 5476,
+        "coordinates": {
+          "latitude": 55.750673,
+          "longitude": 37.661238
+        }
+      },
+      {
+        "name": "Отель Галактика",
+        "price_per_night_rub": 4117,
+        "coordinates": {
+          "latitude": 55.781704,
+          "longitude": 37.52467
+        }
+      },
+      {
+        "name": "Отель Русь",
+        "price_per_night_rub": 8452,
+        "coordinates": {
+          "latitude": 55.744179,
+          "longitude": 37.70645
+        }
+      },
+      {
+        "name": "Отель Меридиан",
+        "price_per_night_rub": 4649,
+        "coordinates": {
+          "latitude": 55.690397,
+          "longitude": 37.514803
+        }
+      },
+      {
+        "name": "Гостиница Капитал",
+        "price_per_night_rub": 8554,
+        "coordinates": {
+          "latitude": 55.694467,
+          "longitude": 37.5468
+        }
+      },
+      {
+        "name": "Гостиница Нева",
+        "price_per_night_rub": 3296,
+        "coordinates": {
+          "latitude": 55.798743,
+          "longitude": 37.574746
+        }
+      },
+      {
+        "name": "Апарт-отель Астра",
+        "price_per_night_rub": 10941,
+        "coordinates": {
+          "latitude": 55.819688,
+          "longitude": 37.664814
+        }
+      },
+      {
+        "name": "Мини-отель Достоевский",
+        "price_per_night_rub": 9374,
+        "coordinates": {
+          "latitude": 55.776742,
+          "longitude": 37.511329
+        }
+      },
+      {
+        "name": "Отель Галактика",
+        "price_per_night_rub": 10250,
+        "coordinates": {
+          "latitude": 55.815354,
+          "longitude": 37.701582
+        }
+      },
+      {
+        "name": "Отель Версаль",
+        "price_per_night_rub": 5106,
+        "coordinates": {
+          "latitude": 55.656506,
+          "longitude": 37.567643
+        }
+      },
+      {
+        "name": "Отель Лагуна",
+        "price_per_night_rub": 5501,
+        "coordinates": {
+          "latitude": 55.751148,
+          "longitude": 37.566229
+        }
+      },
+      {
+        "name": "Апарт-отель Галактика",
+        "price_per_night_rub": 5447,
+        "coordinates": {
+          "latitude": 55.651014,
+          "longitude": 37.641065
+        }
+      },
+      {
+        "name": "Отель Русь",
+        "price_per_night_rub": 4333,
+        "coordinates": {
+          "latitude": 55.750149,
+          "longitude": 37.642474
+        }
+      },
+      {
+        "name": "Отель Сибирь",
+        "price_per_night_rub": 7403,
+        "coordinates": {
+          "latitude": 55.836913,
+          "longitude": 37.584087
+        }
+      },
+      {
+        "name": "Отель Премьер",
+        "price_per_night_rub": 3005,
+        "coordinates": {
+          "latitude": 55.689577,
+          "longitude": 37.549516
+        }
+      },
+      {
+        "name": "Гостиница Версаль",
+        "price_per_night_rub": 9748,
+        "coordinates": {
+          "latitude": 55.726778,
+          "longitude": 37.646087
+        }
+      },
+      {
+        "name": "Мини-отель Сибирь",
+        "price_per_night_rub": 9433,
+        "coordinates": {
+          "latitude": 55.680612,
+          "longitude": 37.623961
+        }
+      },
+      {
+        "name": "Хостел Кремль",
+        "price_per_night_rub": 11702,
+        "coordinates": {
+          "latitude": 55.741465,
+          "longitude": 37.592839
+        }
+      },
+      {
+        "name": "Хостел Вега",
+        "price_per_night_rub": 10946,
+        "coordinates": {
+          "latitude": 55.845626,
+          "longitude": 37.693104
+        }
+      }
+    ]
+  },
+  {
+    "city": "Rostov-on-Don",
+    "hotels": [
+      {
+        "name": "Mercure Rostov-on-Don Center",
+        "price_per_day_usd": 65.0,
+        "coordinates": {
+          "latitude": 47.2364,
+          "longitude": 39.7002
+        }
+      },
+      {
+        "name": "Don Plaza Hotel",
+        "price_per_day_usd": 60.0,
+        "coordinates": {
+          "latitude": 47.2341,
+          "longitude": 39.7034
+        }
+      },
+      {
+        "name": "Attache Hotel",
+        "price_per_day_usd": 55.0,
+        "coordinates": {
+          "latitude": 47.2387,
+          "longitude": 39.6989
+        }
+      },
+      {
+        "name": "Marins Park Hotel Rostov",
+        "price_per_day_usd": 50.0,
+        "coordinates": {
+          "latitude": 47.2323,
+          "longitude": 39.7056
+        }
+      },
+      {
+        "name": "Бутик-отель Достоевский",
+        "price_per_night_rub": 9308,
+        "coordinates": {
+          "latitude": 55.806978,
+          "longitude": 37.677283
+        }
+      },
+      {
+        "name": "Отель Капитал",
+        "price_per_night_rub": 10995,
+        "coordinates": {
+          "latitude": 55.716345,
+          "longitude": 37.650524
+        }
+      },
+      {
+        "name": "Отель Олимп",
+        "price_per_night_rub": 7101,
+        "coordinates": {
+          "latitude": 55.685126,
+          "longitude": 37.682262
+        }
+      },
+      {
+        "name": "Апарт-отель Сити",
+        "price_per_night_rub": 3760,
+        "coordinates": {
+          "latitude": 55.826657,
+          "longitude": 37.687084
+        }
+      },
+      {
+        "name": "Гостиница Империя",
+        "price_per_night_rub": 11895,
+        "coordinates": {
+          "latitude": 55.744581,
+          "longitude": 37.548842
+        }
+      },
+      {
+        "name": "Отель Русь",
+        "price_per_night_rub": 3640,
+        "coordinates": {
+          "latitude": 55.792373,
+          "longitude": 37.686335
+        }
+      },
+      {
+        "name": "Апарт-отель Галактика",
+        "price_per_night_rub": 10278,
+        "coordinates": {
+          "latitude": 55.698668,
+          "longitude": 37.629593
+        }
+      },
+      {
+        "name": "Бутик-отель Премьер",
+        "price_per_night_rub": 3376,
+        "coordinates": {
+          "latitude": 55.837392,
+          "longitude": 37.635529
+        }
+      },
+      {
+        "name": "Гостиница Элегант",
+        "price_per_night_rub": 7748,
+        "coordinates": {
+          "latitude": 55.657328,
+          "longitude": 37.706115
+        }
+      },
+      {
+        "name": "Отель Русь",
+        "price_per_night_rub": 10810,
+        "coordinates": {
+          "latitude": 55.789613,
+          "longitude": 37.655189
+        }
+      },
+      {
+        "name": "Отель Арбат",
+        "price_per_night_rub": 11049,
+        "coordinates": {
+          "latitude": 55.754364,
+          "longitude": 37.701231
+        }
+      },
+      {
+        "name": "Отель Сити",
+        "price_per_night_rub": 3249,
+        "coordinates": {
+          "latitude": 55.747341,
+          "longitude": 37.646341
+        }
+      },
+      {
+        "name": "Хостел Центральный",
+        "price_per_night_rub": 2239,
+        "coordinates": {
+          "latitude": 55.707264,
+          "longitude": 37.571509
+        }
+      },
+      {
+        "name": "Гостиница Астра",
+        "price_per_night_rub": 5809,
+        "coordinates": {
+          "latitude": 55.818934,
+          "longitude": 37.69818
+        }
+      },
+      {
+        "name": "Бутик-отель Спутник",
+        "price_per_night_rub": 7788,
+        "coordinates": {
+          "latitude": 55.779607,
+          "longitude": 37.596779
+        }
+      },
+      {
+        "name": "Отель Нева",
+        "price_per_night_rub": 4803,
+        "coordinates": {
+          "latitude": 55.802033,
+          "longitude": 37.698597
+        }
+      },
+      {
+        "name": "Отель Империя",
+        "price_per_night_rub": 3725,
+        "coordinates": {
+          "latitude": 55.741879,
+          "longitude": 37.598975
+        }
+      },
+      {
+        "name": "Бутик-отель Империя",
+        "price_per_night_rub": 11480,
+        "coordinates": {
+          "latitude": 55.766717,
+          "longitude": 37.696958
+        }
+      },
+      {
+        "name": "Апарт-отель Нева",
+        "price_per_night_rub": 6362,
+        "coordinates": {
+          "latitude": 55.762644,
+          "longitude": 37.702417
+        }
+      },
+      {
+        "name": "Бутик-отель Русь",
+        "price_per_night_rub": 11161,
+        "coordinates": {
+          "latitude": 55.697169,
+          "longitude": 37.627934
+        }
+      },
+      {
+        "name": "Отель Нева",
+        "price_per_night_rub": 7794,
+        "coordinates": {
+          "latitude": 55.705107,
+          "longitude": 37.567232
+        }
+      },
+      {
+        "name": "Апарт-отель Меридиан",
+        "price_per_night_rub": 6483,
+        "coordinates": {
+          "latitude": 55.675251,
+          "longitude": 37.690601
+        }
+      },
+      {
+        "name": "Отель Москва",
+        "price_per_night_rub": 10576,
+        "coordinates": {
+          "latitude": 55.679704,
+          "longitude": 37.668048
+        }
+      },
+      {
+        "name": "Мини-отель Элегант",
+        "price_per_night_rub": 2735,
+        "coordinates": {
+          "latitude": 55.670284,
+          "longitude": 37.522887
+        }
+      },
+      {
+        "name": "Апарт-отель Плаза",
+        "price_per_night_rub": 2178,
+        "coordinates": {
+          "latitude": 55.819547,
+          "longitude": 37.611679
+        }
+      },
+      {
+        "name": "Бутик-отель Вега",
+        "price_per_night_rub": 7545,
+        "coordinates": {
+          "latitude": 55.841868,
+          "longitude": 37.516286
+        }
+      },
+      {
+        "name": "Мини-отель Галактика",
+        "price_per_night_rub": 3714,
+        "coordinates": {
+          "latitude": 55.774493,
+          "longitude": 37.643202
+        }
+      },
+      {
+        "name": "Апарт-отель Москва",
+        "price_per_night_rub": 11266,
+        "coordinates": {
+          "latitude": 55.688901,
+          "longitude": 37.669474
+        }
+      },
+      {
+        "name": "Отель Капитал",
+        "price_per_night_rub": 2418,
+        "coordinates": {
+          "latitude": 55.742607,
+          "longitude": 37.60667
+        }
+      },
+      {
+        "name": "Отель Меридиан",
+        "price_per_night_rub": 2111,
+        "coordinates": {
+          "latitude": 55.846022,
+          "longitude": 37.6326
+        }
+      },
+      {
+        "name": "Отель Элегант",
+        "price_per_night_rub": 11777,
+        "coordinates": {
+          "latitude": 55.746597,
+          "longitude": 37.549618
+        }
+      },
+      {
+        "name": "Бутик-отель Бриз",
+        "price_per_night_rub": 4134,
+        "coordinates": {
+          "latitude": 55.739299,
+          "longitude": 37.705938
+        }
+      },
+      {
+        "name": "Отель Байкал",
+        "price_per_night_rub": 4711,
+        "coordinates": {
+          "latitude": 55.80388,
+          "longitude": 37.521728
+        }
+      },
+      {
+        "name": "Бутик-отель Урал",
+        "price_per_night_rub": 3184,
+        "coordinates": {
+          "latitude": 55.662984,
+          "longitude": 37.551379
+        }
+      },
+      {
+        "name": "Отель Достоевский",
+        "price_per_night_rub": 2982,
+        "coordinates": {
+          "latitude": 55.787391,
+          "longitude": 37.650729
+        }
+      },
+      {
+        "name": "Гостиница Бриз",
+        "price_per_night_rub": 10029,
+        "coordinates": {
+          "latitude": 55.76833,
+          "longitude": 37.625974
+        }
+      },
+      {
+        "name": "Отель Спутник",
+        "price_per_night_rub": 10780,
+        "coordinates": {
+          "latitude": 55.774787,
+          "longitude": 37.595369
+        }
+      },
+      {
+        "name": "Отель Премьер",
+        "price_per_night_rub": 4851,
+        "coordinates": {
+          "latitude": 55.724226,
+          "longitude": 37.646124
+        }
+      },
+      {
+        "name": "Мини-отель Русь",
+        "price_per_night_rub": 10473,
+        "coordinates": {
+          "latitude": 55.679261,
+          "longitude": 37.697822
+        }
+      },
+      {
+        "name": "Апарт-отель Меридиан",
+        "price_per_night_rub": 6719,
+        "coordinates": {
+          "latitude": 55.716092,
+          "longitude": 37.683247
+        }
+      },
+      {
+        "name": "Мини-отель Галактика",
+        "price_per_night_rub": 11493,
+        "coordinates": {
+          "latitude": 55.840296,
+          "longitude": 37.707542
+        }
+      },
+      {
+        "name": "Мини-отель Ренессанс",
+        "price_per_night_rub": 8762,
+        "coordinates": {
+          "latitude": 55.712831,
+          "longitude": 37.664699
+        }
+      },
+      {
+        "name": "Отель Астра",
+        "price_per_night_rub": 10233,
+        "coordinates": {
+          "latitude": 55.742864,
+          "longitude": 37.651392
+        }
+      },
+      {
+        "name": "Отель Достоевский",
+        "price_per_night_rub": 7719,
+        "coordinates": {
+          "latitude": 55.676598,
+          "longitude": 37.66278
+        }
+      },
+      {
+        "name": "Гостиница Центральный",
+        "price_per_night_rub": 2666,
+        "coordinates": {
+          "latitude": 55.720677,
+          "longitude": 37.646037
+        }
+      },
+      {
+        "name": "Мини-отель Премьер",
+        "price_per_night_rub": 8979,
+        "coordinates": {
+          "latitude": 55.779182,
+          "longitude": 37.513374
+        }
+      }
+    ]
+  },
+  {
+    "city": "Omsk",
+    "hotels": [
+      {
+        "name": "Ibis Sibir Omsk",
+        "price_per_day_usd": 40.0,
+        "coordinates": {
+          "latitude": 54.9892,
+          "longitude": 73.3234
+        }
+      },
+      {
+        "name": "Mayak Hotel Omsk",
+        "price_per_day_usd": 45.0,
+        "coordinates": {
+          "latitude": 54.9876,
+          "longitude": 73.3267
+        }
+      },
+      {
+        "name": "Aurora Hotel Omsk",
+        "price_per_day_usd": 50.0,
+        "coordinates": {
+          "latitude": 54.9913,
+          "longitude": 73.3201
+        }
+      },
+      {
+        "name": "Гостиница Лагуна",
+        "price_per_night_rub": 8548,
+        "coordinates": {
+          "latitude": 55.804925,
+          "longitude": 37.634899
+        }
+      },
+      {
+        "name": "Отель Плаза",
+        "price_per_night_rub": 4220,
+        "coordinates": {
+          "latitude": 55.748271,
+          "longitude": 37.664692
+        }
+      },
+      {
+        "name": "Хостел Олимп",
+        "price_per_night_rub": 8592,
+        "coordinates": {
+          "latitude": 55.815963,
+          "longitude": 37.549928
+        }
+      },
+      {
+        "name": "Отель Лагуна",
+        "price_per_night_rub": 6610,
+        "coordinates": {
+          "latitude": 55.682489,
+          "longitude": 37.630237
+        }
+      },
+      {
+        "name": "Отель Русь",
+        "price_per_night_rub": 4374,
+        "coordinates": {
+          "latitude": 55.734786,
+          "longitude": 37.612676
+        }
+      },
+      {
+        "name": "Отель Гринвич",
+        "price_per_night_rub": 9522,
+        "coordinates": {
+          "latitude": 55.74605,
+          "longitude": 37.542017
+        }
+      },
+      {
+        "name": "Бутик-отель Москва",
+        "price_per_night_rub": 11137,
+        "coordinates": {
+          "latitude": 55.753826,
+          "longitude": 37.636857
+        }
+      },
+      {
+        "name": "Апарт-отель Бриз",
+        "price_per_night_rub": 11066,
+        "coordinates": {
+          "latitude": 55.701175,
+          "longitude": 37.592752
+        }
+      },
+      {
+        "name": "Гостиница Гринвич",
+        "price_per_night_rub": 10451,
+        "coordinates": {
+          "latitude": 55.76442,
+          "longitude": 37.641793
+        }
+      },
+      {
+        "name": "Мини-отель Гринвич",
+        "price_per_night_rub": 4959,
+        "coordinates": {
+          "latitude": 55.804069,
+          "longitude": 37.519925
+        }
+      },
+      {
+        "name": "Отель Байкал",
+        "price_per_night_rub": 6683,
+        "coordinates": {
+          "latitude": 55.724913,
+          "longitude": 37.524488
+        }
+      },
+      {
+        "name": "Бутик-отель Меридиан",
+        "price_per_night_rub": 3305,
+        "coordinates": {
+          "latitude": 55.845951,
+          "longitude": 37.510122
+        }
+      },
+      {
+        "name": "Отель Плаза",
+        "price_per_night_rub": 3388,
+        "coordinates": {
+          "latitude": 55.795657,
+          "longitude": 37.588185
+        }
+      },
+      {
+        "name": "Апарт-отель Нева",
+        "price_per_night_rub": 4122,
+        "coordinates": {
+          "latitude": 55.704948,
+          "longitude": 37.652662
+        }
+      },
+      {
+        "name": "Отель Элегант",
+        "price_per_night_rub": 4643,
+        "coordinates": {
+          "latitude": 55.653118,
+          "longitude": 37.676447
+        }
+      },
+      {
+        "name": "Гостиница Ренессанс",
+        "price_per_night_rub": 8395,
+        "coordinates": {
+          "latitude": 55.75135,
+          "longitude": 37.661941
+        }
+      },
+      {
+        "name": "Отель Лагуна",
+        "price_per_night_rub": 11889,
+        "coordinates": {
+          "latitude": 55.73711,
+          "longitude": 37.581688
+        }
+      },
+      {
+        "name": "Гостиница Премьер",
+        "price_per_night_rub": 7035,
+        "coordinates": {
+          "latitude": 55.658507,
+          "longitude": 37.521365
+        }
+      },
+      {
+        "name": "Гостиница Байкал",
+        "price_per_night_rub": 2486,
+        "coordinates": {
+          "latitude": 55.752433,
+          "longitude": 37.653543
+        }
+      },
+      {
+        "name": "Отель Центральный",
+        "price_per_night_rub": 6916,
+        "coordinates": {
+          "latitude": 55.796149,
+          "longitude": 37.700153
+        }
+      },
+      {
+        "name": "Хостел Космос",
+        "price_per_night_rub": 2158,
+        "coordinates": {
+          "latitude": 55.772057,
+          "longitude": 37.564307
+        }
+      },
+      {
+        "name": "Бутик-отель Меридиан",
+        "price_per_night_rub": 2332,
+        "coordinates": {
+          "latitude": 55.681971,
+          "longitude": 37.665969
+        }
+      },
+      {
+        "name": "Отель Достоевский",
+        "price_per_night_rub": 7583,
+        "coordinates": {
+          "latitude": 55.768299,
+          "longitude": 37.706945
+        }
+      },
+      {
+        "name": "Хостел Версаль",
+        "price_per_night_rub": 4767,
+        "coordinates": {
+          "latitude": 55.792712,
+          "longitude": 37.622503
+        }
+      },
+      {
+        "name": "Хостел Кремль",
+        "price_per_night_rub": 5954,
+        "coordinates": {
+          "latitude": 55.825111,
+          "longitude": 37.585513
+        }
+      },
+      {
+        "name": "Отель Астра",
+        "price_per_night_rub": 4143,
+        "coordinates": {
+          "latitude": 55.747404,
+          "longitude": 37.620559
+        }
+      },
+      {
+        "name": "Отель Аврора",
+        "price_per_night_rub": 7538,
+        "coordinates": {
+          "latitude": 55.66035,
+          "longitude": 37.632482
+        }
+      },
+      {
+        "name": "Бутик-отель Ренессанс",
+        "price_per_night_rub": 7724,
+        "coordinates": {
+          "latitude": 55.678914,
+          "longitude": 37.529186
+        }
+      },
+      {
+        "name": "Апарт-отель Гринвич",
+        "price_per_night_rub": 2081,
+        "coordinates": {
+          "latitude": 55.712023,
+          "longitude": 37.656795
+        }
+      },
+      {
+        "name": "Гостиница Сити",
+        "price_per_night_rub": 5678,
+        "coordinates": {
+          "latitude": 55.800215,
+          "longitude": 37.706403
+        }
+      },
+      {
+        "name": "Апарт-отель Меридиан",
+        "price_per_night_rub": 11172,
+        "coordinates": {
+          "latitude": 55.836121,
+          "longitude": 37.564095
+        }
+      },
+      {
+        "name": "Отель Элегант",
+        "price_per_night_rub": 9948,
+        "coordinates": {
+          "latitude": 55.669248,
+          "longitude": 37.515228
+        }
+      },
+      {
+        "name": "Отель Урал",
+        "price_per_night_rub": 7281,
+        "coordinates": {
+          "latitude": 55.716976,
+          "longitude": 37.654241
+        }
+      },
+      {
+        "name": "Отель Версаль",
+        "price_per_night_rub": 5144,
+        "coordinates": {
+          "latitude": 55.689261,
+          "longitude": 37.519347
+        }
+      },
+      {
+        "name": "Апарт-отель Байкал",
+        "price_per_night_rub": 4143,
+        "coordinates": {
+          "latitude": 55.811074,
+          "longitude": 37.563226
+        }
+      },
+      {
+        "name": "Бутик-отель Центральный",
+        "price_per_night_rub": 11484,
+        "coordinates": {
+          "latitude": 55.844296,
+          "longitude": 37.60042
+        }
+      },
+      {
+        "name": "Отель Лагуна",
+        "price_per_night_rub": 6067,
+        "coordinates": {
+          "latitude": 55.672698,
+          "longitude": 37.694112
+        }
+      },
+      {
+        "name": "Хостел Гринвич",
+        "price_per_night_rub": 11724,
+        "coordinates": {
+          "latitude": 55.824502,
+          "longitude": 37.695183
+        }
+      },
+      {
+        "name": "Отель Аврора",
+        "price_per_night_rub": 6097,
+        "coordinates": {
+          "latitude": 55.698847,
+          "longitude": 37.659383
+        }
+      },
+      {
+        "name": "Апарт-отель Арбат",
+        "price_per_night_rub": 11288,
+        "coordinates": {
+          "latitude": 55.663732,
+          "longitude": 37.669267
+        }
+      },
+      {
+        "name": "Отель Империя",
+        "price_per_night_rub": 6809,
+        "coordinates": {
+          "latitude": 55.808447,
+          "longitude": 37.648038
+        }
+      },
+      {
+        "name": "Бутик-отель Достоевский",
+        "price_per_night_rub": 9662,
+        "coordinates": {
+          "latitude": 55.810425,
+          "longitude": 37.653035
+        }
+      },
+      {
+        "name": "Отель Урал",
+        "price_per_night_rub": 7318,
+        "coordinates": {
+          "latitude": 55.753351,
+          "longitude": 37.567634
+        }
+      },
+      {
+        "name": "Отель Аврора",
+        "price_per_night_rub": 6027,
+        "coordinates": {
+          "latitude": 55.657698,
+          "longitude": 37.610288
+        }
+      },
+      {
+        "name": "Апарт-отель Салют",
+        "price_per_night_rub": 10703,
+        "coordinates": {
+          "latitude": 55.671335,
+          "longitude": 37.63157
+        }
+      },
+      {
+        "name": "Апарт-отель Сити",
+        "price_per_night_rub": 8307,
+        "coordinates": {
+          "latitude": 55.812023,
+          "longitude": 37.653901
+        }
+      },
+      {
+        "name": "Апарт-отель Русь",
+        "price_per_night_rub": 11196,
+        "coordinates": {
+          "latitude": 55.835938,
+          "longitude": 37.70968
+        }
+      }
+    ]
+  },
+  {
+    "city": "Krasnoyarsk",
+    "hotels": [
+      {
+        "name": "Hilton Garden Inn Krasnoyarsk",
+        "price_per_day_usd": 65.0,
+        "coordinates": {
+          "latitude": 56.0192,
+          "longitude": 92.8664
+        }
+      },
+      {
+        "name": "Metelitsa Hotel",
+        "price_per_day_usd": 50.0,
+        "coordinates": {
+          "latitude": 56.0178,
+          "longitude": 92.8697
+        }
+      },
+      {
+        "name": "Siberia Hotel",
+        "price_per_day_usd": 55.0,
+        "coordinates": {
+          "latitude": 56.0204,
+          "longitude": 92.8642
+        }
+      },
+      {
+        "name": "Мини-отель Нева",
+        "price_per_night_rub": 4041,
+        "coordinates": {
+          "latitude": 55.752914,
+          "longitude": 37.510424
+        }
+      },
+      {
+        "name": "Хостел Спутник",
+        "price_per_night_rub": 4709,
+        "coordinates": {
+          "latitude": 55.833883,
+          "longitude": 37.589449
+        }
+      },
+      {
+        "name": "Отель Арбат",
+        "price_per_night_rub": 11483,
+        "coordinates": {
+          "latitude": 55.755033,
+          "longitude": 37.550653
+        }
+      },
+      {
+        "name": "Хостел Вега",
+        "price_per_night_rub": 4457,
+        "coordinates": {
+          "latitude": 55.77821,
+          "longitude": 37.651837
+        }
+      },
+      {
+        "name": "Отель Галактика",
+        "price_per_night_rub": 8526,
+        "coordinates": {
+          "latitude": 55.720526,
+          "longitude": 37.532493
+        }
+      },
+      {
+        "name": "Отель Космос",
+        "price_per_night_rub": 9334,
+        "coordinates": {
+          "latitude": 55.6897,
+          "longitude": 37.678268
+        }
+      },
+      {
+        "name": "Апарт-отель Версаль",
+        "price_per_night_rub": 9696,
+        "coordinates": {
+          "latitude": 55.786322,
+          "longitude": 37.691443
+        }
+      },
+      {
+        "name": "Отель Капитал",
+        "price_per_night_rub": 9458,
+        "coordinates": {
+          "latitude": 55.821099,
+          "longitude": 37.516326
+        }
+      },
+      {
+        "name": "Хостел Байкал",
+        "price_per_night_rub": 3049,
+        "coordinates": {
+          "latitude": 55.728143,
+          "longitude": 37.589722
+        }
+      },
+      {
+        "name": "Хостел Аврора",
+        "price_per_night_rub": 10259,
+        "coordinates": {
+          "latitude": 55.763467,
+          "longitude": 37.584459
+        }
+      },
+      {
+        "name": "Отель Плаза",
+        "price_per_night_rub": 6925,
+        "coordinates": {
+          "latitude": 55.833378,
+          "longitude": 37.592912
+        }
+      },
+      {
+        "name": "Отель Русь",
+        "price_per_night_rub": 3046,
+        "coordinates": {
+          "latitude": 55.809193,
+          "longitude": 37.521146
+        }
+      },
+      {
+        "name": "Гостиница Достоевский",
+        "price_per_night_rub": 8924,
+        "coordinates": {
+          "latitude": 55.835056,
+          "longitude": 37.600981
+        }
+      },
+      {
+        "name": "Гостиница Вега",
+        "price_per_night_rub": 6013,
+        "coordinates": {
+          "latitude": 55.664781,
+          "longitude": 37.601289
+        }
+      },
+      {
+        "name": "Отель Нева",
+        "price_per_night_rub": 10017,
+        "coordinates": {
+          "latitude": 55.835665,
+          "longitude": 37.533669
+        }
+      },
+      {
+        "name": "Мини-отель Вега",
+        "price_per_night_rub": 9338,
+        "coordinates": {
+          "latitude": 55.705132,
+          "longitude": 37.536693
+        }
+      },
+      {
+        "name": "Мини-отель Урал",
+        "price_per_night_rub": 2631,
+        "coordinates": {
+          "latitude": 55.674028,
+          "longitude": 37.59739
+        }
+      },
+      {
+        "name": "Отель Нева",
+        "price_per_night_rub": 2190,
+        "coordinates": {
+          "latitude": 55.760772,
+          "longitude": 37.624298
+        }
+      },
+      {
+        "name": "Апарт-отель Вега",
+        "price_per_night_rub": 10735,
+        "coordinates": {
+          "latitude": 55.730541,
+          "longitude": 37.693568
+        }
+      },
+      {
+        "name": "Гостиница Москва",
+        "price_per_night_rub": 5889,
+        "coordinates": {
+          "latitude": 55.846992,
+          "longitude": 37.679426
+        }
+      },
+      {
+        "name": "Бутик-отель Плаза",
+        "price_per_night_rub": 7879,
+        "coordinates": {
+          "latitude": 55.746193,
+          "longitude": 37.663956
+        }
+      },
+      {
+        "name": "Отель Лагуна",
+        "price_per_night_rub": 10363,
+        "coordinates": {
+          "latitude": 55.739531,
+          "longitude": 37.565425
+        }
+      },
+      {
+        "name": "Апарт-отель Элегант",
+        "price_per_night_rub": 10562,
+        "coordinates": {
+          "latitude": 55.805038,
+          "longitude": 37.659337
+        }
+      },
+      {
+        "name": "Гостиница Русь",
+        "price_per_night_rub": 9756,
+        "coordinates": {
+          "latitude": 55.743235,
+          "longitude": 37.678343
+        }
+      },
+      {
+        "name": "Отель Москва",
+        "price_per_night_rub": 5367,
+        "coordinates": {
+          "latitude": 55.663743,
+          "longitude": 37.555112
+        }
+      },
+      {
+        "name": "Апарт-отель Капитал",
+        "price_per_night_rub": 4645,
+        "coordinates": {
+          "latitude": 55.822664,
+          "longitude": 37.583452
+        }
+      },
+      {
+        "name": "Отель Достоевский",
+        "price_per_night_rub": 5970,
+        "coordinates": {
+          "latitude": 55.787067,
+          "longitude": 37.564891
+        }
+      },
+      {
+        "name": "Мини-отель Сити",
+        "price_per_night_rub": 2491,
+        "coordinates": {
+          "latitude": 55.698315,
+          "longitude": 37.649754
+        }
+      },
+      {
+        "name": "Гостиница Сити",
+        "price_per_night_rub": 5536,
+        "coordinates": {
+          "latitude": 55.797839,
+          "longitude": 37.643597
+        }
+      },
+      {
+        "name": "Отель Лагуна",
+        "price_per_night_rub": 8940,
+        "coordinates": {
+          "latitude": 55.827108,
+          "longitude": 37.570467
+        }
+      },
+      {
+        "name": "Бутик-отель Лагуна",
+        "price_per_night_rub": 3554,
+        "coordinates": {
+          "latitude": 55.770696,
+          "longitude": 37.607963
+        }
+      },
+      {
+        "name": "Апарт-отель Элегант",
+        "price_per_night_rub": 5973,
+        "coordinates": {
+          "latitude": 55.830832,
+          "longitude": 37.541688
+        }
+      },
+      {
+        "name": "Гостиница Меридиан",
+        "price_per_night_rub": 7466,
+        "coordinates": {
+          "latitude": 55.661031,
+          "longitude": 37.512317
+        }
+      },
+      {
+        "name": "Бутик-отель Астра",
+        "price_per_night_rub": 9847,
+        "coordinates": {
+          "latitude": 55.803698,
+          "longitude": 37.648917
+        }
+      },
+      {
+        "name": "Гостиница Ренессанс",
+        "price_per_night_rub": 5153,
+        "coordinates": {
+          "latitude": 55.845838,
+          "longitude": 37.529358
+        }
+      },
+      {
+        "name": "Гостиница Ренессанс",
+        "price_per_night_rub": 11072,
+        "coordinates": {
+          "latitude": 55.684922,
+          "longitude": 37.621112
+        }
+      },
+      {
+        "name": "Хостел Гринвич",
+        "price_per_night_rub": 5204,
+        "coordinates": {
+          "latitude": 55.732099,
+          "longitude": 37.664682
+        }
+      },
+      {
+        "name": "Отель Элегант",
+        "price_per_night_rub": 3988,
+        "coordinates": {
+          "latitude": 55.770087,
+          "longitude": 37.565774
+        }
+      },
+      {
+        "name": "Хостел Спутник",
+        "price_per_night_rub": 8968,
+        "coordinates": {
+          "latitude": 55.77399,
+          "longitude": 37.537619
+        }
+      },
+      {
+        "name": "Гостиница Лагуна",
+        "price_per_night_rub": 9850,
+        "coordinates": {
+          "latitude": 55.780396,
+          "longitude": 37.634623
+        }
+      },
+      {
+        "name": "Апарт-отель Байкал",
+        "price_per_night_rub": 2862,
+        "coordinates": {
+          "latitude": 55.756222,
+          "longitude": 37.688328
+        }
+      },
+      {
+        "name": "Бутик-отель Нева",
+        "price_per_night_rub": 4996,
+        "coordinates": {
+          "latitude": 55.840303,
+          "longitude": 37.558847
+        }
+      },
+      {
+        "name": "Апарт-отель Астра",
+        "price_per_night_rub": 2730,
+        "coordinates": {
+          "latitude": 55.789448,
+          "longitude": 37.680085
+        }
+      },
+      {
+        "name": "Отель Байкал",
+        "price_per_night_rub": 10282,
+        "coordinates": {
+          "latitude": 55.813088,
+          "longitude": 37.529276
+        }
+      },
+      {
+        "name": "Отель Вега",
+        "price_per_night_rub": 2612,
+        "coordinates": {
+          "latitude": 55.650914,
+          "longitude": 37.606166
+        }
+      },
+      {
+        "name": "Гостиница Капитал",
+        "price_per_night_rub": 5558,
+        "coordinates": {
+          "latitude": 55.790049,
+          "longitude": 37.511878
+        }
+      },
+      {
+        "name": "Хостел Урал",
+        "price_per_night_rub": 7994,
+        "coordinates": {
+          "latitude": 55.668654,
+          "longitude": 37.665117
+        }
+      }
+    ]
+  },
+  {
+    "city": "Voronezh",
+    "hotels": [
+      {
+        "name": "Hampton by Hilton Voronezh",
+        "price_per_day_usd": 55.0,
+        "coordinates": {
+          "latitude": 51.6762,
+          "longitude": 39.2078
+        }
+      },
+      {
+        "name": "Degas Hotel",
+        "price_per_day_usd": 50.0,
+        "coordinates": {
+          "latitude": 51.6748,
+          "longitude": 39.2101
+        }
+      },
+      {
+        "name": "Mercure Voronezh Centre",
+        "price_per_day_usd": 60.0,
+        "coordinates": {
+          "latitude": 51.6774,
+          "longitude": 39.2056
+        }
+      },
+      {
+        "name": "Бутик-отель Лагуна",
+        "price_per_night_rub": 11461,
+        "coordinates": {
+          "latitude": 55.810651,
+          "longitude": 37.539859
+        }
+      },
+      {
+        "name": "Мини-отель Плаза",
+        "price_per_night_rub": 5887,
+        "coordinates": {
+          "latitude": 55.702264,
+          "longitude": 37.686897
+        }
+      },
+      {
+        "name": "Хостел Империя",
+        "price_per_night_rub": 11662,
+        "coordinates": {
+          "latitude": 55.736001,
+          "longitude": 37.670155
+        }
+      },
+      {
+        "name": "Отель Капитал",
+        "price_per_night_rub": 9092,
+        "coordinates": {
+          "latitude": 55.718986,
+          "longitude": 37.628466
+        }
+      },
+      {
+        "name": "Гостиница Космос",
+        "price_per_night_rub": 3291,
+        "coordinates": {
+          "latitude": 55.703628,
+          "longitude": 37.668966
+        }
+      },
+      {
+        "name": "Апарт-отель Русь",
+        "price_per_night_rub": 11441,
+        "coordinates": {
+          "latitude": 55.763804,
+          "longitude": 37.679858
+        }
+      },
+      {
+        "name": "Отель Центральный",
+        "price_per_night_rub": 11763,
+        "coordinates": {
+          "latitude": 55.828629,
+          "longitude": 37.579806
+        }
+      },
+      {
+        "name": "Хостел Вега",
+        "price_per_night_rub": 9313,
+        "coordinates": {
+          "latitude": 55.716552,
+          "longitude": 37.545757
+        }
+      },
+      {
+        "name": "Бутик-отель Олимп",
+        "price_per_night_rub": 2744,
+        "coordinates": {
+          "latitude": 55.675776,
+          "longitude": 37.708388
+        }
+      },
+      {
+        "name": "Бутик-отель Урал",
+        "price_per_night_rub": 4005,
+        "coordinates": {
+          "latitude": 55.662487,
+          "longitude": 37.577684
+        }
+      },
+      {
+        "name": "Мини-отель Элегант",
+        "price_per_night_rub": 4834,
+        "coordinates": {
+          "latitude": 55.766931,
+          "longitude": 37.532972
+        }
+      },
+      {
+        "name": "Хостел Спутник",
+        "price_per_night_rub": 8568,
+        "coordinates": {
+          "latitude": 55.673059,
+          "longitude": 37.528672
+        }
+      },
+      {
+        "name": "Мини-отель Гринвич",
+        "price_per_night_rub": 10860,
+        "coordinates": {
+          "latitude": 55.843062,
+          "longitude": 37.704963
+        }
+      },
+      {
+        "name": "Отель Плаза",
+        "price_per_night_rub": 8656,
+        "coordinates": {
+          "latitude": 55.759012,
+          "longitude": 37.559029
+        }
+      },
+      {
+        "name": "Гостиница Сибирь",
+        "price_per_night_rub": 10772,
+        "coordinates": {
+          "latitude": 55.776081,
+          "longitude": 37.529453
+        }
+      },
+      {
+        "name": "Гостиница Лагуна",
+        "price_per_night_rub": 11757,
+        "coordinates": {
+          "latitude": 55.75855,
+          "longitude": 37.683698
+        }
+      },
+      {
+        "name": "Бутик-отель Версаль",
+        "price_per_night_rub": 7367,
+        "coordinates": {
+          "latitude": 55.754388,
+          "longitude": 37.675481
+        }
+      },
+      {
+        "name": "Апарт-отель Элегант",
+        "price_per_night_rub": 6432,
+        "coordinates": {
+          "latitude": 55.835361,
+          "longitude": 37.67904
+        }
+      },
+      {
+        "name": "Хостел Элегант",
+        "price_per_night_rub": 3070,
+        "coordinates": {
+          "latitude": 55.71924,
+          "longitude": 37.5748
+        }
+      },
+      {
+        "name": "Хостел Элегант",
+        "price_per_night_rub": 7549,
+        "coordinates": {
+          "latitude": 55.743702,
+          "longitude": 37.665542
+        }
+      },
+      {
+        "name": "Отель Нева",
+        "price_per_night_rub": 10234,
+        "coordinates": {
+          "latitude": 55.757316,
+          "longitude": 37.652129
+        }
+      },
+      {
+        "name": "Гостиница Лагуна",
+        "price_per_night_rub": 6847,
+        "coordinates": {
+          "latitude": 55.761819,
+          "longitude": 37.686538
+        }
+      },
+      {
+        "name": "Апарт-отель Арбат",
+        "price_per_night_rub": 3393,
+        "coordinates": {
+          "latitude": 55.83596,
+          "longitude": 37.621009
+        }
+      },
+      {
+        "name": "Бутик-отель Нева",
+        "price_per_night_rub": 9133,
+        "coordinates": {
+          "latitude": 55.835227,
+          "longitude": 37.59256
+        }
+      },
+      {
+        "name": "Отель Капитал",
+        "price_per_night_rub": 2937,
+        "coordinates": {
+          "latitude": 55.790024,
+          "longitude": 37.697664
+        }
+      },
+      {
+        "name": "Отель Спутник",
+        "price_per_night_rub": 10067,
+        "coordinates": {
+          "latitude": 55.722681,
+          "longitude": 37.65457
+        }
+      },
+      {
+        "name": "Отель Центральный",
+        "price_per_night_rub": 3580,
+        "coordinates": {
+          "latitude": 55.813143,
+          "longitude": 37.55395
+        }
+      },
+      {
+        "name": "Апарт-отель Центральный",
+        "price_per_night_rub": 7287,
+        "coordinates": {
+          "latitude": 55.845415,
+          "longitude": 37.682188
+        }
+      },
+      {
+        "name": "Отель Версаль",
+        "price_per_night_rub": 3968,
+        "coordinates": {
+          "latitude": 55.831703,
+          "longitude": 37.581365
+        }
+      },
+      {
+        "name": "Гостиница Астра",
+        "price_per_night_rub": 3299,
+        "coordinates": {
+          "latitude": 55.706133,
+          "longitude": 37.584878
+        }
+      },
+      {
+        "name": "Хостел Сибирь",
+        "price_per_night_rub": 3864,
+        "coordinates": {
+          "latitude": 55.674809,
+          "longitude": 37.598661
+        }
+      },
+      {
+        "name": "Гостиница Русь",
+        "price_per_night_rub": 4901,
+        "coordinates": {
+          "latitude": 55.836977,
+          "longitude": 37.602156
+        }
+      },
+      {
+        "name": "Гостиница Гринвич",
+        "price_per_night_rub": 7512,
+        "coordinates": {
+          "latitude": 55.733818,
+          "longitude": 37.585052
+        }
+      },
+      {
+        "name": "Гостиница Премьер",
+        "price_per_night_rub": 9922,
+        "coordinates": {
+          "latitude": 55.767198,
+          "longitude": 37.690583
+        }
+      },
+      {
+        "name": "Отель Меридиан",
+        "price_per_night_rub": 8441,
+        "coordinates": {
+          "latitude": 55.714895,
+          "longitude": 37.534641
+        }
+      },
+      {
+        "name": "Мини-отель Гринвич",
+        "price_per_night_rub": 3505,
+        "coordinates": {
+          "latitude": 55.728855,
+          "longitude": 37.643526
+        }
+      },
+      {
+        "name": "Апарт-отель Сити",
+        "price_per_night_rub": 6924,
+        "coordinates": {
+          "latitude": 55.664653,
+          "longitude": 37.555132
+        }
+      },
+      {
+        "name": "Отель Спутник",
+        "price_per_night_rub": 11479,
+        "coordinates": {
+          "latitude": 55.759288,
+          "longitude": 37.659111
+        }
+      },
+      {
+        "name": "Отель Нева",
+        "price_per_night_rub": 2876,
+        "coordinates": {
+          "latitude": 55.839733,
+          "longitude": 37.519193
+        }
+      },
+      {
+        "name": "Отель Капитал",
+        "price_per_night_rub": 3285,
+        "coordinates": {
+          "latitude": 55.691403,
+          "longitude": 37.581397
+        }
+      },
+      {
+        "name": "Отель Версаль",
+        "price_per_night_rub": 2461,
+        "coordinates": {
+          "latitude": 55.765016,
+          "longitude": 37.619995
+        }
+      },
+      {
+        "name": "Хостел Сити",
+        "price_per_night_rub": 8059,
+        "coordinates": {
+          "latitude": 55.738727,
+          "longitude": 37.628834
+        }
+      },
+      {
+        "name": "Отель Достоевский",
+        "price_per_night_rub": 2757,
+        "coordinates": {
+          "latitude": 55.774665,
+          "longitude": 37.686031
+        }
+      },
+      {
+        "name": "Отель Урал",
+        "price_per_night_rub": 8432,
+        "coordinates": {
+          "latitude": 55.818112,
+          "longitude": 37.602657
+        }
+      },
+      {
+        "name": "Мини-отель Байкал",
+        "price_per_night_rub": 8676,
+        "coordinates": {
+          "latitude": 55.819062,
+          "longitude": 37.516317
+        }
+      },
+      {
+        "name": "Отель Спутник",
+        "price_per_night_rub": 3527,
+        "coordinates": {
+          "latitude": 55.754038,
+          "longitude": 37.703319
+        }
+      },
+      {
+        "name": "Бутик-отель Премьер",
+        "price_per_night_rub": 4325,
+        "coordinates": {
+          "latitude": 55.660063,
+          "longitude": 37.54485
+        }
+      }
+    ]
+  },
+  {
+    "city": "Perm",
+    "hotels": [
+      {
+        "name": "Hilton Garden Inn Perm",
+        "price_per_day_usd": 65.0,
+        "coordinates": {
+          "latitude": 58.0112,
+          "longitude": 56.2284
+        }
+      },
+      {
+        "name": "Ural Hotel",
+        "price_per_day_usd": 50.0,
+        "coordinates": {
+          "latitude": 58.0098,
+          "longitude": 56.2317
+        }
+      },
+      {
+        "name": "New Star Hotel",
+        "price_per_day_usd": 45.0,
+        "coordinates": {
+          "latitude": 58.0124,
+          "longitude": 56.2269
+        }
+      },
+      {
+        "name": "Апарт-отель Империя",
+        "price_per_night_rub": 7289,
+        "coordinates": {
+          "latitude": 55.845119,
+          "longitude": 37.552895
+        }
+      },
+      {
+        "name": "Бутик-отель Лагуна",
+        "price_per_night_rub": 11235,
+        "coordinates": {
+          "latitude": 55.754276,
+          "longitude": 37.520855
+        }
+      },
+      {
+        "name": "Отель Аврора",
+        "price_per_night_rub": 8605,
+        "coordinates": {
+          "latitude": 55.693072,
+          "longitude": 37.550483
+        }
+      },
+      {
+        "name": "Отель Арбат",
+        "price_per_night_rub": 4856,
+        "coordinates": {
+          "latitude": 55.814519,
+          "longitude": 37.70521
+        }
+      },
+      {
+        "name": "Гостиница Центральный",
+        "price_per_night_rub": 8134,
+        "coordinates": {
+          "latitude": 55.715504,
+          "longitude": 37.689366
+        }
+      },
+      {
+        "name": "Отель Олимп",
+        "price_per_night_rub": 8232,
+        "coordinates": {
+          "latitude": 55.788096,
+          "longitude": 37.575232
+        }
+      },
+      {
+        "name": "Отель Вега",
+        "price_per_night_rub": 8727,
+        "coordinates": {
+          "latitude": 55.774535,
+          "longitude": 37.62957
+        }
+      },
+      {
+        "name": "Бутик-отель Элегант",
+        "price_per_night_rub": 2561,
+        "coordinates": {
+          "latitude": 55.763582,
+          "longitude": 37.617687
+        }
+      },
+      {
+        "name": "Бутик-отель Москва",
+        "price_per_night_rub": 5266,
+        "coordinates": {
+          "latitude": 55.655518,
+          "longitude": 37.569381
+        }
+      },
+      {
+        "name": "Апарт-отель Нева",
+        "price_per_night_rub": 7046,
+        "coordinates": {
+          "latitude": 55.806638,
+          "longitude": 37.57762
+        }
+      },
+      {
+        "name": "Мини-отель Гринвич",
+        "price_per_night_rub": 11489,
+        "coordinates": {
+          "latitude": 55.763492,
+          "longitude": 37.635757
+        }
+      },
+      {
+        "name": "Гостиница Вега",
+        "price_per_night_rub": 6237,
+        "coordinates": {
+          "latitude": 55.821199,
+          "longitude": 37.609886
+        }
+      },
+      {
+        "name": "Бутик-отель Империя",
+        "price_per_night_rub": 11594,
+        "coordinates": {
+          "latitude": 55.669177,
+          "longitude": 37.689678
+        }
+      },
+      {
+        "name": "Апарт-отель Салют",
+        "price_per_night_rub": 11682,
+        "coordinates": {
+          "latitude": 55.738748,
+          "longitude": 37.533766
+        }
+      },
+      {
+        "name": "Отель Сибирь",
+        "price_per_night_rub": 10737,
+        "coordinates": {
+          "latitude": 55.782264,
+          "longitude": 37.549202
+        }
+      },
+      {
+        "name": "Хостел Лагуна",
+        "price_per_night_rub": 5536,
+        "coordinates": {
+          "latitude": 55.717274,
+          "longitude": 37.707673
+        }
+      },
+      {
+        "name": "Мини-отель Байкал",
+        "price_per_night_rub": 5340,
+        "coordinates": {
+          "latitude": 55.671387,
+          "longitude": 37.531099
+        }
+      },
+      {
+        "name": "Гостиница Меридиан",
+        "price_per_night_rub": 5509,
+        "coordinates": {
+          "latitude": 55.793676,
+          "longitude": 37.579434
+        }
+      },
+      {
+        "name": "Апарт-отель Сибирь",
+        "price_per_night_rub": 5378,
+        "coordinates": {
+          "latitude": 55.775106,
+          "longitude": 37.53767
+        }
+      },
+      {
+        "name": "Отель Капитал",
+        "price_per_night_rub": 3988,
+        "coordinates": {
+          "latitude": 55.761814,
+          "longitude": 37.574493
+        }
+      },
+      {
+        "name": "Мини-отель Олимп",
+        "price_per_night_rub": 2836,
+        "coordinates": {
+          "latitude": 55.65267,
+          "longitude": 37.510784
+        }
+      },
+      {
+        "name": "Бутик-отель Астра",
+        "price_per_night_rub": 11020,
+        "coordinates": {
+          "latitude": 55.652565,
+          "longitude": 37.616677
+        }
+      },
+      {
+        "name": "Отель Плаза",
+        "price_per_night_rub": 10441,
+        "coordinates": {
+          "latitude": 55.724049,
+          "longitude": 37.681427
+        }
+      },
+      {
+        "name": "Гостиница Галактика",
+        "price_per_night_rub": 8632,
+        "coordinates": {
+          "latitude": 55.805988,
+          "longitude": 37.605624
+        }
+      },
+      {
+        "name": "Бутик-отель Салют",
+        "price_per_night_rub": 6620,
+        "coordinates": {
+          "latitude": 55.662938,
+          "longitude": 37.513378
+        }
+      },
+      {
+        "name": "Мини-отель Плаза",
+        "price_per_night_rub": 4301,
+        "coordinates": {
+          "latitude": 55.730278,
+          "longitude": 37.615533
+        }
+      },
+      {
+        "name": "Отель Урал",
+        "price_per_night_rub": 11570,
+        "coordinates": {
+          "latitude": 55.772171,
+          "longitude": 37.678961
+        }
+      },
+      {
+        "name": "Апарт-отель Космос",
+        "price_per_night_rub": 7571,
+        "coordinates": {
+          "latitude": 55.820396,
+          "longitude": 37.586252
+        }
+      },
+      {
+        "name": "Хостел Астра",
+        "price_per_night_rub": 6340,
+        "coordinates": {
+          "latitude": 55.782677,
+          "longitude": 37.687232
+        }
+      },
+      {
+        "name": "Отель Галактика",
+        "price_per_night_rub": 5050,
+        "coordinates": {
+          "latitude": 55.677381,
+          "longitude": 37.547812
+        }
+      },
+      {
+        "name": "Хостел Урал",
+        "price_per_night_rub": 9025,
+        "coordinates": {
+          "latitude": 55.84897,
+          "longitude": 37.570559
+        }
+      },
+      {
+        "name": "Апарт-отель Астра",
+        "price_per_night_rub": 7328,
+        "coordinates": {
+          "latitude": 55.666914,
+          "longitude": 37.6703
+        }
+      },
+      {
+        "name": "Отель Олимп",
+        "price_per_night_rub": 5346,
+        "coordinates": {
+          "latitude": 55.771439,
+          "longitude": 37.562741
+        }
+      },
+      {
+        "name": "Апарт-отель Достоевский",
+        "price_per_night_rub": 2134,
+        "coordinates": {
+          "latitude": 55.841993,
+          "longitude": 37.537453
+        }
+      },
+      {
+        "name": "Отель Меридиан",
+        "price_per_night_rub": 2753,
+        "coordinates": {
+          "latitude": 55.78015,
+          "longitude": 37.532858
+        }
+      },
+      {
+        "name": "Бутик-отель Нева",
+        "price_per_night_rub": 3315,
+        "coordinates": {
+          "latitude": 55.832027,
+          "longitude": 37.525616
+        }
+      },
+      {
+        "name": "Мини-отель Кремль",
+        "price_per_night_rub": 5996,
+        "coordinates": {
+          "latitude": 55.67011,
+          "longitude": 37.661832
+        }
+      },
+      {
+        "name": "Мини-отель Премьер",
+        "price_per_night_rub": 3716,
+        "coordinates": {
+          "latitude": 55.677586,
+          "longitude": 37.661682
+        }
+      },
+      {
+        "name": "Апарт-отель Версаль",
+        "price_per_night_rub": 5547,
+        "coordinates": {
+          "latitude": 55.781262,
+          "longitude": 37.663068
+        }
+      },
+      {
+        "name": "Гостиница Урал",
+        "price_per_night_rub": 11150,
+        "coordinates": {
+          "latitude": 55.805902,
+          "longitude": 37.600889
+        }
+      },
+      {
+        "name": "Отель Вега",
+        "price_per_night_rub": 2702,
+        "coordinates": {
+          "latitude": 55.797204,
+          "longitude": 37.534052
+        }
+      },
+      {
+        "name": "Мини-отель Олимп",
+        "price_per_night_rub": 3494,
+        "coordinates": {
+          "latitude": 55.669395,
+          "longitude": 37.647347
+        }
+      },
+      {
+        "name": "Бутик-отель Центральный",
+        "price_per_night_rub": 6749,
+        "coordinates": {
+          "latitude": 55.708123,
+          "longitude": 37.609176
+        }
+      },
+      {
+        "name": "Хостел Бриз",
+        "price_per_night_rub": 7963,
+        "coordinates": {
+          "latitude": 55.849452,
+          "longitude": 37.566352
+        }
+      },
+      {
+        "name": "Гостиница Кремль",
+        "price_per_night_rub": 5148,
+        "coordinates": {
+          "latitude": 55.664114,
+          "longitude": 37.635399
+        }
+      },
+      {
+        "name": "Отель Галактика",
+        "price_per_night_rub": 8651,
+        "coordinates": {
+          "latitude": 55.653021,
+          "longitude": 37.565997
+        }
+      },
+      {
+        "name": "Отель Космос",
+        "price_per_night_rub": 3616,
+        "coordinates": {
+          "latitude": 55.712508,
+          "longitude": 37.564627
+        }
+      }
+    ]
+  },
+  {
+    "city": "Volgograd",
+    "hotels": [
+      {
+        "name": "Hampton by Hilton Volgograd Profsoyuznaya",
+        "price_per_day_usd": 55.0,
+        "coordinates": {
+          "latitude": 48.7043,
+          "longitude": 44.5167
+        }
+      },
+      {
+        "name": "Hotel Volgograd",
+        "price_per_day_usd": 50.0,
+        "coordinates": {
+          "latitude": 48.7121,
+          "longitude": 44.5062
+        }
+      },
+      {
+        "name": "Yuzhny Hotel",
+        "price_per_day_usd": 45.0,
+        "coordinates": {
+          "latitude": 48.6987,
+          "longitude": 44.5201
+        }
+      },
+      {
+        "name": "Intourist Hotel Volgograd",
+        "price_per_day_usd": 60.0,
+        "coordinates": {
+          "latitude": 48.7078,
+          "longitude": 44.5143
+        }
+      },
+      {
+        "name": "Park Inn by Radisson Volgograd",
+        "price_per_day_usd": 65.0,
+        "coordinates": {
+          "latitude": 48.7154,
+          "longitude": 44.5109
+        }
+      },
+      {
+        "name": "Tsaritsyn Hotel",
+        "price_per_day_usd": 40.0,
+        "coordinates": {
+          "latitude": 48.7002,
+          "longitude": 44.5256
+        }
+      },
+      {
+        "name": "Gallery Park Volgograd",
+        "price_per_day_usd": 50.0,
+        "coordinates": {
+          "latitude": 48.7091,
+          "longitude": 44.5087
+        }
+      },
+      {
+        "name": "Volgograd Boutique Hotel",
+        "price_per_day_usd": 55.0,
+        "coordinates": {
+          "latitude": 48.7065,
+          "longitude": 44.5178
+        }
+      },
+      {
+        "name": "Бутик-отель Галактика",
+        "price_per_night_rub": 7839,
+        "coordinates": {
+          "latitude": 55.813791,
+          "longitude": 37.529455
+        }
+      },
+      {
+        "name": "Отель Империя",
+        "price_per_night_rub": 7897,
+        "coordinates": {
+          "latitude": 55.824508,
+          "longitude": 37.608399
+        }
+      },
+      {
+        "name": "Отель Урал",
+        "price_per_night_rub": 10080,
+        "coordinates": {
+          "latitude": 55.809361,
+          "longitude": 37.560129
+        }
+      },
+      {
+        "name": "Отель Элегант",
+        "price_per_night_rub": 10936,
+        "coordinates": {
+          "latitude": 55.66483,
+          "longitude": 37.556119
+        }
+      },
+      {
+        "name": "Апарт-отель Капитал",
+        "price_per_night_rub": 8161,
+        "coordinates": {
+          "latitude": 55.842736,
+          "longitude": 37.589356
+        }
+      },
+      {
+        "name": "Отель Космос",
+        "price_per_night_rub": 10176,
+        "coordinates": {
+          "latitude": 55.794364,
+          "longitude": 37.619274
+        }
+      },
+      {
+        "name": "Отель Нева",
+        "price_per_night_rub": 4792,
+        "coordinates": {
+          "latitude": 55.670298,
+          "longitude": 37.54855
+        }
+      },
+      {
+        "name": "Мини-отель Салют",
+        "price_per_night_rub": 3918,
+        "coordinates": {
+          "latitude": 55.829257,
+          "longitude": 37.524317
+        }
+      },
+      {
+        "name": "Отель Байкал",
+        "price_per_night_rub": 3722,
+        "coordinates": {
+          "latitude": 55.805073,
+          "longitude": 37.645251
+        }
+      },
+      {
+        "name": "Апарт-отель Кремль",
+        "price_per_night_rub": 6386,
+        "coordinates": {
+          "latitude": 55.822122,
+          "longitude": 37.585157
+        }
+      },
+      {
+        "name": "Отель Ренессанс",
+        "price_per_night_rub": 10109,
+        "coordinates": {
+          "latitude": 55.770871,
+          "longitude": 37.608602
+        }
+      },
+      {
+        "name": "Отель Бриз",
+        "price_per_night_rub": 11235,
+        "coordinates": {
+          "latitude": 55.837488,
+          "longitude": 37.561683
+        }
+      },
+      {
+        "name": "Бутик-отель Русь",
+        "price_per_night_rub": 10719,
+        "coordinates": {
+          "latitude": 55.812894,
+          "longitude": 37.594395
+        }
+      },
+      {
+        "name": "Гостиница Кремль",
+        "price_per_night_rub": 4323,
+        "coordinates": {
+          "latitude": 55.819444,
+          "longitude": 37.538517
+        }
+      },
+      {
+        "name": "Апарт-отель Премьер",
+        "price_per_night_rub": 7283,
+        "coordinates": {
+          "latitude": 55.674713,
+          "longitude": 37.670995
+        }
+      },
+      {
+        "name": "Гостиница Нева",
+        "price_per_night_rub": 10914,
+        "coordinates": {
+          "latitude": 55.785949,
+          "longitude": 37.603674
+        }
+      },
+      {
+        "name": "Апарт-отель Центральный",
+        "price_per_night_rub": 5649,
+        "coordinates": {
+          "latitude": 55.798535,
+          "longitude": 37.538154
+        }
+      },
+      {
+        "name": "Мини-отель Москва",
+        "price_per_night_rub": 4935,
+        "coordinates": {
+          "latitude": 55.825122,
+          "longitude": 37.700143
+        }
+      },
+      {
+        "name": "Хостел Урал",
+        "price_per_night_rub": 4061,
+        "coordinates": {
+          "latitude": 55.76767,
+          "longitude": 37.560789
+        }
+      },
+      {
+        "name": "Апарт-отель Урал",
+        "price_per_night_rub": 5331,
+        "coordinates": {
+          "latitude": 55.783126,
+          "longitude": 37.580867
+        }
+      },
+      {
+        "name": "Отель Нева",
+        "price_per_night_rub": 10675,
+        "coordinates": {
+          "latitude": 55.847695,
+          "longitude": 37.548672
+        }
+      },
+      {
+        "name": "Гостиница Премьер",
+        "price_per_night_rub": 4218,
+        "coordinates": {
+          "latitude": 55.824722,
+          "longitude": 37.612861
+        }
+      },
+      {
+        "name": "Апарт-отель Лагуна",
+        "price_per_night_rub": 5077,
+        "coordinates": {
+          "latitude": 55.748512,
+          "longitude": 37.675634
+        }
+      },
+      {
+        "name": "Хостел Нева",
+        "price_per_night_rub": 5581,
+        "coordinates": {
+          "latitude": 55.709882,
+          "longitude": 37.618416
+        }
+      },
+      {
+        "name": "Отель Аврора",
+        "price_per_night_rub": 10598,
+        "coordinates": {
+          "latitude": 55.814765,
+          "longitude": 37.622583
+        }
+      },
+      {
+        "name": "Хостел Москва",
+        "price_per_night_rub": 10251,
+        "coordinates": {
+          "latitude": 55.699092,
+          "longitude": 37.69627
+        }
+      },
+      {
+        "name": "Апарт-отель Кремль",
+        "price_per_night_rub": 11902,
+        "coordinates": {
+          "latitude": 55.819783,
+          "longitude": 37.566887
+        }
+      },
+      {
+        "name": "Гостиница Салют",
+        "price_per_night_rub": 4237,
+        "coordinates": {
+          "latitude": 55.776763,
+          "longitude": 37.63334
+        }
+      },
+      {
+        "name": "Отель Бриз",
+        "price_per_night_rub": 11308,
+        "coordinates": {
+          "latitude": 55.778263,
+          "longitude": 37.656705
+        }
+      },
+      {
+        "name": "Гостиница Капитал",
+        "price_per_night_rub": 4811,
+        "coordinates": {
+          "latitude": 55.72813,
+          "longitude": 37.631856
+        }
+      },
+      {
+        "name": "Мини-отель Ренессанс",
+        "price_per_night_rub": 6785,
+        "coordinates": {
+          "latitude": 55.798715,
+          "longitude": 37.700356
+        }
+      },
+      {
+        "name": "Мини-отель Сибирь",
+        "price_per_night_rub": 4993,
+        "coordinates": {
+          "latitude": 55.714859,
+          "longitude": 37.639917
+        }
+      },
+      {
+        "name": "Апарт-отель Русь",
+        "price_per_night_rub": 5742,
+        "coordinates": {
+          "latitude": 55.740908,
+          "longitude": 37.54841
+        }
+      },
+      {
+        "name": "Отель Арбат",
+        "price_per_night_rub": 4930,
+        "coordinates": {
+          "latitude": 55.814856,
+          "longitude": 37.569933
+        }
+      },
+      {
+        "name": "Отель Меридиан",
+        "price_per_night_rub": 7868,
+        "coordinates": {
+          "latitude": 55.830683,
+          "longitude": 37.646417
+        }
+      },
+      {
+        "name": "Бутик-отель Сибирь",
+        "price_per_night_rub": 10730,
+        "coordinates": {
+          "latitude": 55.683123,
+          "longitude": 37.707219
+        }
+      },
+      {
+        "name": "Мини-отель Сити",
+        "price_per_night_rub": 9313,
+        "coordinates": {
+          "latitude": 55.775524,
+          "longitude": 37.638236
+        }
+      },
+      {
+        "name": "Отель Галактика",
+        "price_per_night_rub": 5586,
+        "coordinates": {
+          "latitude": 55.652697,
+          "longitude": 37.562272
+        }
+      },
+      {
+        "name": "Отель Нева",
+        "price_per_night_rub": 7678,
+        "coordinates": {
+          "latitude": 55.845575,
+          "longitude": 37.621832
+        }
+      },
+      {
+        "name": "Отель Сибирь",
+        "price_per_night_rub": 8788,
+        "coordinates": {
+          "latitude": 55.737697,
+          "longitude": 37.699495
+        }
+      },
+      {
+        "name": "Отель Премьер",
+        "price_per_night_rub": 9907,
+        "coordinates": {
+          "latitude": 55.703186,
+          "longitude": 37.688081
+        }
+      },
+      {
+        "name": "Апарт-отель Олимп",
+        "price_per_night_rub": 10158,
+        "coordinates": {
+          "latitude": 55.683645,
+          "longitude": 37.693023
+        }
+      }
+    ]
+  },
+  {
+    "city": "Krasnodar",
+    "hotels": [
+      {
+        "name": "Hilton Garden Inn Krasnodar",
+        "price_per_day_usd": 65.0,
+        "coordinates": {
+          "latitude": 45.0401,
+          "longitude": 38.9864
+        }
+      },
+      {
+        "name": "Crowne Plaza Krasnodar",
+        "price_per_day_usd": 70.0,
+        "coordinates": {
+          "latitude": 45.0387,
+          "longitude": 38.9897
+        }
+      },
+      {
+        "name": "Ibis Krasnodar",
+        "price_per_day_usd": 40.0,
+        "coordinates": {
+          "latitude": 45.0413,
+          "longitude": 38.9842
+        }
+      },
+      {
+        "name": "Marriott Krasnodar",
+        "price_per_day_usd": 75.0,
+        "coordinates": {
+          "latitude": 45.0398,
+          "longitude": 38.9876
+        }
+      },
+      {
+        "name": "Хостел Кремль",
+        "price_per_night_rub": 7564,
+        "coordinates": {
+          "latitude": 55.81508,
+          "longitude": 37.645864
+        }
+      },
+      {
+        "name": "Мини-отель Капитал",
+        "price_per_night_rub": 9637,
+        "coordinates": {
+          "latitude": 55.737409,
+          "longitude": 37.537331
+        }
+      },
+      {
+        "name": "Отель Сити",
+        "price_per_night_rub": 10156,
+        "coordinates": {
+          "latitude": 55.837817,
+          "longitude": 37.641342
+        }
+      },
+      {
+        "name": "Отель Капитал",
+        "price_per_night_rub": 10817,
+        "coordinates": {
+          "latitude": 55.802265,
+          "longitude": 37.704522
+        }
+      },
+      {
+        "name": "Хостел Сибирь",
+        "price_per_night_rub": 11592,
+        "coordinates": {
+          "latitude": 55.742282,
+          "longitude": 37.668201
+        }
+      },
+      {
+        "name": "Гостиница Капитал",
+        "price_per_night_rub": 6347,
+        "coordinates": {
+          "latitude": 55.787103,
+          "longitude": 37.510617
+        }
+      },
+      {
+        "name": "Бутик-отель Космос",
+        "price_per_night_rub": 8931,
+        "coordinates": {
+          "latitude": 55.791175,
+          "longitude": 37.588908
+        }
+      },
+      {
+        "name": "Отель Версаль",
+        "price_per_night_rub": 5832,
+        "coordinates": {
+          "latitude": 55.74872,
+          "longitude": 37.668985
+        }
+      },
+      {
+        "name": "Отель Плаза",
+        "price_per_night_rub": 6319,
+        "coordinates": {
+          "latitude": 55.807992,
+          "longitude": 37.556599
+        }
+      },
+      {
+        "name": "Отель Сити",
+        "price_per_night_rub": 7629,
+        "coordinates": {
+          "latitude": 55.740279,
+          "longitude": 37.642136
+        }
+      },
+      {
+        "name": "Гостиница Плаза",
+        "price_per_night_rub": 8662,
+        "coordinates": {
+          "latitude": 55.838623,
+          "longitude": 37.605488
+        }
+      },
+      {
+        "name": "Отель Премьер",
+        "price_per_night_rub": 6339,
+        "coordinates": {
+          "latitude": 55.663552,
+          "longitude": 37.62391
+        }
+      },
+      {
+        "name": "Отель Сити",
+        "price_per_night_rub": 7408,
+        "coordinates": {
+          "latitude": 55.814496,
+          "longitude": 37.662306
+        }
+      },
+      {
+        "name": "Хостел Сибирь",
+        "price_per_night_rub": 11008,
+        "coordinates": {
+          "latitude": 55.756246,
+          "longitude": 37.600891
+        }
+      },
+      {
+        "name": "Отель Байкал",
+        "price_per_night_rub": 6340,
+        "coordinates": {
+          "latitude": 55.681059,
+          "longitude": 37.665753
+        }
+      },
+      {
+        "name": "Хостел Спутник",
+        "price_per_night_rub": 4911,
+        "coordinates": {
+          "latitude": 55.76414,
+          "longitude": 37.555696
+        }
+      },
+      {
+        "name": "Мини-отель Байкал",
+        "price_per_night_rub": 7159,
+        "coordinates": {
+          "latitude": 55.762659,
+          "longitude": 37.523582
+        }
+      },
+      {
+        "name": "Гостиница Астра",
+        "price_per_night_rub": 2706,
+        "coordinates": {
+          "latitude": 55.659825,
+          "longitude": 37.637466
+        }
+      },
+      {
+        "name": "Мини-отель Версаль",
+        "price_per_night_rub": 3174,
+        "coordinates": {
+          "latitude": 55.71094,
+          "longitude": 37.609625
+        }
+      },
+      {
+        "name": "Отель Лагуна",
+        "price_per_night_rub": 11447,
+        "coordinates": {
+          "latitude": 55.658029,
+          "longitude": 37.650995
+        }
+      },
+      {
+        "name": "Мини-отель Москва",
+        "price_per_night_rub": 8030,
+        "coordinates": {
+          "latitude": 55.835887,
+          "longitude": 37.589121
+        }
+      },
+      {
+        "name": "Отель Сити",
+        "price_per_night_rub": 9949,
+        "coordinates": {
+          "latitude": 55.823826,
+          "longitude": 37.706739
+        }
+      },
+      {
+        "name": "Отель Бриз",
+        "price_per_night_rub": 10910,
+        "coordinates": {
+          "latitude": 55.693297,
+          "longitude": 37.658097
+        }
+      },
+      {
+        "name": "Отель Центральный",
+        "price_per_night_rub": 4217,
+        "coordinates": {
+          "latitude": 55.789028,
+          "longitude": 37.620209
+        }
+      },
+      {
+        "name": "Гостиница Ренессанс",
+        "price_per_night_rub": 2226,
+        "coordinates": {
+          "latitude": 55.828558,
+          "longitude": 37.673447
+        }
+      },
+      {
+        "name": "Отель Достоевский",
+        "price_per_night_rub": 2123,
+        "coordinates": {
+          "latitude": 55.800594,
+          "longitude": 37.579773
+        }
+      },
+      {
+        "name": "Хостел Русь",
+        "price_per_night_rub": 3649,
+        "coordinates": {
+          "latitude": 55.826888,
+          "longitude": 37.530235
+        }
+      },
+      {
+        "name": "Апарт-отель Гринвич",
+        "price_per_night_rub": 3539,
+        "coordinates": {
+          "latitude": 55.68735,
+          "longitude": 37.596169
+        }
+      },
+      {
+        "name": "Отель Арбат",
+        "price_per_night_rub": 3651,
+        "coordinates": {
+          "latitude": 55.682213,
+          "longitude": 37.590945
+        }
+      },
+      {
+        "name": "Хостел Версаль",
+        "price_per_night_rub": 6535,
+        "coordinates": {
+          "latitude": 55.7529,
+          "longitude": 37.658236
+        }
+      },
+      {
+        "name": "Хостел Премьер",
+        "price_per_night_rub": 10300,
+        "coordinates": {
+          "latitude": 55.773782,
+          "longitude": 37.642332
+        }
+      },
+      {
+        "name": "Отель Империя",
+        "price_per_night_rub": 11716,
+        "coordinates": {
+          "latitude": 55.751988,
+          "longitude": 37.525011
+        }
+      },
+      {
+        "name": "Отель Аврора",
+        "price_per_night_rub": 4679,
+        "coordinates": {
+          "latitude": 55.680416,
+          "longitude": 37.681789
+        }
+      },
+      {
+        "name": "Отель Гринвич",
+        "price_per_night_rub": 2631,
+        "coordinates": {
+          "latitude": 55.708401,
+          "longitude": 37.516216
+        }
+      },
+      {
+        "name": "Хостел Космос",
+        "price_per_night_rub": 3054,
+        "coordinates": {
+          "latitude": 55.836345,
+          "longitude": 37.649302
+        }
+      },
+      {
+        "name": "Отель Элегант",
+        "price_per_night_rub": 10762,
+        "coordinates": {
+          "latitude": 55.791102,
+          "longitude": 37.52708
+        }
+      },
+      {
+        "name": "Отель Лагуна",
+        "price_per_night_rub": 3911,
+        "coordinates": {
+          "latitude": 55.822049,
+          "longitude": 37.579746
+        }
+      },
+      {
+        "name": "Отель Элегант",
+        "price_per_night_rub": 4416,
+        "coordinates": {
+          "latitude": 55.677836,
+          "longitude": 37.544323
+        }
+      },
+      {
+        "name": "Гостиница Плаза",
+        "price_per_night_rub": 8218,
+        "coordinates": {
+          "latitude": 55.733924,
+          "longitude": 37.561831
+        }
+      },
+      {
+        "name": "Отель Премьер",
+        "price_per_night_rub": 10847,
+        "coordinates": {
+          "latitude": 55.665552,
+          "longitude": 37.560412
+        }
+      },
+      {
+        "name": "Отель Вега",
+        "price_per_night_rub": 4115,
+        "coordinates": {
+          "latitude": 55.755489,
+          "longitude": 37.647717
+        }
+      },
+      {
+        "name": "Отель Меридиан",
+        "price_per_night_rub": 7386,
+        "coordinates": {
+          "latitude": 55.68409,
+          "longitude": 37.59967
+        }
+      },
+      {
+        "name": "Отель Центральный",
+        "price_per_night_rub": 10155,
+        "coordinates": {
+          "latitude": 55.667039,
+          "longitude": 37.665251
+        }
+      },
+      {
+        "name": "Хостел Вега",
+        "price_per_night_rub": 7773,
+        "coordinates": {
+          "latitude": 55.68094,
+          "longitude": 37.51934
+        }
+      },
+      {
+        "name": "Бутик-отель Кремль",
+        "price_per_night_rub": 7456,
+        "coordinates": {
+          "latitude": 55.824655,
+          "longitude": 37.575794
+        }
+      },
+      {
+        "name": "Отель Спутник",
+        "price_per_night_rub": 7319,
+        "coordinates": {
+          "latitude": 55.671965,
+          "longitude": 37.528652
+        }
+      }
+    ]
+  }
 ]
